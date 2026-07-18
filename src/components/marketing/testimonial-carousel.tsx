@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
+import Image from "next/image";
 import { Testimonial } from "@/types";
 
 interface TestimonialCarouselProps {
@@ -60,10 +61,12 @@ export default function TestimonialCarousel({ testimonials, locale }: Testimonia
           <div className="mt-8 flex items-center justify-center gap-4">
             {testimonial.clientPhoto && (
               <div className="relative h-11 w-11 overflow-hidden ring-1 ring-border">
-                <img
+                <Image
                   src={testimonial.clientPhoto}
                   alt={testimonial.clientName}
-                  className="h-full w-full object-cover"
+                  fill
+                  sizes="44px"
+                  className="object-cover"
                 />
               </div>
             )}

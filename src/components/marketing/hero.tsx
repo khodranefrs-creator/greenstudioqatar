@@ -1,6 +1,7 @@
 import { getDictionary } from '@/lib/dictionary';
 import { Locale } from '@/i18n/routing';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default async function Hero({ locale }: { locale: Locale }) {
   const dict = await getDictionary(locale);
@@ -9,10 +10,13 @@ export default async function Hero({ locale }: { locale: Locale }) {
   return (
     <section className="relative h-[100dvh] w-full overflow-hidden">
       <div className="hero-bg absolute inset-0">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1920&q=85&fit=crop"
           alt=""
-          className="h-full w-full object-cover"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal/30 via-charcoal/10 to-charcoal/80" />

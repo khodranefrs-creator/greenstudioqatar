@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 interface TeamMember {
   id: string;
@@ -113,11 +114,16 @@ export default function AdminTeamPage() {
           >
             <div className="flex items-start gap-4">
               {member.photo ? (
-                <img
-                  src={member.photo}
-                  alt={member.name}
-                  className="w-14 h-14 rounded-full object-cover shrink-0"
-                />
+                <div className="relative w-14 h-14 rounded-full overflow-hidden shrink-0">
+                  <Image
+                    src={member.photo}
+                    alt={member.name}
+                    fill
+                    sizes="56px"
+                    unoptimized
+                    className="object-cover"
+                  />
+                </div>
               ) : (
                 <div className="w-14 h-14 rounded-full bg-neutral-700 flex items-center justify-center text-neutral-300 text-lg font-medium shrink-0">
                   {member.name.charAt(0)}

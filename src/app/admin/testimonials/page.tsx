@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 interface Testimonial {
   id: string;
@@ -118,7 +119,16 @@ export default function AdminTestimonialsPage() {
                       <td className="py-3 px-4">
                         <div className="flex items-center gap-3">
                           {testimonial.clientPhoto ? (
-                            <img src={testimonial.clientPhoto} alt="" className="w-8 h-8 rounded-full object-cover" />
+                            <div className="relative w-8 h-8 rounded-full overflow-hidden shrink-0">
+                              <Image
+                                src={testimonial.clientPhoto}
+                                alt=""
+                                fill
+                                sizes="32px"
+                                unoptimized
+                                className="object-cover"
+                              />
+                            </div>
                           ) : (
                             <div className="w-8 h-8 rounded-full bg-neutral-700 flex items-center justify-center text-neutral-400 text-xs">
                               {testimonial.clientName.charAt(0)}

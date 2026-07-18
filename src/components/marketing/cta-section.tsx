@@ -1,6 +1,7 @@
 import { getDictionary } from '@/lib/dictionary';
 import { Locale } from '@/i18n/routing';
 import Link from 'next/link';
+import Image from 'next/image';
 
 interface CtaSectionProps {
   locale: Locale;
@@ -16,10 +17,12 @@ export default async function CtaSection({ locale }: CtaSectionProps) {
   return (
     <section className="relative overflow-hidden bg-charcoal py-section-lg sm:py-section-lg">
       <div className="absolute inset-0 opacity-[0.03]">
-        <img
+        <Image
           src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=1920&q=50&fit=crop"
           alt=""
-          className="h-full w-full object-cover"
+          fill
+          sizes="100vw"
+          className="object-cover"
         />
       </div>
       <div className="relative mx-auto max-w-[90rem] px-6 text-center sm:px-10 md:px-12 lg:px-16">
