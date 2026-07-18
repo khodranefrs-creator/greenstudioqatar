@@ -36,7 +36,7 @@ export default async function Hero({ locale }: { locale: Locale }) {
               </h1>
             </div>
             <div className="overflow-hidden mt-6">
-              <p className="animate-fade-up animate-delay-300 font-body text-sm tracking-[0.12em] text-offwhite/55 sm:text-base sm:tracking-[0.15em] max-w-2xl">
+              <p className="animate-fade-up animate-delay-300 font-body text-sm tracking-[0.12em] text-offwhite/70 sm:text-base sm:tracking-[0.15em] max-w-2xl">
                 {hero.subheadline}
               </p>
             </div>

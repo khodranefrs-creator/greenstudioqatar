@@ -17,8 +17,8 @@ export default async function Philosophy({ locale }: PhilosophyProps) {
           <div className="relative overflow-hidden">
             <div className="aspect-[3/4] sm:aspect-[4/5] relative">
               <Image
-                src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=800&h=1000&fit=crop"
-                alt="Architectural detail"
+                src="https://images.unsplash.com/photo-1600607687644-aac4c3eac7f4?w=800&h=1000&fit=crop"
+                alt="Interior architecture detail"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

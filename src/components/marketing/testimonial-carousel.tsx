@@ -47,8 +47,8 @@ export default function TestimonialCarousel({ testimonials, locale }: Testimonia
             {testimonials.map((t, index) => (
               <div
                 key={t.id}
-                className={`absolute inset-0 transition-all duration-700 ${
-                  index === current ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
+                className={`transition-all duration-700 ${
+                  index === current ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3 absolute inset-0 pointer-events-none"
                 }`}
               >
                 <blockquote className="font-display text-xl font-light leading-[1.6] text-charcoal sm:text-2xl md:text-3xl italic">

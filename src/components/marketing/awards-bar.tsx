@@ -24,13 +24,17 @@ export default async function AwardsBar({ locale }: AwardsBarProps) {
         <h2 className="text-center font-body text-[0.65rem] font-medium tracking-[0.3em] text-muted uppercase">
           {awards.title}
         </h2>
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-12 gap-y-5">
-          {certifications.map((cert) => (
-            <span
-              key={cert}
-              className="font-body text-[0.8rem] tracking-wide text-muted/50 transition-colors duration-300 hover:text-charcoal"
-            >
-              {cert}
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-x-0 gap-y-5">
+          {certifications.map((cert, index) => (
+            <span key={cert} className="flex items-center">
+              <span
+                className="font-body text-[0.8rem] tracking-wide text-muted/50 transition-colors duration-300 hover:text-charcoal px-6"
+              >
+                {cert}
+              </span>
+              {index < certifications.length - 1 && (
+                <span className="hidden sm:block w-px h-4 bg-border" aria-hidden="true" />
+              )}
             </span>
           ))}
         </div>

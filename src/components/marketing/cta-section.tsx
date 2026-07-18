@@ -40,7 +40,7 @@ export default async function CtaSection({ locale }: CtaSectionProps) {
             {button}
           </Link>
         </div>
-        <p className="mt-6 font-body text-[0.75rem] text-offwhite/25">
+        <p className="mt-6 font-body text-[0.75rem] text-offwhite/40">
           {locale === 'ar' ? 'أو اتصل بنا على +974 4412 3456' : 'Or call us at +974 4412 3456'}
         </p>
       </div>

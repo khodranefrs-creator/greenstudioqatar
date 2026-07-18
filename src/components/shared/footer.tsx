@@ -101,7 +101,7 @@ export async function Footer({ locale }: FooterProps) {
             </ul>
             <div className="mt-6 flex gap-5">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/greenstudioqatar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted hover:text-charcoal transition-colors duration-200"
@@ -112,7 +112,7 @@ export async function Footer({ locale }: FooterProps) {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/greenstudioqatar"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-muted hover:text-charcoal transition-colors duration-200"

@@ -19,7 +19,7 @@ export default async function FeaturedProjects({ projects, locale }: FeaturedPro
         <div className="flex items-end justify-between">
           <div>
             <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-muted">
-              {locale === 'ar' ? '精选' : 'Selected Work'}
+              {locale === 'ar' ? 'عرض الكل' : 'View All'}
             </p>
             <h2 className="mt-3 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-5xl">
               {section.title}
