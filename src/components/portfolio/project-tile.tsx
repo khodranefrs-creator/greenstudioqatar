@@ -15,7 +15,7 @@ export default function ProjectTile({ project, locale }: ProjectTileProps) {
 
   return (
     <Link
-      href={`/projects/${project.slug}`}
+      href={`/${locale}/projects/${project.slug}`}
       className="group relative block aspect-[4/5] overflow-hidden bg-charcoal/5"
     >
       <Image

@@ -14,7 +14,9 @@ interface ServiceDetailPageProps {
 }
 
 export async function generateStaticParams() {
-  return services.map((service) => ({ slug: service.slug }));
+  return services.flatMap((service) =>
+    ["en", "ar"].map((locale) => ({ locale, slug: service.slug }))
+  );
 }
 
 export async function generateMetadata({ params }: ServiceDetailPageProps): Promise<Metadata> {

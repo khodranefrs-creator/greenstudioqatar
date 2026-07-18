@@ -14,7 +14,9 @@ interface ProjectDetailPageProps {
 }
 
 export async function generateStaticParams() {
-  return projects.map((project) => ({ slug: project.slug }));
+  return projects.flatMap((project) =>
+    ["en", "ar"].map((locale) => ({ locale, slug: project.slug }))
+  );
 }
 
 export async function generateMetadata({ params }: ProjectDetailPageProps): Promise<Metadata> {
