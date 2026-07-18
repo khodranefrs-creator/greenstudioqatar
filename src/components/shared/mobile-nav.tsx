@@ -18,11 +18,12 @@ export function MobileNav({
   locale,
   links,
   ctaLabel,
-  consultationHref = "/contact",
+  consultationHref,
 }: MobileNavProps) {
   const overlayRef = useRef<HTMLDivElement>(null);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
   const previousFocusRef = useRef<HTMLElement | null>(null);
+  const resolvedConsultationHref = consultationHref ?? `/${locale}/contact`;
 
   useEffect(() => {
     if (isOpen) {
@@ -106,7 +107,7 @@ export function MobileNav({
         <div className="mt-12 flex flex-col items-center gap-6">
           <LanguageSwitcher locale={locale} className="text-lg" />
           <a
-            href={consultationHref}
+            href={resolvedConsultationHref}
             onClick={onClose}
             className="inline-flex h-12 items-center justify-center bg-accent px-8 text-sm font-medium text-offwhite hover:bg-accent-light transition-colors"
           >

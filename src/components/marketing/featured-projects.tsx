@@ -29,7 +29,7 @@ export default async function FeaturedProjects({ projects, locale }: FeaturedPro
             return (
               <Link
                 key={project.id}
-                href={`/projects/${project.slug}`}
+                href={`/${locale}/projects/${project.slug}`}
                 className={`group relative overflow-hidden ${
                   isLarge
                     ? 'sm:col-span-2 lg:col-span-2 aspect-[16/9] sm:aspect-[2/1]'

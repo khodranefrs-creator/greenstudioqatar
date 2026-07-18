@@ -17,20 +17,20 @@ export default async function Hero({ locale }: { locale: Locale }) {
               {hero.headline}
             </h1>
             <p className="mt-6 font-body text-sm tracking-[0.2em] text-muted sm:text-base">
-              {hero.subline}
+              {hero.subheadline}
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <Link
-                href="/projects"
+                href={`/${locale}/projects`}
                 className="inline-flex h-12 items-center justify-center bg-offwhite px-8 font-body text-sm font-medium tracking-wide text-charcoal transition-colors hover:bg-white"
               >
-                {hero.ctaWork}
+                {hero.ctaPrimary}
               </Link>
               <Link
-                href="/contact"
+                href={`/${locale}/contact`}
                 className="inline-flex h-12 items-center justify-center border border-offwhite/30 px-8 font-body text-sm font-medium tracking-wide text-offwhite transition-colors hover:border-offwhite hover:bg-offwhite/10"
               >
-                {hero.ctaConsultation}
+                {hero.ctaSecondary}
               </Link>
             </div>
           </div>

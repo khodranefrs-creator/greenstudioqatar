@@ -18,7 +18,7 @@ export default async function CtaSection({ locale }: CtaSectionProps) {
         </h2>
         <div className="mt-10">
           <Link
-            href="/contact"
+            href={`/${locale}/contact`}
             className="inline-flex h-12 items-center justify-center border border-offwhite/30 px-8 font-body text-sm font-medium tracking-wide text-offwhite transition-colors hover:border-offwhite hover:bg-offwhite/10"
           >
             {cta.button}
