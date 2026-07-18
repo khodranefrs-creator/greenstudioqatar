@@ -10,55 +10,65 @@ const mockAdminUser = {
   passwordHash: bcrypt.hashSync("admin123", 10),
 };
 
-export const authOptions: NextAuthOptions = {
-  secret: process.env.NEXTAUTH_SECRET || "fallback-dev-secret-do-not-use-in-production",
-  providers: [
-    CredentialsProvider({
-      name: "Credentials",
-      credentials: {
-        email: { label: "Email", type: "email" },
-        password: { label: "Password", type: "password" },
-      },
-      async authorize(credentials) {
-        if (!credentials?.email || !credentials?.password) return null;
+export function getAuthOptions(): NextAuthOptions {
+  if (!process.env.NEXTAUTH_SECRET) {
+    const msg =
+      "\n[Auth] NEXTAUTH_SECRET is not set. " +
+      "Authentication will fail. Set NEXTAUTH_SECRET in your environment variables.\n";
+    console.error(msg);
+    throw new Error("Missing NEXTAUTH_SECRET environment variable");
+  }
 
-        const { email, password } = credentials;
-        const user = mockAdminUser;
-        const isValid = bcrypt.compareSync(password, user.passwordHash);
+  return {
+    secret: process.env.NEXTAUTH_SECRET,
+    providers: [
+      CredentialsProvider({
+        name: "Credentials",
+        credentials: {
+          email: { label: "Email", type: "email" },
+          password: { label: "Password", type: "password" },
+        },
+        async authorize(credentials) {
+          if (!credentials?.email || !credentials?.password) return null;
 
-        if (email === user.email && isValid) {
-          return {
-            id: user.id,
-            email: user.email,
-            name: user.name,
-            role: user.role,
-          };
+          const { email, password } = credentials;
+          const user = mockAdminUser;
+          const isValid = bcrypt.compareSync(password, user.passwordHash);
+
+          if (email === user.email && isValid) {
+            return {
+              id: user.id,
+              email: user.email,
+              name: user.name,
+              role: user.role,
+            };
+          }
+          return null;
+        },
+      }),
+    ],
+    session: {
+      strategy: "jwt",
+      maxAge: 24 * 60 * 60,
+    },
+    callbacks: {
+      async jwt({ token, user }) {
+        if (user) {
+          token.id = user.id;
+          token.role = (user as { role?: string }).role;
         }
-        return null;
+        return token;
       },
-    }),
-  ],
-  session: {
-    strategy: "jwt",
-    maxAge: 24 * 60 * 60,
-  },
-  callbacks: {
-    async jwt({ token, user }) {
-      if (user) {
-        token.id = user.id;
-        token.role = (user as { role?: string }).role;
-      }
-      return token;
+      async session({ session, token }) {
+        if (session.user) {
+          session.user.id = token.id as string;
+          session.user.role = token.role as string;
+        }
+        return session;
+      },
     },
-    async session({ session, token }) {
-      if (session.user) {
-        session.user.id = token.id as string;
-        session.user.role = token.role as string;
-      }
-      return session;
+    pages: {
+      signIn: "/admin/login",
     },
-  },
-  pages: {
-    signIn: "/admin/login",
-  },
-};
+  };
+}

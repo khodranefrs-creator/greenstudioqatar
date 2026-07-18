@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth/config";
+import { getAuthOptions } from "@/lib/auth/config";
 
 interface AdminLead {
   id: string;
@@ -173,7 +173,7 @@ const mockLeads: AdminLead[] = [
 
 export async function GET(_request: NextRequest) {
   try {
-    const session = await getServerSession(authOptions);
+    const session = await getServerSession(getAuthOptions());
     if (!session) {
       return NextResponse.json(
         { success: false, error: "Unauthorized" },

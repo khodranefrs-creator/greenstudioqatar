@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { projects } from "@/data/projects";
 import { z } from "zod";
 import { getServerSession } from "next-auth";
-import { authOptions } from "@/lib/auth/config";
+import { getAuthOptions } from "@/lib/auth/config";
 
 const createProjectSchema = z.object({
   titleEn: z.string().min(1),
@@ -67,7 +67,7 @@ export async function GET(request: NextRequest) {
 
 export async function POST(request: NextRequest) {
   try {
-    const session = await getServerSession(authOptions);
+    const session = await getServerSession(getAuthOptions());
     if (!session) {
       return NextResponse.json(
         { success: false, error: "Unauthorized" },
