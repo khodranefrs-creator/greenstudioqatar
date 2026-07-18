@@ -49,7 +49,7 @@ export default async function Hero({ locale }: { locale: Locale }) {
               </Link>
               <Link
                 href={`/${locale}/contact`}
-                className="inline-flex h-13 items-center justify-center border border-offwhite/25 px-9 font-body text-[0.8rem] font-medium tracking-[0.08em] text-offwhite/90 backdrop-blur-sm transition-all duration-300 hover:border-offwhite/50 hover:bg-offwhite/10 hover:text-offwhite"
+                className="inline-flex h-13 items-center justify-center border border-offwhite/25 px-9 font-body text-[0.8rem] font-medium tracking-[0.08em] text-offwhite/90 transition-colors duration-300 hover:border-offwhite/50 hover:bg-offwhite/10 hover:text-offwhite"
               >
                 {hero.ctaSecondary}
               </Link>

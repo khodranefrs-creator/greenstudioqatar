@@ -57,7 +57,7 @@ export default async function FeaturedProjects({ projects, locale }: FeaturedPro
                   src={project.heroImage}
                   alt={title}
                   fill
-                  className="object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-105"
+                  className="object-cover transition-transform duration-500 ease-out group-hover:scale-105"
                   sizes={isLarge ? '(max-width: 768px) 100vw, 50vw' : '(max-width: 768px) 100vw, 33vw'}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal/80 via-charcoal/10 to-transparent" />

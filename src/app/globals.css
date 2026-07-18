@@ -75,13 +75,8 @@ body {
   direction: ltr;
 }
 
-@keyframes kenBurns {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.08); }
-}
-
 .hero-bg {
-  animation: kenBurns 25s ease-out forwards;
+  contain: layout style paint;
 }
 
 @keyframes scrollCue {
@@ -111,6 +106,7 @@ body {
 
 .animate-fade-up {
   animation: fadeUp 0.8s ease-out forwards;
+  will-change: opacity, transform;
 }
 
 .animate-delay-100 { animation-delay: 0.1s; }
@@ -119,7 +115,6 @@ body {
 .animate-delay-400 { animation-delay: 0.4s; }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-bg { animation: none; }
   .scroll-cue { animation: none; }
   .animate-skeleton { animation: none; }
   .animate-fade-up { animation: none; opacity: 1; transform: none; }

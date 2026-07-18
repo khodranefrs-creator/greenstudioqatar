@@ -88,7 +88,7 @@ export default async function ServiceCards({ services, locale }: ServiceCardsPro
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </div>
-              <div className="absolute bottom-0 left-0 h-px w-0 bg-charcoal transition-all duration-500 group-hover:w-full" />
+              <div className="absolute bottom-0 left-0 h-px w-0 bg-charcoal transition-all duration-300 group-hover:w-full" />
             </Link>
           ))}
         </div>
