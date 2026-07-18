@@ -322,6 +322,10 @@
     "noOpenings": "No current openings. Please check back later or send your CV to careers@greenstudioqatar.com.",
     "applyCta": "Send Your Application"
   },
+  "cta": {
+    "headline": "Let's Build Something Extraordinary Together",
+    "button": "Start Your Project"
+  },
   "legal": {
     "privacy": {
       "title": "Privacy Policy",

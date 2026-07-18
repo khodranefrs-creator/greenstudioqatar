@@ -11,6 +11,7 @@ const mockAdminUser = {
 };
 
 export const authOptions: NextAuthOptions = {
+  secret: process.env.NEXTAUTH_SECRET || "fallback-dev-secret-do-not-use-in-production",
   providers: [
     CredentialsProvider({
       name: "Credentials",
