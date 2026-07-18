@@ -1,0 +1,362 @@
+{
+  "nav": {
+    "home": "الرئيسية",
+    "projects": "المشاريع",
+    "services": "الخدمات",
+    "about": "عن الشركة",
+    "journal": "المدونة",
+    "contact": "اتصل بنا",
+    "admin": "لوحة التحكم",
+    "getConsultation": "احجز استشارة",
+    "ourProjects": "مشاريعنا",
+    "ourServices": "خدماتنا",
+    "ourTeam": "فريقنا",
+    "testimonials": "آراء العملاء",
+    "process": "منهجية العمل",
+    "philosophy": "فلسفتنا",
+    "faq": "الأسئلة الشائعة",
+    "privacy": "سياسة الخصوصية",
+    "terms": "شروط الخدمة",
+    "careers": "الوظائف"
+  },
+  "hero": {
+    "headline": "عمارة لعصر جديد",
+    "subheadline": "تصميم معاصر متجذر في التراث الثقافي لمنطقة الشرق الأوسط وشمال أفريقيا.",
+    "ctaPrimary": "شاهد مشاريعنا",
+    "ctaSecondary": "احجز استشارة",
+    "scrollHint": "مرر للاستكشاف"
+  },
+  "trust": {
+    "projectsCompleted": "مشروع مكتمل",
+    "yearsExperience": "سنوات من الخبرة",
+    "teamMembers": "عضو في الفريق",
+    "countriesServed": "دولة خدمناها",
+    "description": "موثوقون من قبل المطورين والحكومات والعملاء من القطاع الخاص في جميع أنحاء الشرق الأوسط وشمال أفريقيا."
+  },
+  "services": {
+    "title": "ماذا نفعل",
+    "subtitle": "خدمات هندسة معمارية وهندسية شاملة مصممة خصيصًا لسوق الشرق الأوسط وشمال أفريقيا.",
+    "viewDetails": "عرض التفاصيل",
+    "architectural-design": {
+      "title": "التصميم المعماري",
+      "summary": "من المفهوم إلى وثائق البناء، نقدم تصاميم معمارية رؤيوية تستجيب للموقع والمناخ والثقافة.",
+      "body": "في جريين ستوديو قطر، تنبثق ممارستنا للتصميم المعماري من فهم عميق للسياق البيئي والثقافي الفريد لمنطقة الشرق الأوسط وشمال أفريقيا. نبتكر مباني ليست فقط مذهلة بصريًا بل فعالة ومستدامة ومتصلة بعمق بمحيطها. عملية التصميم لدينا تعاونية وتكرارية وتعتمد على البيانات، مما يضمن تحقيق كل مشروع لأقصى إمكاناته.",
+      "deliverables": [
+        { "nameEn": "Concept Design", "nameAr": "التصميم المفاهيمي", "descriptionEn": "Initial design exploration including massing studies, site analysis, and conceptual diagrams.", "descriptionAr": "استكشاف التصميم الأولي بما في ذلك دراسات الكتلة وتحليل الموقع والرسوم البيانية المفاهيمية." },
+        { "nameEn": "Schematic Design", "nameAr": "التصميم المبدئي", "descriptionEn": "Refined design with floor plans, elevations, sections, and preliminary material selections.", "descriptionAr": "تصميم محسّن مع مخططات الطوابق والواجهات والقطاعات واختيارات المواد الأولية." },
+        { "nameEn": "Design Development", "nameAr": "تطوير التصميم", "descriptionEn": "Detailed architectural drawings with coordinated structural and MEP systems.", "descriptionAr": "رسومات معمارية مفصلة مع أنظمة هيكلية وميكانيكية وكهربائية وسباكة منسقة." },
+        { "nameEn": "Construction Documents", "nameAr": "وثائق البناء", "descriptionEn": "Comprehensive permit and construction sets including specifications and schedules.", "descriptionAr": "مجموعات شاملة لتصاريح البناء والإنشاءات تشمل المواصفات والجداول." }
+      ],
+      "faqs": [
+        { "questionEn": "What is the typical timeline for an architectural design project?", "questionAr": "ما هو الجدول الزمني النموذجي لمشروع التصميم المعماري؟", "answerEn": "Depending on scale and complexity, a full architectural design process typically takes 4-12 months from concept to construction documents.", "answerAr": "اعتمادًا على الحجم والتعقيد، تستغرق عملية التصميم المعماري الكاملة عادةً من 4 إلى 12 شهرًا من المفهوم إلى وثائق البناء." },
+        { "questionEn": "Do you offer sustainable design solutions?", "questionAr": "هل تقدمون حلول تصميم مستدامة؟", "answerEn": "Yes. Sustainability is core to our practice. We integrate passive design strategies, local materials, and energy-efficient systems into every project.", "answerAr": "نعم. الاستدامة هي جوهر ممارستنا. ندمج استراتيجيات التصميم السلبي والمواد المحلية والأنظمة الموفرة للطاقة في كل مشروع." }
+      ]
+    },
+    "interior-design": {
+      "title": "التصميم الداخلي",
+      "summary": "تجارب مكانية تمزج بين الجماليات المعاصرة والحرفية الإقليمية.",
+      "body": "تحول ممارستنا للتصميم الداخلي المساحات إلى بيئات غامرة. نستلهم الإلهام من تقاليد النسيج الغنية والأنماط الهندسية ولوحات المواد في العالم العربي، مع إعادة تفسيرها من خلال عدسة معاصرة. يتم تنسيق كل تشطيب وتأثيث وتفصيل بعناية لخلق انسجام بين الشكل والوظيفة.",
+      "deliverables": [
+        { "nameEn": "Concept Design", "nameAr": "التصميم المفاهيمي", "descriptionEn": "Mood boards, material palettes, and spatial planning.", "descriptionAr": "لوحات المزاج ولوحات المواد والتخطيط المكاني." },
+        { "nameEn": "Design Development", "nameAr": "تطوير التصميم", "descriptionEn": "Detailed drawings, FF&E schedules, and custom millwork designs.", "descriptionAr": "رسومات مفصلة وجداول الأثاث والتجهيزات وتصاميم النجارة المخصصة." },
+        { "nameEn": "Construction Documents", "nameAr": "وثائق البناء", "descriptionEn": "Interior construction packages including finishes, lighting, and joinery.", "descriptionAr": "حزم البناء الداخلي تشمل التشطيبات والإضاءة والنجارة." },
+        { "nameEn": "Installation Oversight", "nameAr": "الإشراف على التركيب", "descriptionEn": "On-site supervision during installation and styling.", "descriptionAr": "الإشراف في الموقع أثناء التركيب والتنسيق." }
+      ],
+      "faqs": [
+        { "questionEn": "Do you work on both residential and commercial interiors?", "questionAr": "هل تعملون في المساحات الداخلية السكنية والتجارية؟", "answerEn": "Absolutely. We handle a wide range of interior typologies including private residences, offices, hospitality venues, and retail spaces.", "answerAr": "بالتأكيد. نتعامل مع مجموعة واسعة من أنواع المساحات الداخلية بما في ذلك المساكن الخاصة والمكاتب ومرافق الضيافة والمساحات التجارية." }
+      ]
+    },
+    "engineering-consultancy": {
+      "title": "الاستشارات الهندسية",
+      "summary": "خدمات هندسية إنشائية ومدنية وميكانيكية وكهربائية تضمن السلامة والكفاءة وقابلية التنفيذ.",
+      "body": "يقدم فريق الاستشارات الهندسية لدينا تحليلاً وتصميماً خبيراً في مجالات الهندسة الإنشائية والمدنية والميكانيكية والكهربائية. نستفيد من أدوات المحاكاة المتقدمة والمعرفة المحلية العميقة لتقديم حلول هندسية مبتكرة وعملية في آن واحد. من الأبراج الشاهقة في الدوحة إلى مشاريع البنية التحتية المعقدة، يضمن عملنا أن كل مبنى يقوم على أساس من التميز التقني.",
+      "deliverables": [
+        { "nameEn": "Structural Engineering", "nameAr": "الهندسة الإنشائية", "descriptionEn": "Structural analysis, framing design, and foundation engineering.", "descriptionAr": "التحليل الإنشائي وتصميم الإطارات وهندسة الأساسات." },
+        { "nameEn": "MEP Engineering", "nameAr": "الهندسة الميكانيكية والكهربائية والسباكة", "descriptionEn": "Mechanical, electrical, and plumbing system design.", "descriptionAr": "تصميم الأنظمة الميكانيكية والكهربائية وأنظمة السباكة." },
+        { "nameEn": "Civil Engineering", "nameAr": "الهندسة المدنية", "descriptionEn": "Site grading, drainage, and utility design.", "descriptionAr": "تسوية الموقع وتصريف المياه وتصميم المرافق." },
+        { "nameEn": "Value Engineering", "nameAr": "الهندسة القيمية", "descriptionEn": "Cost optimization without compromising quality or performance.", "descriptionAr": "تحسين التكاليف دون المساس بالجودة أو الأداء." }
+      ],
+      "faqs": [
+        { "questionEn": "Which engineering software do you use?", "questionAr": "ما هي برامج الهندسة التي تستخدمونها؟", "answerEn": "We use industry-standard tools including ETABS, SAP2000, SAFE, Revit, Robot Structural Analysis, and AutoCAD MEP.", "answerAr": "نستخدم أدوات قياسية في المجال بما في ذلك ETABS و SAP2000 و SAFE و Revit و Robot Structural Analysis و AutoCAD MEP." }
+      ]
+    },
+    "project-management": {
+      "title": "إدارة المشاريع",
+      "summary": "إدارة مشاريع شاملة من دراسة الجدوى إلى التسليم، مع الالتزام بالجدول الزمني والميزانية.",
+      "body": "ندير المشاريع بالدقة والاهتمام الذي تستحقه. يشرف فريق إدارة المشاريع لدينا على كل مرحلة - من دراسات الجدوى الأولية وإعداد الميزانية مروراً بالمشتريات والبناء ووصولاً إلى التسليم النهائي. بفضل خبرتنا العميقة في سوق البناء في الشرق الأوسط وشمال أفريقيا، نتوقع المخاطر قبل حدوثها ونحافظ على توافق أصحاب المصلحة طوال دورة حياة المشروع.",
+      "deliverables": [
+        { "nameEn": "Feasibility Studies", "nameAr": "دراسات الجدوى", "descriptionEn": "Site evaluation, market analysis, and financial modeling.", "descriptionAr": "تقييم الموقع وتحليل السوق والنمذجة المالية." },
+        { "nameEn": "Budgeting & Cost Control", "nameAr": "إعداد الميزانية والتحكم في التكاليف", "descriptionEn": "Detailed cost estimates, value engineering, and expense tracking.", "descriptionAr": "تقديرات التكلفة التفصيلية والهندسة القيمية وتتبع النفقات." },
+        { "nameEn": "Procurement Management", "nameAr": "إدارة المشتريات", "descriptionEn": "Tendering, contractor selection, and contract administration.", "descriptionAr": "المناقصات واختيار المقاولين وإدارة العقود." },
+        { "nameEn": "Construction Oversight", "nameAr": "الإشراف على البناء", "descriptionEn": "Schedule management, quality control, and progress reporting.", "descriptionAr": "إدارة الجدول الزمني ومراقبة الجودة وتقارير التقدم." }
+      ],
+      "faqs": [
+        { "questionEn": "What project management methodology do you use?", "questionAr": "ما هي منهجية إدارة المشاريع التي تستخدمونها؟", "answerEn": "We follow PMI standards with a tailored approach for construction projects, using tools like Primavera P6 and MS Project.", "answerAr": "نتبع معايير معهد إدارة المشاريع مع نهج مخصص لمشاريع البناء، باستخدام أدوات مثل Primavera P6 و MS Project." }
+      ]
+    },
+    "construction-supervision": {
+      "title": "الإشراف على البناء",
+      "summary": "إشراف ميداني لضمان تنفيذ التصميم بأعلى معايير الجودة.",
+      "body": "التصميم العظيم يستحق تنفيذاً عظيماً. يوفر فريق الإشراف على البناء لدينا تمثيلاً ميدانياً مخصصاً لضمان بناء كل عنصر من عناصر التصميم تماماً كما هو مقصود. نقوم بعمليات تفتيش منتظمة، ومراجعة المقدمات، والتنسيق مع المقاولين، وتقديم تقارير مفصلة عن التقدم - حفاظاً على الجودة والجدول الزمني والميزانية طوال مرحلة البناء.",
+      "deliverables": [
+        { "nameEn": "Site Monitoring", "nameAr": "مراقبة الموقع", "descriptionEn": "Regular site visits and inspection reports.", "descriptionAr": "زيارات دورية للموقع وتقارير التفتيش." },
+        { "nameEn": "Quality Assurance", "nameAr": "ضمان الجودة", "descriptionEn": "Material testing, workmanship verification, and compliance checks.", "descriptionAr": "اختبار المواد والتحقق من جودة التنفيذ وفحوص الامتثال." },
+        { "nameEn": "Progress Reporting", "nameAr": "تقارير التقدم", "descriptionEn": "Weekly and monthly progress reports with photographic documentation.", "descriptionAr": "تقارير أسبوعية وشهرية عن التقدم مع توثيق بالصور." },
+        { "nameEn": "Snagging & Handover", "nameAr": "قائمة العيوب والتسليم", "descriptionEn": "Defect identification, punch list management, and final handover.", "descriptionAr": "تحديد العيوب وإدارة قائمة الملاحظات والتسليم النهائي." }
+      ],
+      "faqs": [
+        { "questionEn": "Do you provide supervision for projects not originally designed by you?", "questionAr": "هل تقدمون الإشراف للمشاريع التي لم تصمموها في الأصل؟", "answerEn": "Yes. We frequently serve as supervision consultant on projects designed by other firms, bringing our quality assurance expertise to any project.", "answerAr": "نعم. نعمل في كثير من الأحيان كمستشار إشراف في مشاريع صممتها مكاتب أخرى، ونقدم خبرتنا في ضمان الجودة لأي مشروع." }
+      ]
+    }
+  },
+  "projects": {
+    "title": "مشاريعنا",
+    "subtitle": "مجموعة منتقاة من أعمالنا في منطقة الشرق الأوسط وشمال أفريقيا.",
+    "allProjects": "جميع المشاريع",
+    "filterLabel": "تصفية حسب النوع",
+    "viewProject": "عرض المشروع",
+    "specifications": "المواصفات الفنية",
+    "type": "النوع",
+    "location": "الموقع",
+    "year": "السنة",
+    "size": "المساحة",
+    "client": "العميل",
+    "status": "الحالة",
+    "gallery": "معرض المشروع",
+    "relatedProjects": "مشاريع ذات صلة",
+    "completed": "مكتمل",
+    "ongoing": "قيد التنفيذ",
+    "concept": "مفهوم",
+    "noProjects": "لم يتم العثور على مشاريع",
+    "backToProjects": "العودة إلى المشاريع",
+    "residential": "سكني",
+    "commercial": "تجاري",
+    "government": "حكومي",
+    "hospitality": "ضيافة",
+    "interior": "تصميم داخلي",
+    "mixed-use": "متعدد الاستخدامات",
+    "cultural": "ثقافي",
+    "healthcare": "رعاية صحية",
+    "educational": "تعليمي",
+    "resort": "منتجع",
+    "retail": "تجارة بالتجزئة",
+    "master-plan": "مخطط شامل"
+  },
+  "about": {
+    "title": "عن جريين ستوديو قطر",
+    "subtitle": "مكتب عمارة معاصر يصمم مساحات هادفة في منطقة الشرق الأوسط وشمال أفريقيا.",
+    "story": "تأسس جريين ستوديو قطر في عام 2015، انطلاقاً من قناعة بأن العمارة في منطقة الشرق الأوسط وشمال أفريقيا تستحق نموذجاً جديداً - نموذجاً يكرم التقاليد الثقافية الغنية مع احتضان الابتكار والاستدامة. يجمع فريقنا من المهندسين المعماريين والمهندسين والمصممين خبرات متنوعة توحدها غاية مشتركة: إنشاء مبانٍ تلهم وتؤدي وتدوم. مع مكاتبنا في الدوحة وخبرة في مشاريع تمتد من الجزائر إلى دبي، نحن محظوظون بتشكيل البيئة المبنية لمنطقة سريعة التطور.",
+    "missionTitle": "رسالتنا",
+    "mission": "تقديم عمارة من أعلى مستويات الجودة - تصاميم صارمة مفاهيمياً ومسؤولة بيئياً ومستجيبة بعمق للمجتمعات التي تخدمها.",
+    "visionTitle": "رؤيتنا",
+    "vision": "أن نكون المكتب الهندسي والمعماري الرائد في منطقة الشرق الأوسط وشمال أفريقيا، المعترف به عالمياً للتميز في التصميم والاستدامة والحساسية الثقافية.",
+    "valuesTitle": "قيمنا",
+    "values": [
+      { "title": "التميز", "description": "نسعى لأعلى المعايير في كل مشروع، بغض النظر عن الحجم أو الميزانية." },
+      { "title": "الاستدامة", "description": "ندمج الإشراف البيئي في كل مرحلة من مراحل التصميم والبناء." },
+      { "title": "الصدى الثقافي", "description": "نصمم باحترام عميق لتراث وتقاليد وتطلعات المجتمعات التي نخدمها." },
+      { "title": "التعاون", "description": "نؤمن بأن أفضل النتائج تنبثق من الحوار المفتوح بين العملاء والاستشاريين والمجتمعات." },
+      { "title": "الابتكار", "description": "نتبنى التقنيات والمواد والمنهجيات الجديدة لدفع حدود الممكن." }
+    ]
+  },
+  "team": {
+    "title": "فريقنا",
+    "subtitle": "الأشخاص الذين يقفون وراء مشاريعنا.",
+    "role": "المنصب",
+    "credentials": "المؤهلات",
+    "linkedServices": "الخبرات"
+  },
+  "process": {
+    "title": "كيف نعمل",
+    "subtitle": "عملية تعاونية شفافة من المفهوم إلى الاكتمال.",
+    "steps": [
+      { "title": "الاستكشاف", "description": "نبدأ بفهم رؤيتكم وموقعكم وأهدافكم من خلال استشارة وبحث متعمقين." },
+      { "title": "التصميم المفاهيمي", "description": "نترجم الأفكار إلى مفاهيم تصميمية، مستكشفين الكتلة والمواد والتنظيم المكاني." },
+      { "title": "تطوير التصميم", "description": "نطور المفهوم المختار إلى رسومات ومواصفات مفصلة، منسقين جميع التخصصات." },
+      { "title": "التوثيق والترخيص", "description": "نعد وثائق بناء شاملة ونتولى عملية الحصول على التصاريح." },
+      { "title": "الإشراف على البناء", "description": "نوفر إشرافاً ميدانياً لضمان تنفيذ التصميم بدقة وجودة." },
+      { "title": "التسليم وما بعده", "description": "نكمل قائمة الملاحظات ونساعد في شغل المبنى ونبقى متاحين للدعم بعد الإشغال." }
+    ]
+  },
+  "testimonials": {
+    "title": "ماذا يقول عملاؤنا",
+    "subtitle": "ثقة بنيت من خلال شراكات ناجحة."
+  },
+  "contact": {
+    "title": "تواصل معنا",
+    "subtitle": "مستعد لبدء مشروع؟ تواصل مع فريقنا.",
+    "formTitle": "أرسل لنا رسالة",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "email": "البريد الإلكتروني",
+    "phone": "رقم الهاتف",
+    "subject": "الموضوع",
+    "message": "رسالتك",
+    "submit": "إرسال الرسالة",
+    "sending": "جارٍ الإرسال...",
+    "success": "تم إرسال رسالتك. سنتواصل معك خلال 24 ساعة.",
+    "error": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+    "officeTitle": "مكتبنا",
+    "address": "الدفنة - الخليج الغربي، الدوحة، قطر",
+    "phoneLabel": "هاتف",
+    "emailLabel": "بريد إلكتروني",
+    "mapTitle": "موقعنا على الخريطة"
+  },
+  "consultation": {
+    "title": "احجز استشارة",
+    "subtitle": "أخبرنا عن مشروعك وسنقدم عرضاً مخصصاً لاحتياجاتك.",
+    "step1": "نوع المشروع",
+    "step2": "تفاصيل المشروع",
+    "step3": "معلومات الاتصال",
+    "step4": "مراجعة وإرسال",
+    "projectType": "نوع المشروع",
+    "projectTypePlaceholder": "اختر نوع المشروع",
+    "residential": "فيلا سكنية",
+    "commercial": "مبنى تجاري",
+    "government": "مرفق حكومي",
+    "hospitality": "ضيافة / فندق",
+    "interior": "تشطيب داخلي",
+    "mixed-use": "تطوير متعدد الاستخدامات",
+    "siteArea": "مساحة الموقع التقريبية (متر مربع)",
+    "budgetTier": "نطاق الميزانية",
+    "budgetTierPlaceholder": "اختر نطاق الميزانية",
+    "budgetSmall": "أقل من 1 مليون ريال قطري",
+    "budgetMedium": "1 - 5 مليون ريال قطري",
+    "budgetLarge": "5 - 15 مليون ريال قطري",
+    "budgetXL": "أكثر من 15 مليون ريال قطري",
+    "timelineMonths": "الجدول الزمني المطلوب (بالأشهر)",
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "email": "البريد الإلكتروني",
+    "phone": "رقم الهاتف",
+    "countryCode": "مفتاح الدولة",
+    "company": "الشركة (اختياري)",
+    "additionalInfo": "معلومات إضافية (اختياري)",
+    "additionalInfoPlaceholder": "أي متطلبات أو أسئلة محددة...",
+    "previous": "السابق",
+    "next": "التالي",
+    "submit": "إرسال طلب الاستشارة",
+    "success": "شكراً لك! تم استلام طلب الاستشارة الخاص بك. سيتواصل فريقنا معك خلال 48 ساعة.",
+    "error": "حدث خطأ أثناء إرسال طلبك. يرجى المحاولة مرة أخرى."
+  },
+  "footer": {
+    "description": "جريين ستوديو قطر هو مكتب هندسة معمارية وهندسة معاصر يقدم مشاريع رؤيوية في منطقة الشرق الأوسط وشمال أفريقيا.",
+    "quickLinks": "روابط سريعة",
+    "services": "خدماتنا",
+    "contact": "اتصل بنا",
+    "followUs": "تابعنا",
+    "newsletter": "النشرة البريدية",
+    "newsletterPlaceholder": "أدخل بريدك الإلكتروني",
+    "newsletterSubmit": "اشتراك",
+    "newsletterSuccess": "شكراً على الاشتراك!",
+    "rights": "جميع الحقوق محفوظة.",
+    "madeWith": "صنع بـ",
+    "inDoha": "في الدوحة، قطر"
+  },
+  "seo": {
+    "defaultTitle": "جريين ستوديو قطر | عمارة وتصميم في الشرق الأوسط وشمال أفريقيا",
+    "defaultDescription": "مكتب هندسة معمارية وتصميم معاصر يقدم مشاريع مستدامة ورؤيوية في منطقة الشرق الأوسط وشمال أفريقيا.",
+    "defaultTitleAr": "جريين ستوديو قطر | عمارة وتصميم في الشرق الأوسط وشمال أفريقيا",
+    "defaultDescriptionAr": "مكتب هندسة معمارية وتصميم معاصر يقدم مشاريع مستدامة ورؤيوية في منطقة الشرق الأوسط وشمال أفريقيا."
+  },
+  "admin": {
+    "loginTitle": "تسجيل دخول المشرفين",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "signIn": "تسجيل الدخول",
+    "signOut": "تسجيل الخروج",
+    "dashboard": "لوحة التحكم",
+    "projects": "المشاريع",
+    "services": "الخدمات",
+    "team": "الفريق",
+    "testimonials": "آراء العملاء",
+    "blog": "المقالات",
+    "consultations": "طلبات الاستشارة",
+    "messages": "رسائل التواصل",
+    "settings": "الإعدادات",
+    "addNew": "إضافة جديد",
+    "edit": "تعديل",
+    "delete": "حذف",
+    "save": "حفظ",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "loading": "جارٍ التحميل...",
+    "notFound": "غير موجود",
+    "unauthorized": "غير مصرح",
+    "noResults": "لا توجد نتائج",
+    "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة"
+  },
+  "journal": {
+    "title": "المدونة",
+    "subtitle": "أفكار حول العمارة والتصميم والبيئة المبنية في منطقة الشرق الأوسط وشمال أفريقيا.",
+    "readMore": "اقرأ المزيد",
+    "publishedOn": "نُشر في",
+    "by": "بواسطة",
+    "tags": "الوسوم",
+    "share": "مشاركة",
+    "relatedPosts": "مقالات ذات صلة",
+    "noPosts": "لا توجد مقالات بعد",
+    "backToJournal": "العودة إلى المدونة"
+  },
+  "philosophy": {
+    "title": "فلسفتنا",
+    "subtitle": "تصميم موجه بالغرض والمكان والناس.",
+    "intro": "في جريين ستوديو قطر، نؤمن بأن العمارة هي أكثر من مجرد بناء - إنها فعل تعبير ثقافي وإشراف بيئي ومسؤولية اجتماعية. فلسفتنا تقوم على ثلاث ركائز:",
+    "pillar1Title": "التصميم السياقي",
+    "pillar1Body": "كل مشروع يبدأ بقراءة عميقة لسياقه - المناخ، والمناظر الطبيعية، والنسيج الحضري، والحمض النووي الثقافي للمكان. نصمم مع بيئتنا، وليس ضدها.",
+    "pillar2Title": "الابتكار المستدام",
+    "pillar2Body": "نرى الاستدامة ليست كقائمة مراجعة بل كفلسفة تصميم. من استراتيجيات التبريد السلبي إلى اختيار المواد، كل قرار يُتخذ مع مراعاة صحة الكوكب على المدى الطويل.",
+    "pillar3Title": "التجربة الإنسانية",
+    "pillar3Body": "العمارة العظيمة تُشعر بها قبل أن تُرى. نعطي الأولوية للتجربة الإنسانية - الضوء، والتناسب، والمادية، والصفات الحسية التي تجعل المساحة تنبض بالحياة."
+  },
+  "careers": {
+    "title": "انضم إلى فريقنا",
+    "subtitle": "نبحث دائماً عن أشخاص موهوبين يشاركوننا شغفنا بالتميز في التصميم.",
+    "noOpenings": "لا توجد وظائف شاغرة حالياً. يرجى العودة لاحقاً أو إرسال سيرتك الذاتية إلى careers@greenstudioqatar.com.",
+    "applyCta": "أرسل طلبك"
+  },
+  "legal": {
+    "privacy": {
+      "title": "سياسة الخصوصية",
+      "lastUpdated": "آخر تحديث: يناير 2026",
+      "intro": "يحترم جريين ستوديو قطر خصوصيتك. توضح هذه السياسة كيفية جمعنا واستخدامنا وحماية بياناتك الشخصية.",
+      "section1Title": "المعلومات التي نجمعها",
+      "section1Body": "نجمع المعلومات التي تقدمها من خلال نماذج الاتصال والاستشارة لدينا، بما في ذلك اسمك وبريدك الإلكتروني ورقم هاتفك وتفاصيل مشروعك.",
+      "section2Title": "كيف نستخدم بياناتك",
+      "section2Body": "تُستخدم بياناتك فقط للرد على استفساراتك وتقديم الخدمات وتحسين عروضنا. لا نبيع أو نشارك بياناتك مع أطراف ثالثة.",
+      "section3Title": "أمن البيانات",
+      "section3Body": "نطبق إجراءات أمنية معقولة لحماية معلوماتك الشخصية. ومع ذلك، لا يوجد نقل عبر الإنترنت آمن تماماً.",
+      "section4Title": "اتصل بنا",
+      "section4Body": "للاستفسارات المتعلقة بالخصوصية، اتصل بنا على info@greenstudioqatar.com."
+    },
+    "terms": {
+      "title": "شروط الخدمة",
+      "lastUpdated": "آخر تحديث: يناير 2026",
+      "intro": "باستخدام موقع جريين ستوديو قطر وخدماته، فإنك توافق على هذه الشروط.",
+      "section1Title": "الخدمات",
+      "section1Body": "جميع الخدمات مقدمة بموجب اتفاقية كتابية منفصلة. محتوى الموقع لأغراض إعلامية فقط.",
+      "section2Title": "الملكية الفكرية",
+      "section2Body": "جميع صور المشاريع والتصاميم والمحتوى على هذا الموقع هي ملكية فكرية لجريين ستوديو قطر ما لم يذكر خلاف ذلك.",
+      "section3Title": "حدود المسؤولية",
+      "section3Body": "لا يتحمل جريين ستوديو قطر أي مسؤولية عن أي أضرار ناشئة عن استخدام هذا الموقع.",
+      "section4Title": "القانون الحاكم",
+      "section4Body": "تخضع هذه الشروط لقوانين دولة قطر."
+    }
+  },
+  "common": {
+    "loading": "جارٍ التحميل...",
+    "error": "حدث خطأ",
+    "notFound": "الصفحة غير موجودة",
+    "backToHome": "العودة إلى الرئيسية",
+    "pageNotFound": "عذراً! لم يتم العثور على هذه الصفحة.",
+    "readMore": "اقرأ المزيد",
+    "learnMore": "اعرف المزيد",
+    "close": "إغلاق",
+    "menu": "القائمة",
+    "search": "بحث",
+    "noResults": "لا توجد نتائج",
+    "language": "اللغة",
+    "english": "English",
+    "arabic": "العربية"
+  }
+}

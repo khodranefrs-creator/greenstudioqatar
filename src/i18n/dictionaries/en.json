@@ -1,0 +1,362 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "services": "Services",
+    "about": "About",
+    "journal": "Journal",
+    "contact": "Contact",
+    "admin": "Admin",
+    "getConsultation": "Book a Consultation",
+    "ourProjects": "Our Projects",
+    "ourServices": "Our Services",
+    "ourTeam": "Our Team",
+    "testimonials": "Testimonials",
+    "process": "Our Process",
+    "philosophy": "Our Philosophy",
+    "faq": "FAQ",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "careers": "Careers"
+  },
+  "hero": {
+    "headline": "Architecture for a New Era",
+    "subheadline": "Contemporary design rooted in the cultural heritage of the MENA region.",
+    "ctaPrimary": "View Our Projects",
+    "ctaSecondary": "Book a Consultation",
+    "scrollHint": "Scroll to explore"
+  },
+  "trust": {
+    "projectsCompleted": "Projects Completed",
+    "yearsExperience": "Years of Experience",
+    "teamMembers": "Team Members",
+    "countriesServed": "Countries Served",
+    "description": "Trusted by developers, governments, and private clients across the Middle East and North Africa."
+  },
+  "services": {
+    "title": "What We Do",
+    "subtitle": "Comprehensive architecture and engineering services tailored to the MENA market.",
+    "viewDetails": "View Details",
+    "architectural-design": {
+      "title": "Architectural Design",
+      "summary": "From concept to construction documents, we deliver visionary architectural designs that respond to site, climate, and culture.",
+      "body": "At Green Studio Qatar, our architectural design practice is rooted in a deep understanding of the MENA region's unique environmental and cultural context. We create buildings that are not only visually striking but also performant, sustainable, and deeply connected to their surroundings. Our design process is collaborative, iterative, and data-informed, ensuring every project achieves its fullest potential.",
+      "deliverables": [
+        { "nameEn": "Concept Design", "nameAr": "التصميم المفاهيمي", "descriptionEn": "Initial design exploration including massing studies, site analysis, and conceptual diagrams.", "descriptionAr": "استكشاف التصميم الأولي بما في ذلك دراسات الكتلة وتحليل الموقع والرسوم البيانية المفاهيمية." },
+        { "nameEn": "Schematic Design", "nameAr": "التصميم المبدئي", "descriptionEn": "Refined design with floor plans, elevations, sections, and preliminary material selections.", "descriptionAr": "تصميم محسّن مع مخططات الطوابق والواجهات والقطاعات واختيارات المواد الأولية." },
+        { "nameEn": "Design Development", "nameAr": "تطوير التصميم", "descriptionEn": "Detailed architectural drawings with coordinated structural and MEP systems.", "descriptionAr": "رسومات معمارية مفصلة مع أنظمة هيكلية وميكانيكية وكهربائية وسباكة منسقة." },
+        { "nameEn": "Construction Documents", "nameAr": "وثائق البناء", "descriptionEn": "Comprehensive permit and construction sets including specifications and schedules.", "descriptionAr": "مجموعات شاملة لتصاريح البناء والإنشاءات تشمل المواصفات والجداول." }
+      ],
+      "faqs": [
+        { "questionEn": "What is the typical timeline for an architectural design project?", "questionAr": "ما هو الجدول الزمني النموذجي لمشروع التصميم المعماري؟", "answerEn": "Depending on scale and complexity, a full architectural design process typically takes 4-12 months from concept to construction documents.", "answerAr": "اعتمادًا على الحجم والتعقيد، تستغرق عملية التصميم المعماري الكاملة عادةً من 4 إلى 12 شهرًا من المفهوم إلى وثائق البناء." },
+        { "questionEn": "Do you offer sustainable design solutions?", "questionAr": "هل تقدمون حلول تصميم مستدامة؟", "answerEn": "Yes. Sustainability is core to our practice. We integrate passive design strategies, local materials, and energy-efficient systems into every project.", "answerAr": "نعم. الاستدامة هي جوهر ممارستنا. ندمج استراتيجيات التصميم السلبي والمواد المحلية والأنظمة الموفرة للطاقة في كل مشروع." }
+      ]
+    },
+    "interior-design": {
+      "title": "Interior Design",
+      "summary": "Spatial experiences that blend contemporary aesthetics with regional craftsmanship.",
+      "body": "Our interior design practice transforms spaces into immersive environments. We draw inspiration from the rich textile traditions, geometric patterns, and material palettes of the Arab world, reinterpreted through a contemporary lens. Every finish, furnishing, and detail is carefully curated to create harmony between form and function.",
+      "deliverables": [
+        { "nameEn": "Concept Design", "nameAr": "التصميم المفاهيمي", "descriptionEn": "Mood boards, material palettes, and spatial planning.", "descriptionAr": "لوحات المزاج ولوحات المواد والتخطيط المكاني." },
+        { "nameEn": "Design Development", "nameAr": "تطوير التصميم", "descriptionEn": "Detailed drawings, FF&E schedules, and custom millwork designs.", "descriptionAr": "رسومات مفصلة وجداول الأثاث والتجهيزات وتصاميم النجارة المخصصة." },
+        { "nameEn": "Construction Documents", "nameAr": "وثائق البناء", "descriptionEn": "Interior construction packages including finishes, lighting, and joinery.", "descriptionAr": "حزم البناء الداخلي تشمل التشطيبات والإضاءة والنجارة." },
+        { "nameEn": "Installation Oversight", "nameAr": "الإشراف على التركيب", "descriptionEn": "On-site supervision during installation and styling.", "descriptionAr": "الإشراف في الموقع أثناء التركيب والتنسيق." }
+      ],
+      "faqs": [
+        { "questionEn": "Do you work on both residential and commercial interiors?", "questionAr": "هل تعملون في المساحات الداخلية السكنية والتجارية؟", "answerEn": "Absolutely. We handle a wide range of interior typologies including private residences, offices, hospitality venues, and retail spaces.", "answerAr": "بالتأكيد. نتعامل مع مجموعة واسعة من أنواع المساحات الداخلية بما في ذلك المساكن الخاصة والمكاتب ومرافق الضيافة والمساحات التجارية." }
+      ]
+    },
+    "engineering-consultancy": {
+      "title": "Engineering Consultancy",
+      "summary": "Structural, civil, and MEP engineering services that ensure safety, efficiency, and constructability.",
+      "body": "Our engineering consultancy team provides expert analysis and design across structural, civil, and MEP disciplines. We leverage advanced simulation tools and deep local knowledge to deliver engineering solutions that are both innovative and practical. From tall towers in Doha to complex infrastructure projects, our work ensures every building stands on a foundation of technical excellence.",
+      "deliverables": [
+        { "nameEn": "Structural Engineering", "nameAr": "الهندسة الإنشائية", "descriptionEn": "Structural analysis, framing design, and foundation engineering.", "descriptionAr": "التحليل الإنشائي وتصميم الإطارات وهندسة الأساسات." },
+        { "nameEn": "MEP Engineering", "nameAr": "الهندسة الميكانيكية والكهربائية والسباكة", "descriptionEn": "Mechanical, electrical, and plumbing system design.", "descriptionAr": "تصميم الأنظمة الميكانيكية والكهربائية وأنظمة السباكة." },
+        { "nameEn": "Civil Engineering", "nameAr": "الهندسة المدنية", "descriptionEn": "Site grading, drainage, and utility design.", "descriptionAr": "تسوية الموقع وتصريف المياه وتصميم المرافق." },
+        { "nameEn": "Value Engineering", "nameAr": "الهندسة القيمية", "descriptionEn": "Cost optimization without compromising quality or performance.", "descriptionAr": "تحسين التكاليف دون المساس بالجودة أو الأداء." }
+      ],
+      "faqs": [
+        { "questionEn": "Which engineering software do you use?", "questionAr": "ما هي برامج الهندسة التي تستخدمونها؟", "answerEn": "We use industry-standard tools including ETABS, SAP2000, SAFE, Revit, Robot Structural Analysis, and AutoCAD MEP.", "answerAr": "نستخدم أدوات قياسية في المجال بما في ذلك ETABS و SAP2000 و SAFE و Revit و Robot Structural Analysis و AutoCAD MEP." }
+      ]
+    },
+    "project-management": {
+      "title": "Project Management",
+      "summary": "End-to-end project management from feasibility through handover, keeping your project on time and on budget.",
+      "body": "We manage projects with the precision and care they deserve. Our project management team oversees every phase — from initial feasibility studies and budgeting through procurement, construction, and final handover. With deep experience in the MENA construction market, we anticipate risks before they materialize and keep stakeholders aligned throughout the project lifecycle.",
+      "deliverables": [
+        { "nameEn": "Feasibility Studies", "nameAr": "دراسات الجدوى", "descriptionEn": "Site evaluation, market analysis, and financial modeling.", "descriptionAr": "تقييم الموقع وتحليل السوق والنمذجة المالية." },
+        { "nameEn": "Budgeting & Cost Control", "nameAr": "إعداد الميزانية والتحكم في التكاليف", "descriptionEn": "Detailed cost estimates, value engineering, and expense tracking.", "descriptionAr": "تقديرات التكلفة التفصيلية والهندسة القيمية وتتبع النفقات." },
+        { "nameEn": "Procurement Management", "nameAr": "إدارة المشتريات", "descriptionEn": "Tendering, contractor selection, and contract administration.", "descriptionAr": "المناقصات واختيار المقاولين وإدارة العقود." },
+        { "nameEn": "Construction Oversight", "nameAr": "الإشراف على البناء", "descriptionEn": "Schedule management, quality control, and progress reporting.", "descriptionAr": "إدارة الجدول الزمني ومراقبة الجودة وتقارير التقدم." }
+      ],
+      "faqs": [
+        { "questionEn": "What project management methodology do you use?", "questionAr": "ما هي منهجية إدارة المشاريع التي تستخدمونها؟", "answerEn": "We follow PMI standards with a tailored approach for construction projects, using tools like Primavera P6 and MS Project.", "answerAr": "نتبع معايير معهد إدارة المشاريع مع نهج مخصص لمشاريع البناء، باستخدام أدوات مثل Primavera P6 و MS Project." }
+      ]
+    },
+    "construction-supervision": {
+      "title": "Construction Supervision",
+      "summary": "On-site supervision ensuring design intent is faithfully executed to the highest quality standards.",
+      "body": "Great design deserves great execution. Our construction supervision team provides dedicated on-site representation to ensure that every element of the design is built exactly as intended. We conduct regular inspections, review submittals, coordinate with contractors, and provide detailed progress reports — safeguarding quality, schedule, and budget throughout the construction phase.",
+      "deliverables": [
+        { "nameEn": "Site Monitoring", "nameAr": "مراقبة الموقع", "descriptionEn": "Regular site visits and inspection reports.", "descriptionAr": "زيارات دورية للموقع وتقارير التفتيش." },
+        { "nameEn": "Quality Assurance", "nameAr": "ضمان الجودة", "descriptionEn": "Material testing, workmanship verification, and compliance checks.", "descriptionAr": "اختبار المواد والتحقق من جودة التنفيذ وفحوص الامتثال." },
+        { "nameEn": "Progress Reporting", "nameAr": "تقارير التقدم", "descriptionEn": "Weekly and monthly progress reports with photographic documentation.", "descriptionAr": "تقارير أسبوعية وشهرية عن التقدم مع توثيق بالصور." },
+        { "nameEn": "Snagging & Handover", "nameAr": "قائمة العيوب والتسليم", "descriptionEn": "Defect identification, punch list management, and final handover.", "descriptionAr": "تحديد العيوب وإدارة قائمة الملاحظات والتسليم النهائي." }
+      ],
+      "faqs": [
+        { "questionEn": "Do you provide supervision for projects not originally designed by you?", "questionAr": "هل تقدمون الإشراف للمشاريع التي لم تصمموها في الأصل؟", "answerEn": "Yes. We frequently serve as supervision consultant on projects designed by other firms, bringing our quality assurance expertise to any project.", "answerAr": "نعم. نعمل في كثير من الأحيان كمستشار إشراف في مشاريع صممتها مكاتب أخرى، ونقدم خبرتنا في ضمان الجودة لأي مشروع." }
+      ]
+    }
+  },
+  "projects": {
+    "title": "Our Projects",
+    "subtitle": "A curated selection of our work across the MENA region.",
+    "allProjects": "All Projects",
+    "filterLabel": "Filter by typology",
+    "viewProject": "View Project",
+    "specifications": "Technical Specifications",
+    "type": "Typology",
+    "location": "Location",
+    "year": "Year",
+    "size": "Size",
+    "client": "Client",
+    "status": "Status",
+    "gallery": "Project Gallery",
+    "relatedProjects": "Related Projects",
+    "completed": "Completed",
+    "ongoing": "Ongoing",
+    "concept": "Concept",
+    "noProjects": "No projects found",
+    "backToProjects": "Back to Projects",
+    "residential": "Residential",
+    "commercial": "Commercial",
+    "government": "Government",
+    "hospitality": "Hospitality",
+    "interior": "Interior Design",
+    "mixed-use": "Mixed-Use",
+    "cultural": "Cultural",
+    "healthcare": "Healthcare",
+    "educational": "Educational",
+    "resort": "Resort",
+    "retail": "Retail",
+    "master-plan": "Master Plan"
+  },
+  "about": {
+    "title": "About Green Studio Qatar",
+    "subtitle": "A contemporary architecture firm crafting meaningful spaces across the MENA region.",
+    "story": "Founded in 2015, Green Studio Qatar emerged from a conviction that architecture in the MENA region deserves a new paradigm — one that honors rich cultural traditions while embracing innovation and sustainability. Our team of architects, engineers, and designers brings together diverse expertise united by a common purpose: to create buildings that inspire, perform, and endure. With offices in Doha and project experience spanning from Algiers to Dubai, we are privileged to shape the built environment of a rapidly evolving region.",
+    "missionTitle": "Our Mission",
+    "mission": "To deliver architecture of the highest quality — designs that are conceptually rigorous, environmentally responsible, and deeply responsive to the communities they serve.",
+    "visionTitle": "Our Vision",
+    "vision": "To be the leading architecture and design firm in the MENA region, recognized globally for design excellence, sustainability, and cultural sensitivity.",
+    "valuesTitle": "Our Values",
+    "values": [
+      { "title": "Excellence", "description": "We pursue the highest standards in every project, regardless of scale or budget." },
+      { "title": "Sustainability", "description": "We integrate environmental stewardship into every stage of design and construction." },
+      { "title": "Cultural Resonance", "description": "We design with deep respect for the heritage, traditions, and aspirations of the communities we serve." },
+      { "title": "Collaboration", "description": "We believe the best outcomes emerge from open dialogue between clients, consultants, and communities." },
+      { "title": "Innovation", "description": "We embrace new technologies, materials, and methodologies to push the boundaries of what is possible." }
+    ]
+  },
+  "team": {
+    "title": "Our Team",
+    "subtitle": "The people behind our projects.",
+    "role": "Role",
+    "credentials": "Credentials",
+    "linkedServices": "Expertise"
+  },
+  "process": {
+    "title": "How We Work",
+    "subtitle": "A collaborative, transparent process from concept to completion.",
+    "steps": [
+      { "title": "Discovery", "description": "We begin by understanding your vision, site, and goals through in-depth consultation and research." },
+      { "title": "Concept Design", "description": "We translate insights into design concepts, exploring massing, materiality, and spatial organization." },
+      { "title": "Design Development", "description": "We refine the selected concept into detailed drawings and specifications, coordinating all disciplines." },
+      { "title": "Documentation & Permitting", "description": "We prepare comprehensive construction documents and navigate the permitting process." },
+      { "title": "Construction Oversight", "description": "We provide on-site supervision to ensure the design is executed with precision and quality." },
+      { "title": "Handover & Beyond", "description": "We complete snagging, assist with occupancy, and remain available for post-occupancy support." }
+    ]
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Trust built through successful partnerships."
+  },
+  "contact": {
+    "title": "Get in Touch",
+    "subtitle": "Ready to start a project? Reach out to our team.",
+    "formTitle": "Send us a message",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "subject": "Subject",
+    "message": "Your Message",
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "success": "Your message has been sent. We will get back to you within 24 hours.",
+    "error": "Something went wrong. Please try again.",
+    "officeTitle": "Our Office",
+    "address": "West Bay, Doha, Qatar",
+    "phoneLabel": "Phone",
+    "emailLabel": "Email",
+    "mapTitle": "Find Us"
+  },
+  "consultation": {
+    "title": "Book a Consultation",
+    "subtitle": "Tell us about your project and we will tailor a proposal to your needs.",
+    "step1": "Project Type",
+    "step2": "Project Details",
+    "step3": "Contact Information",
+    "step4": "Review & Submit",
+    "projectType": "Project Type",
+    "projectTypePlaceholder": "Select the type of project",
+    "residential": "Residential Villa",
+    "commercial": "Commercial Building",
+    "government": "Government Facility",
+    "hospitality": "Hospitality / Hotel",
+    "interior": "Interior Fit-Out",
+    "mixed-use": "Mixed-Use Development",
+    "siteArea": "Approximate Site Area (sqm)",
+    "budgetTier": "Budget Range",
+    "budgetTierPlaceholder": "Select budget range",
+    "budgetSmall": "Under 1M QAR",
+    "budgetMedium": "1M – 5M QAR",
+    "budgetLarge": "5M – 15M QAR",
+    "budgetXL": "15M+ QAR",
+    "timelineMonths": "Desired Timeline (months)",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "countryCode": "Country Code",
+    "company": "Company (Optional)",
+    "additionalInfo": "Additional Information (Optional)",
+    "additionalInfoPlaceholder": "Any specific requirements or questions...",
+    "previous": "Previous",
+    "next": "Next",
+    "submit": "Submit Consultation Request",
+    "success": "Thank you! Your consultation request has been received. Our team will contact you within 48 hours.",
+    "error": "There was an error submitting your request. Please try again."
+  },
+  "footer": {
+    "description": "Green Studio Qatar is a contemporary architecture and engineering firm delivering visionary projects across the MENA region.",
+    "quickLinks": "Quick Links",
+    "services": "Our Services",
+    "contact": "Contact Us",
+    "followUs": "Follow Us",
+    "newsletter": "Newsletter",
+    "newsletterPlaceholder": "Enter your email",
+    "newsletterSubmit": "Subscribe",
+    "newsletterSuccess": "Thank you for subscribing!",
+    "rights": "All rights reserved.",
+    "madeWith": "Made with",
+    "inDoha": "in Doha, Qatar"
+  },
+  "seo": {
+    "defaultTitle": "Green Studio Qatar | Architecture & Design in the MENA Region",
+    "defaultDescription": "A contemporary architecture and design firm delivering sustainable, visionary projects across the MENA region.",
+    "defaultTitleAr": "جريين ستوديو قطر | عمارة وتصميم في الشرق الأوسط وشمال أفريقيا",
+    "defaultDescriptionAr": "مكتب هندسة معمارية وتصميم معاصر يقدم مشاريع مستدامة ورؤيوية في منطقة الشرق الأوسط وشمال أفريقيا."
+  },
+  "admin": {
+    "loginTitle": "Admin Login",
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign In",
+    "signOut": "Sign Out",
+    "dashboard": "Dashboard",
+    "projects": "Projects",
+    "services": "Services",
+    "team": "Team",
+    "testimonials": "Testimonials",
+    "blog": "Blog Posts",
+    "consultations": "Consultation Requests",
+    "messages": "Contact Messages",
+    "settings": "Settings",
+    "addNew": "Add New",
+    "edit": "Edit",
+    "delete": "Delete",
+    "save": "Save",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "loading": "Loading...",
+    "notFound": "Not found",
+    "unauthorized": "Unauthorized",
+    "noResults": "No results",
+    "invalidCredentials": "Invalid email or password"
+  },
+  "journal": {
+    "title": "Journal",
+    "subtitle": "Thoughts on architecture, design, and the built environment in the MENA region.",
+    "readMore": "Read More",
+    "publishedOn": "Published on",
+    "by": "by",
+    "tags": "Tags",
+    "share": "Share",
+    "relatedPosts": "Related Posts",
+    "noPosts": "No articles yet",
+    "backToJournal": "Back to Journal"
+  },
+  "philosophy": {
+    "title": "Our Philosophy",
+    "subtitle": "Design guided by purpose, place, and people.",
+    "intro": "At Green Studio Qatar, we believe architecture is more than building — it is an act of cultural expression, environmental stewardship, and social responsibility. Our philosophy is rooted in three pillars:",
+    "pillar1Title": "Contextual Design",
+    "pillar1Body": "Every project begins with a deep reading of its context — the climate, the landscape, the urban fabric, and the cultural DNA of the place. We design with, not against, our environment.",
+    "pillar2Title": "Sustainable Innovation",
+    "pillar2Body": "We see sustainability not as a checklist but as a design ethos. From passive cooling strategies to material selection, every decision is made with the long-term health of the planet in mind.",
+    "pillar3Title": "Human Experience",
+    "pillar3Body": "Great architecture is felt before it is seen. We prioritize the human experience — light, proportion, materiality, and the sensory qualities that make a space come alive."
+  },
+  "careers": {
+    "title": "Join Our Team",
+    "subtitle": "We are always looking for talented individuals who share our passion for design excellence.",
+    "noOpenings": "No current openings. Please check back later or send your CV to careers@greenstudioqatar.com.",
+    "applyCta": "Send Your Application"
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: January 2026",
+      "intro": "Green Studio Qatar respects your privacy. This policy outlines how we collect, use, and protect your personal data.",
+      "section1Title": "Information We Collect",
+      "section1Body": "We collect information you provide through our contact and consultation forms, including your name, email, phone number, and project details.",
+      "section2Title": "How We Use Your Data",
+      "section2Body": "Your data is used solely to respond to your inquiries, provide services, and improve our offerings. We do not sell or share your data with third parties.",
+      "section3Title": "Data Security",
+      "section3Body": "We implement reasonable security measures to protect your personal information. However, no internet transmission is completely secure.",
+      "section4Title": "Contact",
+      "section4Body": "For privacy-related inquiries, contact us at info@greenstudioqatar.com."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated: January 2026",
+      "intro": "By using the Green Studio Qatar website and services, you agree to these terms.",
+      "section1Title": "Services",
+      "section1Body": "All services are provided under a separate written agreement. Website content is for informational purposes only.",
+      "section2Title": "Intellectual Property",
+      "section2Body": "All project images, designs, and content on this website are the intellectual property of Green Studio Qatar unless otherwise noted.",
+      "section3Title": "Limitation of Liability",
+      "section3Body": "Green Studio Qatar shall not be held liable for any damages arising from the use of this website.",
+      "section4Title": "Governing Law",
+      "section4Body": "These terms are governed by the laws of the State of Qatar."
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "notFound": "Page not found",
+    "backToHome": "Back to Home",
+    "pageNotFound": "Oops! This page could not be found.",
+    "readMore": "Read More",
+    "learnMore": "Learn More",
+    "close": "Close",
+    "menu": "Menu",
+    "search": "Search",
+    "noResults": "No results found",
+    "language": "Language",
+    "english": "English",
+    "arabic": "العربية"
+  }
+}

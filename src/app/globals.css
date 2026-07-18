@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-charcoal: #111110;
+  --color-offwhite: #F7F5F1;
+  --color-accent: #2F3A2C;
+  --color-accent-light: #4A5E46;
+  --color-accent-dark: #1E2721;
+  --color-muted: #8C8880;
+  --color-border: #E5E2DC;
+  --color-surface: #FFFFFF;
+  --color-surface-secondary: #F0EEE8;
+
+  --font-display: "Playfair Display", serif;
+  --font-body: "Inter", sans-serif;
+  --font-arabic: "Noto Kufi Arabic", sans-serif;
+
+  --spacing-section: 6rem;
+  --spacing-section-sm: 4rem;
+  --spacing-section-lg: 8rem;
+  --spacing-element: 1.5rem;
+  --spacing-gutter: 1.25rem;
+  --spacing-container: 1rem;
+
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius-full: 9999px;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-offwhite);
+  color: var(--color-charcoal);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-offwhite);
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-offwhite);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-muted);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
+
+.rtl {
+  direction: rtl;
+  font-family: var(--font-arabic);
+}
+
+.rtl .ltr-insist {
+  direction: ltr;
+  font-family: var(--font-body);
+}
+
+.ltr {
+  direction: ltr;
+}
+
+@keyframes kenBurns {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.hero-bg {
+  background:
+    linear-gradient(135deg, #1a1a1a 0%, #2d2d2a 25%, #1a1a1a 50%, #2d2d2a 75%, #1a1a1a 100%);
+  background-size: 200% 200%;
+  animation: kenBurns 20s ease-in-out infinite;
+}
+
+@keyframes scrollCue {
+  0% {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  50% {
+    opacity: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  51% {
+    transform-origin: bottom;
+  }
+  100% {
+    opacity: 0;
+    transform: scaleY(0);
+    transform-origin: bottom;
+  }
+}
+
+.scroll-cue {
+  animation: scrollCue 2s ease-in-out infinite;
+}
+
+@keyframes skeleton-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.animate-skeleton {
+  animation: skeleton-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-bg {
+    animation: none;
+  }
+  .scroll-cue {
+    animation: none;
+  }
+  .animate-skeleton {
+    animation: none;
+  }
+}
