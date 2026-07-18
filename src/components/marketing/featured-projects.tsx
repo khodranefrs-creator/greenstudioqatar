@@ -11,7 +11,7 @@ interface FeaturedProjectsProps {
 
 export default async function FeaturedProjects({ projects, locale }: FeaturedProjectsProps) {
   const dict = await getDictionary(locale);
-  const section = dict.featuredProjects as Record<string, string>;
+  const section = dict.projects as Record<string, string>;
 
   return (
     <section className="py-section-lg sm:py-section-lg">

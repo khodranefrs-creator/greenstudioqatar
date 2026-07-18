@@ -302,12 +302,19 @@
     "title": "Our Philosophy",
     "subtitle": "Design guided by purpose, place, and people.",
     "intro": "At Green Studio Qatar, we believe architecture is more than building — it is an act of cultural expression, environmental stewardship, and social responsibility. Our philosophy is rooted in three pillars:",
+    "p1": "Every project begins with a deep reading of its context — the climate, the landscape, the urban fabric, and the cultural DNA of the place. We design with, not against, our environment.",
+    "p2": "We see sustainability not as a checklist but as a design ethos. From passive cooling strategies to material selection, every decision is made with the long-term health of the planet in mind.",
+    "p3": "Great architecture is felt before it is seen. We prioritize the human experience — light, proportion, materiality, and the sensory qualities that make a space come alive.",
+    "pullQuote": "Architecture is the thoughtful making of space.",
     "pillar1Title": "Contextual Design",
     "pillar1Body": "Every project begins with a deep reading of its context — the climate, the landscape, the urban fabric, and the cultural DNA of the place. We design with, not against, our environment.",
     "pillar2Title": "Sustainable Innovation",
     "pillar2Body": "We see sustainability not as a checklist but as a design ethos. From passive cooling strategies to material selection, every decision is made with the long-term health of the planet in mind.",
     "pillar3Title": "Human Experience",
     "pillar3Body": "Great architecture is felt before it is seen. We prioritize the human experience — light, proportion, materiality, and the sensory qualities that make a space come alive."
+  },
+  "awards": {
+    "title": "Certifications & Awards"
   },
   "careers": {
     "title": "Join Our Team",

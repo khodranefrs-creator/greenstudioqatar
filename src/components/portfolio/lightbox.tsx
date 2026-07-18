@@ -27,9 +27,10 @@ export default function Lightbox({
 
   useEffect(() => {
     if (isOpen && initialIndex !== currentIndex) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setCurrentIndex(initialIndex);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps, react-hooks/set-state-in-effect
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isOpen, initialIndex]);
 
   const navigate = useCallback(

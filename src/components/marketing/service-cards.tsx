@@ -70,7 +70,7 @@ export default async function ServiceCards({ services, locale }: ServiceCardsPro
                 href={`/${locale}/services/${service.slug}`}
                 className="mt-4 inline-flex items-center font-body text-sm text-charcoal underline decoration-border underline-offset-4 transition-colors hover:text-accent"
               >
-                {section.learnMore} →
+                {section.viewDetails} →
               </Link>
             </div>
           ))}

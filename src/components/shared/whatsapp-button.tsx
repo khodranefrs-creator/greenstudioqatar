@@ -20,10 +20,10 @@ export function WhatsAppButton({
   useEffect(() => {
     const wasDismissed = localStorage.getItem("whatsapp-dismissed") === "true";
     if (wasDismissed) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setDismissed(true);
     }
     setHydrated(true);
-    // eslint-disable-next-line react-hooks/set-state-in-effect
   }, []);
 
   useEffect(() => {

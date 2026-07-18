@@ -21,13 +21,13 @@ export default function AnimatedSection({
 
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setReducedMotion(reduced);
 
     if (reduced) {
       setIsVisible(true);
       return;
     }
-    // eslint-disable-next-line react-hooks/set-state-in-effect
 
     const node = ref.current;
     if (!node) return;
