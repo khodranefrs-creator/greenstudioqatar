@@ -17,29 +17,34 @@ export default async function ProcessTimeline({ locale }: ProcessTimelineProps) 
 
   return (
     <section className="py-section-lg sm:py-section-lg">
-      <div className="mx-auto max-w-7xl px-6 sm:px-8 md:px-12 lg:px-16">
-        <h2 className="font-display text-3xl font-light tracking-tight text-charcoal sm:text-4xl md:text-5xl">
-          {String(processSection.title)}
-        </h2>
+      <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16">
+        <div className="text-center">
+          <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-muted">
+            {locale === 'ar' ? 'كيف نعمل' : 'How We Work'}
+          </p>
+          <h2 className="mt-3 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-5xl">
+            {String(processSection.title)}
+          </h2>
+        </div>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6">
+        <div className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {steps.map((step, index) => (
-              <div key={index} className="relative">
+            <div key={index} className="group relative">
+              <div className="flex items-center gap-4">
+                <span className="font-display text-4xl font-light text-charcoal/[0.08] transition-colors duration-300 group-hover:text-accent/20">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
                 {index < steps.length - 1 && (
-                  <div className="absolute top-4 hidden h-px w-full bg-border lg:block" />
+                  <div className="hidden lg:block flex-1 h-px bg-border" />
                 )}
-                <div className="relative flex flex-col items-start">
-                  <div className="flex h-8 w-8 items-center justify-center border border-border font-body text-xs text-muted">
-                    {String(index + 1).padStart(2, '0')}
-                  </div>
-                  <h3 className="mt-4 font-display text-base font-normal text-charcoal">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2 font-body text-sm leading-relaxed text-muted">
-                    {step.description}
-                  </p>
-                </div>
               </div>
+              <h3 className="mt-5 font-display text-lg font-normal text-charcoal leading-snug">
+                {step.title}
+              </h3>
+              <p className="mt-3 font-body text-[0.8rem] leading-[1.8] text-muted">
+                {step.description}
+              </p>
+            </div>
           ))}
         </div>
       </div>
