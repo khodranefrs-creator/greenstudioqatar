@@ -18,7 +18,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
   return (
     <NextIntlClientProvider locale={typedLocale} messages={messages}>
-      <div className={locale === "ar" ? "rtl" : "ltr"} dir={locale === "ar" ? "rtl" : "ltr"}>
+      <div className={locale === "ar" ? "rtl" : "ltr"}>
         <Header locale={locale} />
         <main className="flex-1">{children}</main>
         <Footer locale={typedLocale} />

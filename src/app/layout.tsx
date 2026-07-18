@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter, Noto_Kufi_Arabic } from "next/font/google";
+import { getLocale } from "next-intl/server";
+import { type Locale } from "@/i18n/routing";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -20,6 +22,18 @@ const notoKufiArabic = Noto_Kufi_Arabic({
   display: "swap",
 });
 
+function getDirection(locale: string): "ltr" | "rtl" {
+  return locale === "ar" ? "rtl" : "ltr";
+}
+
+async function resolveLocale(): Promise<Locale> {
+  try {
+    return (await getLocale()) as Locale;
+  } catch {
+    return "en";
+  }
+}
+
 export const metadata: Metadata = {
   title: {
     template: "%s | Green Studio Qatar",
@@ -34,15 +48,18 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await resolveLocale();
+  const dir = getDirection(locale);
+
   return (
     <html
-      lang="en"
-      dir="ltr"
+      lang={locale}
+      dir={dir}
       className={`${playfairDisplay.variable} ${inter.variable} ${notoKufiArabic.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
