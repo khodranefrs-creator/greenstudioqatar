@@ -30,7 +30,7 @@ export async function Footer({ locale }: FooterProps) {
     <footer className="bg-offwhite border-t border-border">
       <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16 py-16 lg:py-20">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-10">
-          <div className="lg:col-span-4">
+          <div className="lg:col-span-5">
             <Link
               href={`/${locale}`}
               className="font-display text-[1.1rem] font-semibold tracking-[0.25em] uppercase text-charcoal"
@@ -45,7 +45,7 @@ export async function Footer({ locale }: FooterProps) {
             </div>
           </div>
 
-          <div className="lg:col-span-3">
+          <div className="lg:col-span-2">
             <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-charcoal">
               {footer.services}
             </h3>

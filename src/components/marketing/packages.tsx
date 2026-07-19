@@ -24,14 +24,14 @@ export default async function Packages({ locale }: PackagesProps) {
   return (
     <section className="bg-surface py-section-lg sm:py-section-xl">
       <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16">
-        <div className="text-center">
+        <div>
           <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-muted">
             {locale === 'ar' ? 'التعاون' : 'Engagement'}
           </p>
           <h2 className="mt-4 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-5xl">
             {section.title}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl font-body text-sm text-muted sm:text-[0.95rem]">
+          <p className="mt-4 max-w-2xl font-body text-sm text-muted sm:text-[0.95rem]">
             {section.subtitle}
           </p>
         </div>
@@ -82,7 +82,7 @@ export default async function Packages({ locale }: PackagesProps) {
           )}
         </div>
 
-        <div className="mt-14 text-center">
+        <div className="mt-14">
           <p className="font-body text-sm text-muted">{section.customQuote}</p>
           <Link
             href={`/${locale}/contact`}

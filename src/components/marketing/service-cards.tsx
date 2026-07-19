@@ -30,18 +30,31 @@ export default async function ServiceCards({ services, locale }: ServiceCardsPro
   return (
     <section className="bg-surface-secondary py-section-xl sm:py-section-xl">
       <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16">
-        <div className="mx-auto max-w-4xl">
-          <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-muted">
-            {locale === 'ar' ? 'الخدمات' : 'Services'}
-          </p>
-          <h2 className="mt-4 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-5xl">
-            {section.heading}
-          </h2>
-          <p className="mt-6 font-body text-base leading-[1.85] text-muted sm:text-[1.05rem]">
-            {section.description}
-          </p>
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
+          <div className="lg:col-span-4">
+            <div className="lg:sticky lg:top-32">
+              <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-muted">
+                {locale === 'ar' ? 'الخدمات' : 'Services'}
+              </p>
+              <h2 className="mt-4 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-5xl">
+                {section.heading}
+              </h2>
+              <p className="mt-6 font-body text-base leading-[1.85] text-muted sm:text-[1.05rem]">
+                {section.description}
+              </p>
+              <div className="mt-10">
+                <Link
+                  href={`/${locale}/services`}
+                  className="group inline-flex items-center gap-2 border-b border-charcoal/20 pb-0.5 font-body text-[0.9rem] font-medium tracking-wide text-charcoal transition-colors duration-300 hover:border-charcoal"
+                >
+                  {locale === 'ar' ? 'عرض كل الخدمات' : 'View all services'}
+                  <Arrow locale={locale} />
+                </Link>
+              </div>
+            </div>
+          </div>
 
-          <div className="mt-12">
+          <div className="lg:col-span-8">
             {services.map((service, index) => {
               const number = String(index + 1).padStart(2, '0');
               const name = locale === 'ar' ? service.nameAr : service.nameEn;
@@ -71,16 +84,6 @@ export default async function ServiceCards({ services, locale }: ServiceCardsPro
               );
             })}
             <div className="border-t border-border" />
-          </div>
-
-          <div className="mt-10">
-            <Link
-              href={`/${locale}/services`}
-              className="group inline-flex items-center gap-2 border-b border-charcoal/20 pb-0.5 font-body text-[0.9rem] font-medium tracking-wide text-charcoal transition-colors duration-300 hover:border-charcoal"
-            >
-              {locale === 'ar' ? 'عرض كل الخدمات' : 'View all services'}
-              <Arrow locale={locale} />
-            </Link>
           </div>
         </div>
       </div>

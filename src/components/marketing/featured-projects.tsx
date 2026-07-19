@@ -16,7 +16,7 @@ export default async function FeaturedProjects({ projects, locale }: FeaturedPro
     return (
       <section className="py-section-lg sm:py-section-xl">
         <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16">
-          <div className="mx-auto max-w-3xl">
+          <div className="max-w-3xl">
             <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-muted">
               {locale === 'ar' ? 'أعمالنا' : 'Our Work'}
             </p>

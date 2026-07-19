@@ -18,11 +18,11 @@ export default async function CtaSection({ locale }: CtaSectionProps) {
 
   return (
     <section className="relative overflow-hidden bg-charcoal py-section-lg pb-28 sm:py-section-xl lg:pb-0">
-      <div className="relative mx-auto max-w-[90rem] px-6 text-center sm:px-10 md:px-12 lg:px-16">
+      <div className="relative mx-auto max-w-[90rem] px-6 sm:px-10 md:px-12 lg:px-16">
         <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-offwhite/40">
           {locale === 'ar' ? 'جاهزين للعمل' : 'Next Step'}
         </p>
-        <h2 className="mt-6 font-display text-3xl font-light leading-[1.15] tracking-[-0.02em] text-offwhite sm:text-4xl md:text-5xl lg:text-[4rem]">
+        <h2 className="mt-6 font-display text-3xl font-light leading-[1.15] tracking-[-0.02em] text-offwhite sm:text-4xl md:text-5xl lg:text-[4rem] lg:max-w-3xl">
           {headline}
         </h2>
         <div className="mt-10 sm:mt-12">
