@@ -167,3 +167,23 @@ export type ButtonVariant = "primary" | "secondary" | "ghost" | "link";
 export type ButtonSize = "sm" | "md" | "lg";
 
 export type BadgeVariant = "default" | "outline" | "accent";
+
+export interface Package {
+  id: string;
+  nameEn: string;
+  nameAr: string;
+  taglineEn: string;
+  taglineAr: string;
+  priceLabelEn: string;
+  priceLabelAr: string;
+  priceValue: number;
+  timelineEn: string;
+  timelineAr: string;
+  featuresEn: string[];
+  featuresAr: string[];
+  ctaEn: string;
+  ctaAr: string;
+  featured?: boolean;
+  popular?: boolean;
+  customQuote?: boolean;
+}

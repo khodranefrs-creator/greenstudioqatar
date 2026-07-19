@@ -6,7 +6,7 @@
   --color-accent: #2F3A2C;
   --color-accent-light: #4A5E46;
   --color-accent-dark: #1E2721;
-  --color-muted: #8C8880;
+  --color-muted: #6B6860;
   --color-border: #E5E2DC;
   --color-surface: #FFFFFF;
   --color-surface-secondary: #F0EEE8;
@@ -80,10 +80,9 @@ body {
 }
 
 @keyframes scrollCue {
-  0% { opacity: 0; transform: scaleY(0); transform-origin: top; }
-  50% { opacity: 1; transform: scaleY(1); transform-origin: top; }
-  51% { transform-origin: bottom; }
-  100% { opacity: 0; transform: scaleY(0); transform-origin: bottom; }
+  0% { opacity: 0; transform: translateY(-8px); }
+  50% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(8px); }
 }
 
 .scroll-cue {
@@ -106,7 +105,6 @@ body {
 
 .animate-fade-up {
   animation: fadeUp 0.8s ease-out forwards;
-  will-change: opacity, transform;
 }
 
 .animate-delay-100 { animation-delay: 0.1s; }
@@ -118,4 +116,9 @@ body {
   .scroll-cue { animation: none; }
   .animate-skeleton { animation: none; }
   .animate-fade-up { animation: none; opacity: 1; transform: none; }
+}
+
+*:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
 }

@@ -34,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           languages: {
             en: `${BASE_URL}/en${page}`,
             ar: `${BASE_URL}/ar${page}`,
+            'x-default': `${BASE_URL}/en${page}`,
           },
         },
       });
@@ -52,6 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           languages: {
             en: `${BASE_URL}/en/projects/${project.slug}`,
             ar: `${BASE_URL}/ar/projects/${project.slug}`,
+            'x-default': `${BASE_URL}/en/projects/${project.slug}`,
           },
         },
       });
@@ -70,6 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           languages: {
             en: `${BASE_URL}/en/services/${service.slug}`,
             ar: `${BASE_URL}/ar/services/${service.slug}`,
+            'x-default': `${BASE_URL}/en/services/${service.slug}`,
           },
         },
       });
@@ -88,6 +91,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
           languages: {
             en: `${BASE_URL}/en/journal/${post.slug}`,
             ar: `${BASE_URL}/ar/journal/${post.slug}`,
+            'x-default': `${BASE_URL}/en/journal/${post.slug}`,
           },
         },
       });

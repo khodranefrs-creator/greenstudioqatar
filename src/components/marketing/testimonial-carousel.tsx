@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect, useCallback } from "react";
-import Image from "next/image";
 import { Testimonial } from "@/types";
 
 interface TestimonialCarouselProps {
@@ -36,17 +35,21 @@ export default function TestimonialCarousel({ testimonials, locale }: Testimonia
       className="py-section-lg sm:py-section-lg"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
+      role="group"
+      aria-roledescription="carousel"
+      aria-label="Client testimonials"
     >
       <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16">
         <div className="mx-auto max-w-3xl text-center">
-          <svg viewBox="0 0 40 32" fill="none" className="mx-auto h-8 w-10 text-charcoal/10">
+          <svg viewBox="0 0 40 32" fill="none" className="mx-auto h-8 w-10 text-charcoal/10" aria-hidden="true">
             <path d="M0 32V20C0 9.4 5.2 2.6 16 0l1.6 4C10.4 5.8 7.2 10 6.4 16h8v16H0zm24 0V20C24 9.4 29.2 2.6 40 0l1.6 4C34.4 5.8 31.2 10 30.4 16h8v16H24z" fill="currentColor" />
           </svg>
 
-          <div className="relative min-h-[180px] sm:min-h-[160px] mt-6">
+          <div className="relative min-h-[180px] sm:min-h-[160px] mt-6" aria-live="polite">
             {testimonials.map((t, index) => (
               <div
                 key={t.id}
+                aria-hidden={index !== current}
                 className={`transition-all duration-700 ${
                   index === current ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3 absolute inset-0 pointer-events-none"
                 }`}
@@ -59,17 +62,11 @@ export default function TestimonialCarousel({ testimonials, locale }: Testimonia
           </div>
 
           <div className="mt-8 flex items-center justify-center gap-4">
-            {testimonial.clientPhoto && (
-              <div className="relative h-11 w-11 overflow-hidden ring-1 ring-border">
-                <Image
-                  src={testimonial.clientPhoto}
-                  alt={testimonial.clientName}
-                  fill
-                  sizes="44px"
-                  className="object-cover"
-                />
-              </div>
-            )}
+            <div className="flex h-11 w-11 items-center justify-center bg-charcoal/[0.04] ring-1 ring-border">
+              <span className="font-display text-[0.65rem] font-light tracking-wider text-charcoal/20">
+                {testimonial.clientName.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase()}
+              </span>
+            </div>
             <div className="text-start">
               <p className="font-body text-[0.8rem] font-medium text-charcoal">
                 {testimonial.clientName}
@@ -84,7 +81,7 @@ export default function TestimonialCarousel({ testimonials, locale }: Testimonia
           <div className="mt-10 flex items-center justify-center gap-3">
             <button
               onClick={prev}
-              className="flex h-9 w-9 items-center justify-center border border-border text-muted transition-colors hover:text-charcoal hover:border-charcoal/30"
+              className="flex h-11 w-11 items-center justify-center border border-border text-muted transition-colors hover:text-charcoal hover:border-charcoal/30"
               aria-label="Previous testimonial"
             >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" className="h-4 w-4">
@@ -96,16 +93,17 @@ export default function TestimonialCarousel({ testimonials, locale }: Testimonia
                 <button
                   key={index}
                   onClick={() => setCurrent(index)}
-                  className={`transition-all duration-300 ${
-                    index === current ? "w-6 h-[2px] bg-charcoal" : "w-[6px] h-[2px] bg-border hover:bg-muted"
+                  className={`h-3 min-w-3 transition-all duration-300 ${
+                    index === current ? "w-6 bg-charcoal" : "w-3 bg-border hover:bg-muted"
                   }`}
                   aria-label={`Go to testimonial ${index + 1}`}
+                  aria-pressed={index === current}
                 />
               ))}
             </div>
             <button
               onClick={next}
-              className="flex h-9 w-9 items-center justify-center border border-border text-muted transition-colors hover:text-charcoal hover:border-charcoal/30"
+              className="flex h-11 w-11 items-center justify-center border border-border text-muted transition-colors hover:text-charcoal hover:border-charcoal/30"
               aria-label="Next testimonial"
             >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" className="h-4 w-4">

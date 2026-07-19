@@ -9,14 +9,12 @@ export default async function AwardsBar({ locale }: AwardsBarProps) {
   const dict = await getDictionary(locale);
   const awards = dict.awards as Record<string, string>;
 
-  const certifications = [
-    'AIA Member',
-    'RIBA Chartered',
-    'ISO 9001:2015',
-    'LEED Accredited',
-    'Qatar Green Building Council',
-    'Excellence in Design Award 2023',
-  ];
+  // TODO: Replace with the firm's REAL certifications and awards.
+  // Current list contains individual credentials (AIA, RIBA, LEED) and unverifiable claims.
+  // Each item should be a verifiable, firm-level credential or award.
+  const certifications: string[] = [];
+
+  if (certifications.length === 0) return null;
 
   return (
     <section className="border-y border-border py-section-sm sm:py-section-sm">
@@ -28,7 +26,7 @@ export default async function AwardsBar({ locale }: AwardsBarProps) {
           {certifications.map((cert, index) => (
             <span key={cert} className="flex items-center">
               <span
-                className="font-body text-[0.8rem] tracking-wide text-muted/50 transition-colors duration-300 hover:text-charcoal px-6"
+                className="font-body text-[0.8rem] tracking-wide text-muted transition-colors duration-300 hover:text-charcoal px-6"
               >
                 {cert}
               </span>

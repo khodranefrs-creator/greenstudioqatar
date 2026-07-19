@@ -32,13 +32,14 @@ function siteName(locale: string): string {
   return locale === "ar" ? siteNameAr : siteNameEn;
 }
 
-function alternates(locale: string, path: string) {
+export function alternates(locale: string, path: string) {
   const basePath = path.replace(/^\//, "");
   return {
     canonical: `${SITE_URL}/${locale}/${basePath}`,
     languages: {
       en: `${SITE_URL}/en/${basePath}`,
       ar: `${SITE_URL}/ar/${basePath}`,
+      "x-default": `${SITE_URL}/en/${basePath}`,
     },
   };
 }
@@ -66,7 +67,7 @@ export function generateHomeMetadata(locale: string): Metadata {
       title,
       description,
       siteName: siteName(locale),
-      locale: locale === "ar" ? "ar_AE" : "en_US",
+      locale: locale === "ar" ? "ar_QA" : "en_US",
       type: "website",
       images: [{ url: defaultOgImage(), width: 1200, height: 630 }],
     },
@@ -143,7 +144,7 @@ export function generatePageMetadata({
   return {
     alternates: alternates(locale, route),
     openGraph: {
-      locale: locale === "ar" ? "ar_AE" : "en_US",
+      locale: locale === "ar" ? "ar_QA" : "en_US",
       siteName: siteName(locale),
     },
   };

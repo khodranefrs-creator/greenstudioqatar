@@ -1,121 +1,114 @@
 import { Service } from "@/types";
 
+// =============================================================================
+// SERVICES BASED ON VERIFIED COMPANY ACTIVITIES
+// =============================================================================
+// Categories verified from Green Studio for Design and Consultancy (Qatar):
+//
+// 1. Architecture & Design
+//    - Architectural Design, Concept Design, Interior Design, Engineering Design
+//
+// 2. Engineering Consultancy
+//    - Civil Engineering, Electrical Engineering, Engineering Consultations
+//
+// 3. Project Supervision & Management
+//    - Construction Supervision, Project Follow-up, Project Management
+//
+// 4. Interior Design
+//    - Interior Spaces, Decoration, Customized Design Solutions
+// =============================================================================
+
 export const services: Service[] = [
   {
     id: "1",
     slug: "architectural-design",
     nameEn: "Architectural Design",
     nameAr: "التصميم المعماري",
-    summaryEn: "From concept to construction documents, we deliver visionary architectural designs that respond to site, climate, and culture.",
-    summaryAr: "من المفهوم إلى وثائق البناء، نقدم تصاميم معمارية رؤيوية تستجيب للموقع والمناخ والثقافة.",
+    summaryEn: "Comprehensive architectural design from concept through construction documentation.",
+    summaryAr: "تصميم معماري شامل من المفهوم إلى توثيق البناء.",
     bodyEn:
-      "At Green Studio Qatar, our architectural design practice is rooted in a deep understanding of the MENA region's unique environmental and cultural context. We create buildings that are not only visually striking but also performant, sustainable, and deeply connected to their surroundings. Our process is collaborative and iterative, ensuring every project achieves its fullest potential.",
+      "Green Studio for Design and Consultancy provides architectural design services that respond to site, climate, and culture. Our design process covers concept development, schematic design, design development, and construction documentation. We work across residential, commercial, and institutional typologies in Qatar and the MENA region.",
     bodyAr:
-      "في جريين ستوديو قطر، تنبثق ممارستنا للتصميم المعماري من فهم عميق للسياق البيئي والثقافي الفريد لمنطقة الشرق الأوسط وشمال أفريقيا. نبني مباني ليست فقط مذهلة بصريًا بل فعالة ومستدامة ومتصلة بعمق بمحيطها. عمليتنا تعاونية وتكرارية، مما يضمن تحقيق كل مشروع لأقصى إمكاناته.",
-    heroImage: "https://images.unsplash.com/photo-1487958449943-2429e8be8955?w=1920&q=80",
+      "توفر جريين ستوديو للتصميم والاستشارات خدمات التصميم المعماري التي تستجيب للموقع والمناخ والثقافة. تغطي عملية التصميم لدينا تطوير المفهوم والتصميم المبدئي وتطوير التصميم وتوثيق البناء. نعمل عبر الأنواع السكنية والتجارية والمؤسسية في قطر ومنطقة الشرق الأوسط وشمال أفريقيا.",
+    heroImage: "",
     deliverables: [
-      { nameEn: "Concept Design", nameAr: "التصميم المفاهيمي", descriptionEn: "Massing studies, site analysis, and conceptual diagrams.", descriptionAr: "دراسات الكتلة، تحليل الموقع، والرسوم البيانية المفاهيمية." },
-      { nameEn: "Schematic Design", nameAr: "التصميم المبدئي", descriptionEn: "Floor plans, elevations, sections, and material selections.", descriptionAr: "مخططات الطوابق، الواجهات، القطاعات، واختيارات المواد." },
-      { nameEn: "Design Development", nameAr: "تطوير التصميم", descriptionEn: "Detailed drawings with structural and MEP coordination.", descriptionAr: "رسومات تفصيلية مع التنسيق الهيكلي والميكانيكي والكهربائي." },
-      { nameEn: "Construction Documents", nameAr: "وثائق البناء", descriptionEn: "Permit and construction sets with specifications.", descriptionAr: "مجموعات التصاريح والإنشاءات مع المواصفات." },
+      { nameEn: "Concept Design", nameAr: "التصميم المفاهيمي", descriptionEn: "Site analysis, massing studies, and conceptual presentation.", descriptionAr: "تحليل الموقع ودراسات الكتلة والعروض المفاهيمية." },
+      { nameEn: "Schematic Design", nameAr: "التصميم المبدئي", descriptionEn: "Floor plans, elevations, sections, and material selections.", descriptionAr: "مخططات الطوابق والواجهات والقطاعات واختيارات المواد." },
+      { nameEn: "Design Development", nameAr: "تطوير التصميم", descriptionEn: "Detailed drawings with structural and MEP coordination.", descriptionAr: "رسومات مفصلة مع التنسيق الهيكلي والميكانيكي والكهربائي." },
+      { nameEn: "Construction Documents", nameAr: "وثائق البناء", descriptionEn: "Permit sets and construction documentation.", descriptionAr: "مجموعات التصاريح وتوثيق البناء." },
     ],
     faqs: [
-      { questionEn: "What is the typical design timeline?", questionAr: "ما هو الجدول الزمني النموذجي للتصميم؟", answerEn: "4 to 12 months depending on project complexity.", answerAr: "من 4 إلى 12 شهرًا حسب تعقيد المشروع." },
-      { questionEn: "Do you provide sustainable design?", questionAr: "هل تقدمون تصميمًا مستدامًا؟", answerEn: "Yes, sustainability is integrated into every project we undertake.", answerAr: "نعم، الاستدامة جزء لا يتجزأ من كل مشروع نقوم به." },
+      { questionEn: "What is the typical design timeline?", questionAr: "ما هو الجدول الزمني النموذجي للتصميم؟", answerEn: "Depending on project scale and complexity, architectural design typically takes 4-12 months.", answerAr: "اعتمادًا على حجم وتعقيد المشروع، يستغرق التصميم المعماري عادةً 4-12 شهرًا." },
     ],
-    leadArchitectId: "1",
+    leadArchitectId: undefined,
   },
   {
     id: "2",
     slug: "interior-design",
     nameEn: "Interior Design",
     nameAr: "التصميم الداخلي",
-    summaryEn: "Spatial experiences that blend contemporary aesthetics with regional craftsmanship.",
-    summaryAr: "تجارب مكانية تمزج بين الجماليات المعاصرة والحرفية الإقليمية.",
+    summaryEn: "Interior spaces, decoration, and customized design solutions for residential and commercial projects.",
+    summaryAr: "مساحات داخلية وديكور وحلول تصميم مخصصة للمشاريع السكنية والتجارية.",
     bodyEn:
-      "Our interior design practice transforms spaces into immersive environments. We draw inspiration from the rich textile traditions, geometric patterns, and material palettes of the Arab world, reinterpreted through a contemporary lens.",
+      "Our interior design service covers interior spaces, decoration, and customized design solutions. We create environments that balance aesthetics with functionality, drawing on regional craftsmanship and contemporary design principles. Services include spatial planning, material selection, FF&E specifications, and installation oversight.",
     bodyAr:
-      "تحول ممارستنا للتصميم الداخلي المساحات إلى بيئات غامرة. نستلهم الإلهام من تقاليد النسيج الغنية والأنماط الهندسية ولوحات المواد في العالم العربي، مع إعادة تفسيرها من خلال عدسة معاصرة.",
-    heroImage: "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1920&q=80",
+      "تغطي خدمة التصميم الداخلي لدينا المساحات الداخلية والديكور وحلول التصميم المخصصة. نبتكر بيئات توازن بين الجماليات والوظيفة، مستفيدين من الحرفية الإقليمية ومبادئ التصميم المعاصر. تشمل الخدمات التخطيط المكاني واختيار المواد ومواصفات الأثاث والتجهيزات والإشراف على التركيب.",
+    heroImage: "",
     deliverables: [
-      { nameEn: "Concept Design", nameAr: "التصميم المفاهيمي", descriptionEn: "Mood boards, material palettes, and spatial planning.", descriptionAr: "لوحات المزاج، لوحات المواد، والتخطيط المكاني." },
-      { nameEn: "Design Development", nameAr: "تطوير التصميم", descriptionEn: "Detailed drawings, FF&E schedules, millwork.", descriptionAr: "رسومات تفصيلية وجداول الأثاث والتجهيزات والنجارة." },
-      { nameEn: "Construction Documents", nameAr: "وثائق البناء", descriptionEn: "Plans, elevations, joinery details, and finishing schedules.", descriptionAr: "مخططات، واجهات، تفاصيل النجارة، وجداول التشطيبات." },
-      { nameEn: "Installation Oversight", nameAr: "الإشراف على التركيب", descriptionEn: "On-site supervision during installation and styling.", descriptionAr: "الإشراف في الموقع أثناء التركيب والتنسيق." },
+      { nameEn: "Interior Spaces", nameAr: "المساحات الداخلية", descriptionEn: "Spatial planning and layout design.", descriptionAr: "التخطيط المكاني وتصميم التوزيع." },
+      { nameEn: "Decoration", nameAr: "الديكور", descriptionEn: "Material selection, finishes, and styling.", descriptionAr: "اختيار المواد والتشطيبات والتنسيق." },
+      { nameEn: "Customized Solutions", nameAr: "حلول مخصصة", descriptionEn: "Bespoke furniture, millwork, and design elements.", descriptionAr: "أثاث مخصص ونجارة وعناصر تصميمية." },
+      { nameEn: "Installation Oversight", nameAr: "الإشراف على التركيب", descriptionEn: "On-site supervision during fit-out.", descriptionAr: "الإشراف في الموقع أثناء التجهيز." },
     ],
     faqs: [
-      { questionEn: "Do you do both residential and commercial interiors?", questionAr: "هل تعملون في المساحات الداخلية السكنية والتجارية؟", answerEn: "Yes, we handle a wide range of interior typologies.", answerAr: "نعم، نتعامل مع مجموعة واسعة من أنواع المساحات الداخلية." },
+      { questionEn: "Do you handle both residential and commercial interiors?", questionAr: "هل تعملون في التصميم الداخلي السكني والتجاري؟", answerEn: "Yes, we work across residential, commercial, and hospitality interior typologies.", answerAr: "نعم، نعمل عبر أنواع التصميم الداخلي السكنية والتجارية وضيافة." },
     ],
-    leadArchitectId: "3",
+    leadArchitectId: undefined,
   },
   {
     id: "3",
     slug: "engineering-consultancy",
     nameEn: "Engineering Consultancy",
     nameAr: "الاستشارات الهندسية",
-    summaryEn: "Structural, civil, and MEP engineering that ensures safety, efficiency, and constructability.",
-    summaryAr: "هندسة إنشائية ومدنية وميكانيكية وكهربائية تضمن السلامة والكفاءة وقابلية التنفيذ.",
+    summaryEn: "Civil engineering, electrical engineering, and comprehensive engineering consultations.",
+    summaryAr: "هندسة مدنية وهندسة كهربائية واستشارات هندسية شاملة.",
     bodyEn:
-      "Our engineering team provides expert analysis and design across structural, civil, and MEP disciplines. We leverage advanced simulation tools and deep local knowledge to deliver engineering solutions that are both innovative and practical.",
+      "Green Studio provides engineering consultancy services including civil engineering, electrical engineering, and general engineering consultations. We deliver technical analysis and design solutions that ensure safety, efficiency, and compliance with local regulations and international standards.",
     bodyAr:
-      "يقدم فريقنا الهندسي تحليلاً وتصميماً خبيراً في مجالات الهندسة الإنشائية والمدنية والميكانيكية والكهربائية. نستخدم أدوات محاكاة متقدمة ومعرفة محلية عميقة لتقديم حلول هندسية مبتكرة وعملية.",
-    heroImage: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1920&q=80",
+      "توفر جريين ستوديو خدمات الاستشارات الهندسية بما في ذلك الهندسة المدنية والهندسة الكهربائية والاستشارات الهندسية العامة. نقدم حلول التحليل الفني والتصميم التي تضمن السلامة والكفاءة والامتثال للوائح المحلية والمعايير الدولية.",
+    heroImage: "",
     deliverables: [
-      { nameEn: "Structural Engineering", nameAr: "الهندسة الإنشائية", descriptionEn: "Structural analysis and foundation design.", descriptionAr: "التحليل الإنشائي وتصميم الأساسات." },
-      { nameEn: "MEP Engineering", nameAr: "الهندسة الميكانيكية والكهربائية والسباكة", descriptionEn: "Mechanical, electrical, and plumbing systems.", descriptionAr: "تصميم الأنظمة الميكانيكية والكهربائية وأنظمة السباكة." },
-      { nameEn: "Civil Engineering", nameAr: "الهندسة المدنية", descriptionEn: "Site grading, drainage, and utility design.", descriptionAr: "تسوية الموقع وتصريف المياه وتصميم المرافق." },
-      { nameEn: "Value Engineering", nameAr: "الهندسة القيمية", descriptionEn: "Cost optimization while maintaining quality.", descriptionAr: "تحسين التكاليف مع الحفاظ على الجودة." },
+      { nameEn: "Civil Engineering", nameAr: "الهندسة المدنية", descriptionEn: "Structural analysis, foundation design, and site works.", descriptionAr: "التحليل الإنشائي وتصميم الأساسات والأعمال الموقعية." },
+      { nameEn: "Electrical Engineering", nameAr: "الهندسة الكهربائية", descriptionEn: "Electrical systems design and power distribution.", descriptionAr: "تصميم الأنظمة الكهربائية وتوزيع الطاقة." },
+      { nameEn: "Engineering Consultations", nameAr: "الاستشارات الهندسية", descriptionEn: "Technical advisory and feasibility assessments.", descriptionAr: "الاستشارات الفنية وتقييمات الجدوى." },
     ],
     faqs: [
-      { questionEn: "What engineering software do you use?", questionAr: "ما هي برامج الهندسة التي تستخدمونها؟", answerEn: "ETABS, SAP2000, SAFE, Revit, AutoCAD MEP, and Robot Structural Analysis.", answerAr: "ETABS, SAP2000, SAFE, Revit, AutoCAD MEP, وRobot Structural Analysis." },
+      { questionEn: "Do you provide standalone engineering consultations?", questionAr: "هل تقدمون استشارات هندسية مستقلة؟", answerEn: "Yes, we offer engineering consultations as part of our service portfolio.", answerAr: "نعم، نقدم الاستشارات الهندسية كجزء من محفظة خدماتنا." },
     ],
-    leadArchitectId: "2",
+    leadArchitectId: undefined,
   },
   {
     id: "4",
     slug: "project-management",
     nameEn: "Project Management",
     nameAr: "إدارة المشاريع",
-    summaryEn: "End-to-end project management from feasibility through handover.",
-    summaryAr: "إدارة مشاريع شاملة من دراسة الجدوى إلى التسليم.",
+    summaryEn: "End-to-end project management and project follow-up from inception to handover.",
+    summaryAr: "إدارة مشاريع ومتابعة شاملة من البداية إلى التسليم.",
     bodyEn:
-      "We manage projects with precision. Our team oversees every phase from feasibility to handover. With deep experience in the MENA construction market, we anticipate risks and keep stakeholders aligned.",
+      "Our project management service covers the full lifecycle of a construction project. This includes feasibility assessment, procurement management, construction oversight, project follow-up, and final handover. We keep projects on schedule, within budget, and to the required quality standards.",
     bodyAr:
-      "ندير المشاريع بدقة. يشرف فريقنا على كل مرحلة من دراسة الجدوى إلى التسليم. بفضل الخبرة العميقة في سوق البناء في الشرق الأوسط وشمال أفريقيا، نتوقع المخاطر ونحافظ على توافق أصحاب المصلحة.",
-    heroImage: "https://images.unsplash.com/photo-1504639725590-34d0984388bd?w=1920&q=80",
+      "تغطي خدمة إدارة المشاريع دورة حياة مشروع البناء كاملة. تشمل تقييم الجدوى وإدارة المشتريات والإشراف على البناء ومتابعة المشاريع والتسليم النهائي. نحافظ على المشاريع ضمن الجدول الزمني والميزانية ومعايير الجودة المطلوبة.",
+    heroImage: "",
     deliverables: [
-      { nameEn: "Feasibility Studies", nameAr: "دراسات الجدوى", descriptionEn: "Site evaluation, market analysis, and financial modeling.", descriptionAr: "تقييم الموقع، تحليل السوق، والنمذجة المالية." },
-      { nameEn: "Budgeting & Cost Control", nameAr: "إعداد الميزانية والتحكم في التكاليف", descriptionEn: "Detailed estimates and expense tracking.", descriptionAr: "تقديرات مفصلة وتتبع النفقات." },
-      { nameEn: "Procurement Management", nameAr: "إدارة المشتريات", descriptionEn: "Tendering and contract administration.", descriptionAr: "المناقصات وإدارة العقود." },
-      { nameEn: "Construction Oversight", nameAr: "الإشراف على البناء", descriptionEn: "Schedule management and quality control.", descriptionAr: "إدارة الجدول الزمني ومراقبة الجودة." },
+      { nameEn: "Feasibility Assessment", nameAr: "تقييم الجدوى", descriptionEn: "Site evaluation and project feasibility analysis.", descriptionAr: "تقييم الموقع وتحليل جدوى المشروع." },
+      { nameEn: "Project Follow-up", nameAr: "متابعة المشاريع", descriptionEn: "Ongoing monitoring and progress reporting.", descriptionAr: "المراقبة المستمرة وتقارير التقدم." },
+      { nameEn: "Construction Oversight", nameAr: "الإشراف على البناء", descriptionEn: "Quality control and schedule management.", descriptionAr: "مراقبة الجودة وإدارة الجدول الزمني." },
+      { nameEn: "Handover", nameAr: "التسليم", descriptionEn: "Final inspection and project handover.", descriptionAr: "الفحص النهائي وتسليم المشروع." },
     ],
     faqs: [
-      { questionEn: "What project management methodology do you follow?", questionAr: "ما هي منهجية إدارة المشاريع التي تتبعونها؟", answerEn: "PMI standards with a construction-tailored approach.", answerAr: "معايير معهد إدارة المشاريع مع نهج مخصص للبناء." },
+      { questionEn: "Do you manage projects not designed by your firm?", questionAr: "هل تديرون مشاريع لم تُصمم من مكتبكم؟", answerEn: "Yes, we provide project management services for projects by other design firms as well.", answerAr: "نعم، نقدم خدمات إدارة المشاريع للمشاريع التي تصممها مكاتب أخرى أيضًا." },
     ],
-    leadArchitectId: "4",
-  },
-  {
-    id: "5",
-    slug: "construction-supervision",
-    nameEn: "Construction Supervision",
-    nameAr: "الإشراف على البناء",
-    summaryEn: "On-site supervision to ensure design intent is faithfully executed.",
-    summaryAr: "إشراف ميداني لضمان تنفيذ التصميم بدقة وجودة.",
-    bodyEn:
-      "Our construction supervision team provides on-site representation to ensure every element is built as intended. We conduct regular inspections, review submittals, coordinate with contractors, and provide detailed progress reports.",
-    bodyAr:
-      "يوفر فريق الإشراف على البناء لدينا تمثيلاً ميدانياً لضمان بناء كل عنصر كما هو مقصود. نقوم بعمليات تفتيش منتظمة ومراجعة المقدمات والتنسيق مع المقاولين وتقديم تقارير مفصلة.",
-    heroImage: "https://images.unsplash.com/photo-1558618666-fcd25c2f8e08?w=1920&q=80",
-    deliverables: [
-      { nameEn: "Site Monitoring", nameAr: "مراقبة الموقع", descriptionEn: "Regular site visits and inspections.", descriptionAr: "زيارات موقعية وتفتيشات منتظمة." },
-      { nameEn: "Quality Assurance", nameAr: "ضمان الجودة", descriptionEn: "Material testing and workmanship checks.", descriptionAr: "اختبار المواد والتحقق من جودة التنفيذ." },
-      { nameEn: "Progress Reporting", nameAr: "تقارير التقدم", descriptionEn: "Weekly/monthly reports with photos.", descriptionAr: "تقارير أسبوعية/شهرية مع توثيق بالصور." },
-      { nameEn: "Snagging & Handover", nameAr: "قائمة العيوب والتسليم", descriptionEn: "Defect identification and final handover.", descriptionAr: "تحديد العيوب والتسليم النهائي." },
-    ],
-    faqs: [
-      { questionEn: "Can you supervise projects not originally designed by you?", questionAr: "هل يمكنكم الإشراف على مشاريع لم تصمموها؟", answerEn: "Yes, we frequently serve as supervision consultant on projects by other firms.", answerAr: "نعم، نعمل غالبًا كمستشار اشراف في مشاريع من مكاتب أخرى." },
-    ],
-    leadArchitectId: "4",
+    leadArchitectId: undefined,
   },
 ];
 

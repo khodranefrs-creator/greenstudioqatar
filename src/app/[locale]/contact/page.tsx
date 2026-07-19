@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { Locale } from "@/i18n/routing";
 import { getDictionary } from "@/lib/dictionary";
+import { alternates } from "@/lib/seo/metadata";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import ContactForm from "@/components/forms/contact-form";
@@ -18,6 +19,7 @@ export async function generateMetadata({ params }: ContactPageProps): Promise<Me
   return {
     title: contact.title ?? "Contact Us",
     description: contact.subtitle ?? "Get in touch with Green Studio Qatar.",
+    alternates: alternates(locale, "contact"),
     openGraph: { title: contact.title ?? "Contact Us", description: contact.subtitle ?? "" },
   };
 }

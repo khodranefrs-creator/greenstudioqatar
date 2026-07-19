@@ -90,7 +90,7 @@ export default function ProjectMap({
       <div className="absolute bottom-4 right-4 w-8 h-8 border-b border-r border-offwhite/20" />
 
       {/* Brand label */}
-      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-offwhite/30 text-[10px] uppercase tracking-[0.3em] font-body">
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 text-offwhite/60 text-[10px] uppercase tracking-[0.3em] font-body">
         Project Location
       </div>
     </div>

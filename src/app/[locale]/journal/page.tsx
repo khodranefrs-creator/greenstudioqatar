@@ -7,6 +7,7 @@ import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { blogPosts } from "@/data/blog-posts";
 import { teamMap } from "@/data/team";
+import { alternates } from "@/lib/seo/metadata";
 
 interface JournalPageProps {
   params: Promise<{ locale: string }>;
@@ -20,6 +21,7 @@ export async function generateMetadata({ params }: JournalPageProps): Promise<Me
   return {
     title: journal.title ?? "Journal",
     description: journal.subtitle ?? "Thoughts on architecture and design.",
+    alternates: alternates(locale, "journal"),
     openGraph: { title: journal.title ?? "Journal", description: journal.subtitle ?? "" },
   };
 }

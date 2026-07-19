@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { Locale } from "@/i18n/routing";
 import { getDictionary } from "@/lib/dictionary";
 import { Container } from "@/components/ui/container";
+import { alternates } from "@/lib/seo/metadata";
 
 interface PrivacyPageProps {
   params: Promise<{ locale: string }>;
@@ -16,6 +17,7 @@ export async function generateMetadata({ params }: PrivacyPageProps): Promise<Me
   return {
     title: privacy?.title ?? "Privacy Policy",
     description: privacy?.intro ?? "Green Studio Qatar privacy policy.",
+    alternates: alternates(locale, "privacy"),
   };
 }
 

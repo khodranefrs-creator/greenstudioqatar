@@ -27,7 +27,7 @@ export function LanguageSwitcher({ locale, className = "" }: LanguageSwitcherPro
   return (
     <button
       onClick={switchLanguage}
-      className={`inline-flex items-center gap-1.5 text-sm font-medium transition-colors hover:text-accent ${className}`}
+      className={`inline-flex items-center justify-center gap-1.5 min-h-11 min-w-11 text-sm font-medium transition-colors hover:text-accent ${className}`}
       aria-label={`Switch to ${isArabic ? "English" : "Arabic"}`}
     >
       {isArabic ? "EN" : "عربي"}

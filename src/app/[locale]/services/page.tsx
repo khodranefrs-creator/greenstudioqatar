@@ -5,6 +5,7 @@ import { getDictionary } from "@/lib/dictionary";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { services } from "@/data/services";
+import { alternates } from "@/lib/seo/metadata";
 
 interface ServicesPageProps {
   params: Promise<{ locale: string }>;
@@ -49,6 +50,7 @@ export async function generateMetadata({ params }: ServicesPageProps): Promise<M
   return {
     title: svc.title ?? "Our Services",
     description: svc.subtitle ?? "Comprehensive architecture and engineering services.",
+    alternates: alternates(locale, "services"),
     openGraph: { title: svc.title ?? "Our Services", description: svc.subtitle ?? "" },
   };
 }

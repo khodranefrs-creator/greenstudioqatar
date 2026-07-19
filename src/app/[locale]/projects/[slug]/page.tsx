@@ -8,6 +8,7 @@ import TechnicalInfo from "@/components/ui/technical-info";
 import RelatedProjects from "@/components/ui/related-projects";
 import ProjectMap from "@/components/portfolio/project-map";
 import { projects, getProjectBySlug } from "@/data/projects";
+import { alternates } from "@/lib/seo/metadata";
 
 interface ProjectDetailPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -30,6 +31,7 @@ export async function generateMetadata({ params }: ProjectDetailPageProps): Prom
   return {
     title,
     description: description?.slice(0, 160),
+    alternates: alternates(locale, `projects/${slug}`),
     openGraph: {
       title,
       description: description?.slice(0, 160),

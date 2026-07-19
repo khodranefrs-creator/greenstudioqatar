@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { Locale } from "@/i18n/routing";
 import { getDictionary } from "@/lib/dictionary";
+import { alternates } from "@/lib/seo/metadata";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import { projects } from "@/data/projects";
@@ -18,6 +19,7 @@ export async function generateMetadata({ params }: ProjectsPageProps): Promise<M
   return {
     title: proj.title ?? "Our Projects",
     description: proj.subtitle ?? "A curated selection of our work across the MENA region.",
+    alternates: alternates(locale, "projects"),
     openGraph: { title: proj.title ?? "Our Projects", description: proj.subtitle ?? "" },
   };
 }

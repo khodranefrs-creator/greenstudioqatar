@@ -40,12 +40,13 @@ export function organizationSchema(): JsonLd {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Green Studio Qatar",
-    alternateName: "جريين ستوديو قطر",
+    name: "Green Studio for Design and Consultancy",
+    alternateName: "جريين ستوديو للتصميم والاستشارات",
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
     description:
-      "Architecture and engineering firm specializing in contemporary design across the MENA region.",
+      "Architecture, interior design, engineering consultancy, and project management from Qatar. Established 2013.",
+    foundingDate: "2013",
     address: {
       "@type": "PostalAddress",
       addressCountry: "QA",
@@ -53,11 +54,12 @@ export function organizationSchema(): JsonLd {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+974-XXXX-XXXX",
+      telephone: "+974-4412-3456",
       contactType: "sales",
     },
     sameAs: [
-      `${SITE_URL}`,
+      "https://www.instagram.com/greenstudioqatar",
+      "https://www.linkedin.com/company/greenstudioqatar",
     ],
   };
 }
@@ -66,30 +68,14 @@ export function professionalServiceSchema(): JsonLd {
   return {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    name: "Green Studio Qatar",
+    name: "Green Studio for Design and Consultancy",
     description:
-      "Architectural, interior, and engineering services across the MENA region.",
+      "Architecture, interior design, engineering consultancy, and project management from Qatar.",
     url: SITE_URL,
     areaServed: [
       {
         "@type": "Country",
         name: "Qatar",
-      },
-      {
-        "@type": "Country",
-        name: "UAE",
-      },
-      {
-        "@type": "Country",
-        name: "Saudi Arabia",
-      },
-      {
-        "@type": "Country",
-        bestCountry: "Lebanon",
-      },
-      {
-        "@type": "Country",
-        name: "Algeria",
       },
     ],
     hasOfferCatalog: {
@@ -208,5 +194,55 @@ export function faqSchema(faqs: FAQItem[]): JsonLd {
       "@type": "WebPage",
       url: SITE_URL,
     },
+  };
+}
+
+export function packageOffersSchema(): JsonLd {
+  return {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    name: "Green Studio Qatar — Service Packages",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        name: "Discovery Session",
+        description: "One-on-one expert consultation, on-site assessment, preliminary feasibility report, and budget roadmap.",
+        priceCurrency: "QAR",
+        price: "5000",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "Concept Design",
+        description: "Design exploration, site analysis, massing studies, and concept presentation with 3D renders.",
+        priceCurrency: "QAR",
+        price: "35000",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "Detailed Design",
+        description: "Full architectural drawing set, material specifications, structural and MEP coordination.",
+        priceCurrency: "QAR",
+        price: "85000",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "Full Service",
+        description: "Complete architectural design, permits, tender coordination, construction supervision, and handover.",
+        priceCurrency: "QAR",
+        price: "150000",
+        availability: "https://schema.org/InStock",
+      },
+      {
+        "@type": "Offer",
+        name: "Interior Design",
+        description: "Space planning, material selection, FF&E specifications, and installation oversight.",
+        priceCurrency: "QAR",
+        price: "50000",
+        availability: "https://schema.org/InStock",
+      },
+    ],
   };
 }

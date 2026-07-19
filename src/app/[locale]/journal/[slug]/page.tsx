@@ -6,6 +6,7 @@ import { getDictionary } from "@/lib/dictionary";
 import { Container } from "@/components/ui/container";
 import { blogPosts } from "@/data/blog-posts";
 import { teamMap } from "@/data/team";
+import { alternates } from "@/lib/seo/metadata";
 
 interface BlogPostPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -28,6 +29,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   return {
     title,
     description: excerpt,
+    alternates: alternates(locale, `journal/${slug}`),
     openGraph: {
       title,
       description: excerpt,

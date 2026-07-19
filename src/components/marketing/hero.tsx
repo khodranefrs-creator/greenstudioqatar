@@ -1,7 +1,6 @@
 import { getDictionary } from '@/lib/dictionary';
 import { Locale } from '@/i18n/routing';
 import Link from 'next/link';
-import Image from 'next/image';
 
 export default async function Hero({ locale }: { locale: Locale }) {
   const dict = await getDictionary(locale);
@@ -10,14 +9,7 @@ export default async function Hero({ locale }: { locale: Locale }) {
   return (
     <section className="relative h-[100dvh] w-full overflow-hidden">
       <div className="hero-bg absolute inset-0">
-        <Image
-          src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1920&q=85&fit=crop"
-          alt=""
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover"
-        />
+        <div className="absolute inset-0 bg-charcoal" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-charcoal/30 via-charcoal/10 to-charcoal/80" />
       <div className="absolute inset-0 bg-gradient-to-r from-charcoal/40 to-transparent" />
@@ -27,7 +19,7 @@ export default async function Hero({ locale }: { locale: Locale }) {
           <div className="max-w-4xl">
             <div className="overflow-hidden">
               <p className="animate-fade-up animate-delay-100 font-body text-[0.7rem] font-medium tracking-[0.35em] uppercase text-offwhite/60 sm:text-[0.75rem]">
-                {locale === 'ar' ? 'استوديو معماري' : 'Architecture & Design Studio'}
+                {locale === 'ar' ? 'جريين ستوديو للتصميم والاستشارات' : 'Green Studio for Design & Consultancy'}
               </p>
             </div>
             <div className="overflow-hidden mt-5">

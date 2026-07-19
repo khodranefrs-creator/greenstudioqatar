@@ -59,7 +59,7 @@ export function WhatsAppButton({
     >
       <button
         onClick={handleDismiss}
-        className="absolute -top-2 -inset-inline-end-2 z-10 flex h-6 w-6 items-center justify-center rounded-full bg-charcoal text-offwhite text-xs hover:bg-charcoal/80 transition-colors"
+        className="absolute -top-2 -inset-inline-end-2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-charcoal text-offwhite text-xs hover:bg-charcoal/80 transition-colors"
         aria-label="Dismiss"
       >
         ×

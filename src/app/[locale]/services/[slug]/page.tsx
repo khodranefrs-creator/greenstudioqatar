@@ -1,13 +1,12 @@
 import type { Metadata } from "next";
-import type { Locale } from "@/i18n/routing";
 import Image from "next/image";
 import Link from "next/link";
-import { getDictionary } from "@/lib/dictionary";
 import { Container } from "@/components/ui/container";
 import RelatedProjects from "@/components/ui/related-projects";
 import { services, getServiceBySlug } from "@/data/services";
 import { projects } from "@/data/projects";
 import { teamMap } from "@/data/team";
+import { alternates } from "@/lib/seo/metadata";
 
 interface ServiceDetailPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -30,6 +29,7 @@ export async function generateMetadata({ params }: ServiceDetailPageProps): Prom
   return {
     title: name,
     description: summary,
+    alternates: alternates(locale, `services/${slug}`),
     openGraph: {
       title: name,
       description: summary,
@@ -40,7 +40,6 @@ export async function generateMetadata({ params }: ServiceDetailPageProps): Prom
 
 export default async function ServiceDetailPage({ params }: ServiceDetailPageProps) {
   const { slug, locale } = await params;
-  const typedLocale = locale as Locale;
   const service = getServiceBySlug(slug);
 
   if (!service) {
@@ -53,8 +52,6 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
       </Container>
     );
   }
-
-  const dict = await getDictionary(typedLocale);
 
   const name = locale === "ar" ? service.nameAr : service.nameEn;
   const summary = locale === "ar" ? service.summaryAr : service.summaryEn;
@@ -195,25 +192,23 @@ export default async function ServiceDetailPage({ params }: ServiceDetailPagePro
               {locale === "ar" ? "المسؤول عن هذا القسم" : "Service Lead"}
             </h2>
             <div className="flex flex-col sm:flex-row gap-6 items-start">
-              {lead.photo && (
-                <div className="relative h-24 w-24 shrink-0 overflow-hidden">
-                  <Image
-                    src={lead.photo}
-                    alt={lead.name}
-                    fill
-                    className="object-cover"
-                    sizes="96px"
-                  />
+              <div className="relative h-24 w-24 shrink-0 overflow-hidden bg-charcoal/[0.04]">
+                <div className="flex h-full w-full items-center justify-center">
+                  <span className="font-display text-xl font-light tracking-wider text-charcoal/15">
+                    {lead.name.split(" ").map((w: string) => w[0]).slice(0, 2).join("").toUpperCase()}
+                  </span>
                 </div>
-              )}
+              </div>
               <div>
                 <h3 className="font-display text-lg text-charcoal">{lead.name}</h3>
                 <p className="mt-1 font-body text-xs uppercase tracking-widest text-muted">
                   {locale === "ar" ? lead.roleAr : lead.roleEn}
                 </p>
-                <p className="mt-3 font-body text-sm leading-relaxed text-charcoal/70 max-w-xl">
-                  {locale === "ar" ? lead.bioAr : lead.bioEn}
-                </p>
+                {lead.bioEn && (
+                  <p className="mt-3 font-body text-sm leading-relaxed text-charcoal/70 max-w-xl">
+                    {locale === "ar" ? lead.bioAr : lead.bioEn}
+                  </p>
+                )}
               </div>
             </div>
           </Container>

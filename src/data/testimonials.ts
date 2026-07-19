@@ -1,52 +1,18 @@
 import { Testimonial } from "@/types";
 
-export const testimonials: Testimonial[] = [
-  {
-    id: "1",
-    clientName: "Abdulaziz Al-Saud",
-    clientTitle: "CEO",
-    clientTitleAr: "الرئيس التنفيذي",
-    clientCompany: "AlSaud Development Group",
-    clientPhoto: "https://images.unsplash.com/photo-1507003211169-0a1dd72280f1?w=200&q=80",
-    quoteEn: "Green Studio translated our vision into an extraordinary reality. Their attention to detail and ability to blend modern design with cultural sensitivity is unmatched. They delivered on time and on budget.",
-    quoteAr: "استطاع جريين ستوديو ترجمة رؤيتنا إلى واقع استثنائي. اهتمامهم بالتفاصيل وقدرتهم على المزج بين التصميم الحديث والحساسية الثقافية لا مثيل لها. التزموا بالوقت والميزانية.",
-    linkedProjectId: "2",
-    featured: true,
-  },
-  {
-    id: "2",
-    clientName: "Mona Al-Fardan",
-    clientTitle: "VP, Operations",
-    clientTitleAr: "نائب رئيس العمليات",
-    clientCompany: "Doha Hospitality Group",
-    clientPhoto: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&q=80",
-    quoteEn: "The team's collaborative approach made the entire process a pleasure. They listened to our needs and delivered a design that perfectly captured our brand identity.",
-    quoteAr: "فريق العمل نهجهم التعاوني جعل العملية بأكملها ممتعة. استمعوا لاحتياجاتنا وقدموا تصميماً عكس تماماً هوية علامتنا التجارية.",
-    linkedProjectId: "4",
-    featured: true,
-  },
-  {
-    id: "3",
-    clientName: "Dr. Khaled Al-Mutawa",
-    clientTitle: "Undersecretary",
-    clientTitleAr: "وكيل الوزارة",
-    clientCompany: "Algerian Ministry of Public Works",
-    clientPhoto: "https://images.unsplash.com/photo-1566492031773-4f4e92371d3b?w=200&q=80",
-    quoteEn: "The design of our ministry building was handled with exceptional professionalism and cultural awareness. The result reflects our national identity while meeting all functional requirements.",
-    quoteAr: "تم التعامل مع تصميم مبنى الوزارة بمهنية استثنائية ووعي ثقافي عالٍ. النتيجة تعكس هويتنا الوطنية بينما تلبي جميع المتطلبات الوظيفية.",
-    linkedProjectId: "3",
-    featured: false,
-  },
-  {
-    id: "4",
-    clientName: "Sofia Papadopoulos",
-    clientTitle: "Director of Acquisitions",
-    clientTitleAr: "مديرة الاستحواذ",
-    clientCompany: "Horizon Capital",
-    clientPhoto: "https://images.unsplash.com/photo-1573497019940-1c8686566db2?w=200&q=80",
-    quoteEn: "Green Studio's market knowledge and technical expertise were invaluable to our first investment in the region. They helped us navigate complex regulations and delivered a project that exceeded our expectations.",
-    quoteAr: "كانت معرفة جريين ستوديو بالسوق وخبرتهم الفنية لا تقدر بثمن لاستثمارنا الأول في المنطقة. ساعدونا في التعامل مع اللوائح المعقدة وقدموا مشروعاً تجاوز توقعاتنا.",
-    linkedProjectId: "6",
-    featured: true,
-  },
-];
+// =============================================================================
+// TODO: CLIENT MUST PROVIDE VERIFIED TESTIMONIALS
+// =============================================================================
+// ALL previous testimonial data was fabricated and has been removed.
+//
+// Before launch, the client must provide verified testimonials including:
+// 1. Real client name (with permission to publish)
+// 2. Verified job title and company
+// 3. Actual quote (written or approved by the client)
+// 4. Linked project (must exist in the verified portfolio)
+//
+// DO NOT fabricate client names, titles, companies, or quotes.
+// DO NOT use stock photos for client portraits.
+// =============================================================================
+
+export const testimonials: Testimonial[] = [];

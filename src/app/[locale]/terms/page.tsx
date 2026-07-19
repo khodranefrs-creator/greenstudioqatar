@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { Locale } from "@/i18n/routing";
 import { getDictionary } from "@/lib/dictionary";
 import { Container } from "@/components/ui/container";
+import { alternates } from "@/lib/seo/metadata";
 
 interface TermsPageProps {
   params: Promise<{ locale: string }>;
@@ -16,6 +17,7 @@ export async function generateMetadata({ params }: TermsPageProps): Promise<Meta
   return {
     title: terms?.title ?? "Terms of Service",
     description: terms?.intro ?? "Green Studio Qatar terms of service.",
+    alternates: alternates(locale, "terms"),
   };
 }
 

@@ -20,22 +20,22 @@
     "careers": "Careers"
   },
   "hero": {
-    "headline": "Architecture for a New Era",
-    "subheadline": "Contemporary design rooted in the cultural heritage of the MENA region.",
-    "ctaPrimary": "View Our Projects",
-    "ctaSecondary": "Book a Consultation",
+    "headline": "Architecture, Design & Consultancy",
+    "subheadline": "From Qatar — providing professional design, engineering, and project management services since 2013.",
+    "ctaPrimary": "Our Services",
+    "ctaSecondary": "Get in Touch",
     "scrollHint": "Scroll to explore"
   },
   "trust": {
-    "projectsCompleted": "Projects Completed",
-    "yearsExperience": "Years of Experience",
-    "teamMembers": "Team Members",
-    "countriesServed": "Countries Served",
-    "description": "Trusted by developers, governments, and private clients across the Middle East and North Africa."
+    "projectsCompleted": "Projects Delivered",
+    "yearsExperience": "Established",
+    "teamMembers": "Expertise",
+    "countriesServed": "Based in Qatar",
+    "description": "Green Studio for Design and Consultancy — providing architecture, engineering, and project management services from Qatar since 2013."
   },
   "services": {
     "title": "What We Do",
-    "subtitle": "Comprehensive architecture and engineering services tailored to the MENA market.",
+    "subtitle": "Architecture, design, engineering, and project management — delivered from Qatar.",
     "viewDetails": "View Details",
     "architectural-design": {
       "title": "Architectural Design",
@@ -143,20 +143,20 @@
     "master-plan": "Master Plan"
   },
   "about": {
-    "title": "About Green Studio Qatar",
-    "subtitle": "A contemporary architecture firm crafting meaningful spaces across the MENA region.",
-    "story": "Founded in 2015, Green Studio Qatar emerged from a conviction that architecture in the MENA region deserves a new paradigm — one that honors rich cultural traditions while embracing innovation and sustainability. Our team of architects, engineers, and designers brings together diverse expertise united by a common purpose: to create buildings that inspire, perform, and endure. With offices in Doha and project experience spanning from Algiers to Dubai, we are privileged to shape the built environment of a rapidly evolving region.",
+    "title": "About Green Studio",
+    "subtitle": "Architecture, design, and consultancy from Qatar — established 2013.",
+    "story": "Green Studio for Design and Consultancy was established in 2013 in Qatar. We provide architectural design, interior design, engineering consultancy, and project management services. Our work is grounded in technical expertise and a commitment to delivering projects that meet the needs of our clients and communities.",
     "missionTitle": "Our Mission",
-    "mission": "To deliver architecture of the highest quality — designs that are conceptually rigorous, environmentally responsible, and deeply responsive to the communities they serve.",
+    "mission": "To deliver professional architecture and design services of the highest quality, grounded in technical competence and client-focused practice.",
     "visionTitle": "Our Vision",
-    "vision": "To be the leading architecture and design firm in the MENA region, recognized globally for design excellence, sustainability, and cultural sensitivity.",
+    "vision": "To be a trusted design and consultancy firm in Qatar, recognized for professional integrity and quality delivery.",
     "valuesTitle": "Our Values",
     "values": [
-      { "title": "Excellence", "description": "We pursue the highest standards in every project, regardless of scale or budget." },
-      { "title": "Sustainability", "description": "We integrate environmental stewardship into every stage of design and construction." },
-      { "title": "Cultural Resonance", "description": "We design with deep respect for the heritage, traditions, and aspirations of the communities we serve." },
-      { "title": "Collaboration", "description": "We believe the best outcomes emerge from open dialogue between clients, consultants, and communities." },
-      { "title": "Innovation", "description": "We embrace new technologies, materials, and methodologies to push the boundaries of what is possible." }
+      { "title": "Professionalism", "description": "We uphold the highest standards of professional conduct and technical competence in every project." },
+      { "title": "Integrity", "description": "We are honest and transparent in our dealings with clients, partners, and communities." },
+      { "title": "Quality", "description": "We are committed to delivering work that meets or exceeds industry standards." },
+      { "title": "Collaboration", "description": "We work closely with clients and consultants to achieve the best outcomes for every project." },
+      { "title": "Sustainability", "description": "We integrate responsible design practices into our work." }
     ]
   },
   "team": {
@@ -240,7 +240,7 @@
     "error": "There was an error submitting your request. Please try again."
   },
   "footer": {
-    "description": "Green Studio Qatar is a contemporary architecture and engineering firm delivering visionary projects across the MENA region.",
+    "description": "Green Studio for Design and Consultancy — architecture, engineering, and project management services from Qatar.",
     "quickLinks": "Quick Links",
     "services": "Our Services",
     "contact": "Contact Us",
@@ -254,10 +254,10 @@
     "inDoha": "in Doha, Qatar"
   },
   "seo": {
-    "defaultTitle": "Green Studio Qatar | Architecture & Design in the MENA Region",
-    "defaultDescription": "A contemporary architecture and design firm delivering sustainable, visionary projects across the MENA region.",
-    "defaultTitleAr": "جريين ستوديو قطر | عمارة وتصميم في الشرق الأوسط وشمال أفريقيا",
-    "defaultDescriptionAr": "مكتب هندسة معمارية وتصميم معاصر يقدم مشاريع مستدامة ورؤيوية في منطقة الشرق الأوسط وشمال أفريقيا."
+    "defaultTitle": "Green Studio for Design and Consultancy | Qatar",
+    "defaultDescription": "Architecture, interior design, engineering consultancy, and project management from Qatar. Established 2013.",
+    "defaultTitleAr": "جريين ستوديو للتصميم والاستشارات | قطر",
+    "defaultDescriptionAr": "عمارة وتصميم داخلي واستشارات هندسية وإدارة مشاريع من قطر. تأسس عام 2013."
   },
   "admin": {
     "loginTitle": "Admin Login",
@@ -321,6 +321,16 @@
     "subtitle": "We are always looking for talented individuals who share our passion for design excellence.",
     "noOpenings": "No current openings. Please check back later or send your CV to careers@greenstudioqatar.com.",
     "applyCta": "Send Your Application"
+  },
+  "packages": {
+    "title": "Investment Guide",
+    "subtitle": "Transparent pricing for every stage of your project. Every engagement begins with understanding your vision.",
+    "timeline": "Timeline",
+    "mostPopular": "Most Popular",
+    "customQuote": "Every project is unique — pricing depends on scope, site conditions, and design complexity. Tell us about your vision and we will prepare a tailored proposal.",
+    "customQuoteCta": "Request a Custom Quote",
+    "notSure": "Not sure which package is right for you?",
+    "notSureCta": "Book a Discovery Session"
   },
   "cta": {
     "headline": "Let's Build Something Extraordinary Together",

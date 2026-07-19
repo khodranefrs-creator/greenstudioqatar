@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { Locale } from "@/i18n/routing";
 import { getDictionary } from "@/lib/dictionary";
+import { alternates } from "@/lib/seo/metadata";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
 import ConsultationStepper from "@/components/forms/consultation-stepper";
@@ -17,6 +18,7 @@ export async function generateMetadata({ params }: ConsultationPageProps): Promi
   return {
     title: consult.title ?? "Book a Consultation",
     description: consult.subtitle ?? "Tell us about your project.",
+    alternates: alternates(locale, "consultation"),
     openGraph: { title: consult.title ?? "Book a Consultation", description: consult.subtitle ?? "" },
   };
 }

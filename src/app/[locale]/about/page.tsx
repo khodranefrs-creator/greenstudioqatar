@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import type { Locale } from "@/i18n/routing";
 import { getDictionary } from "@/lib/dictionary";
+import { alternates } from "@/lib/seo/metadata";
 import { Container } from "@/components/ui/container";
 import { SectionHeading } from "@/components/ui/section-heading";
-import Image from "next/image";
 import Link from "next/link";
 import { teamMembers } from "@/data/team";
 
@@ -17,8 +17,9 @@ export async function generateMetadata({ params }: AboutPageProps): Promise<Meta
   const about = dict.about as Record<string, string>;
 
   return {
-    title: about.title ?? "About Us",
-    description: about.subtitle ?? "Learn about Green Studio Qatar.",
+    title: about.title ?? "About Green Studio",
+    description: about.subtitle ?? "Architecture, design, and consultancy from Qatar.",
+    alternates: alternates(locale, "about"),
     openGraph: { title: about.title ?? "About Us", description: about.subtitle ?? "" },
   };
 }
@@ -45,7 +46,6 @@ export default async function AboutPage({ params }: AboutPageProps) {
         <div className="hero-bg absolute inset-0 opacity-30" />
         <Container className="relative z-10">
           <SectionHeading
-            eyebrow={String(about.title ?? "")}
             title={locale === "ar" ? "نبذة عنا" : "About Us"}
             description={String(about.subtitle ?? "")}
             align="center"
@@ -127,23 +127,31 @@ export default async function AboutPage({ params }: AboutPageProps) {
           </h2>
           <div className="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {leadership.map((member) => (
-              <div key={member.id} className="group">
-                <div className="relative aspect-[3/4] overflow-hidden bg-charcoal/50">
-                  {member.photo && (
-                    <Image
-                      src={member.photo}
-                      alt={member.name}
-                      fill
-                      className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    />
-                  )}
+              <div key={member.id} className="group border border-offwhite/10 p-7 transition-all duration-500 hover:border-offwhite/20">
+                <div className="aspect-[3/4] overflow-hidden bg-offwhite/[0.03]">
+                  <div className="flex h-full w-full items-center justify-center">
+                    <span className="font-display text-4xl font-light tracking-wider text-offwhite/10">
+                      {member.name.split(" ").map((w) => w[0]).slice(0, 2).join("").toUpperCase()}
+                    </span>
+                  </div>
                 </div>
                 <div className="mt-4">
                   <h3 className="font-display text-lg text-offwhite">{member.name}</h3>
                   <p className="mt-1 font-body text-xs uppercase tracking-widest text-offwhite/50">
                     {locale === "ar" ? member.roleAr : member.roleEn}
                   </p>
+                  {member.credentials && member.credentials.length > 0 && (
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      {member.credentials.map((cred) => (
+                        <span
+                          key={cred}
+                          className="inline-block border border-offwhite/10 px-2 py-0.5 font-body text-[0.6rem] tracking-wide text-offwhite/60"
+                        >
+                          {cred}
+                        </span>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             ))}
@@ -155,14 +163,12 @@ export default async function AboutPage({ params }: AboutPageProps) {
         <Container>
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-display text-3xl font-light tracking-tight text-charcoal sm:text-4xl">
-              {locale === "ar" ? "الأرقام تتحدث" : "By the Numbers"}
+              {locale === "ar" ? "الأرقام" : "At a Glance"}
             </h2>
-            <div className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-4">
+            <div className="mt-12 grid grid-cols-2 gap-8 sm:grid-cols-2">
               {[
-                { value: "20+", label: locale === "ar" ? "سنة خبرة" : "Years Experience" },
-                { value: "120+", label: locale === "ar" ? "مشروع" : "Projects" },
-                { value: "12", label: locale === "ar" ? "دولة" : "Countries" },
-                { value: "50+", label: locale === "ar" ? "عضو فريق" : "Team Members" },
+                { value: "2013", label: locale === "ar" ? "سنة التأسيس" : "Established" },
+                { value: "QA", label: locale === "ar" ? "مقرنا قطر" : "Based in Qatar" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center">
                   <span className="font-display text-3xl font-light text-charcoal sm:text-4xl">

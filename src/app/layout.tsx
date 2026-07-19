@@ -35,6 +35,7 @@ async function resolveLocale(): Promise<Locale> {
 }
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://greenstudioqatar.com"),
   title: {
     template: "%s | Green Studio Qatar",
     default: "Green Studio Qatar — Architecture & Engineering",
@@ -62,7 +63,15 @@ export default async function RootLayout({
       dir={dir}
       className={`${playfairDisplay.variable} ${inter.variable} ${notoKufiArabic.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:start-4 focus:z-[100] focus:bg-charcoal focus:text-offwhite focus:px-4 focus:py-2 focus:text-sm"
+        >
+          Skip to main content
+        </a>
+        {children}
+      </body>
     </html>
   );
 }

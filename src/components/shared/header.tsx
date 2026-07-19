@@ -57,7 +57,7 @@ export function Header({ locale }: HeaderProps) {
             GREEN STUDIO
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-10">
+          <nav className="hidden lg:flex items-center gap-10" aria-label="Main navigation">
             {links.map((link) => (
               <Link
                 key={link.href}
@@ -89,10 +89,11 @@ export function Header({ locale }: HeaderProps) {
 
           <button
             onClick={() => setMobileOpen(true)}
-            className={`lg:hidden flex flex-col items-end gap-[5px] p-2 transition-colors duration-300 ${
+            className={`lg:hidden flex flex-col items-end justify-center gap-[5px] h-11 w-11 transition-colors duration-300 ${
               scrolled ? "text-charcoal" : "text-offwhite"
             }`}
             aria-label="Open navigation"
+            aria-expanded={mobileOpen}
           >
             <span className={`block h-px w-6 transition-all duration-300 ${scrolled ? 'bg-charcoal' : 'bg-offwhite'}`} />
             <span className={`block h-px w-4 transition-all duration-300 ${scrolled ? 'bg-charcoal' : 'bg-offwhite'}`} />
