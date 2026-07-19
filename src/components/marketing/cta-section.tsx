@@ -22,13 +22,13 @@ export default async function CtaSection({ locale }: CtaSectionProps) {
         <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-offwhite/40">
           {locale === 'ar' ? 'جاهزين للعمل' : 'Next Step'}
         </p>
-        <h2 className="mt-6 font-display text-3xl font-light leading-[1.15] tracking-[-0.02em] text-offwhite sm:text-4xl md:text-5xl lg:text-6xl">
+        <h2 className="mt-6 font-display text-3xl font-light leading-[1.15] tracking-[-0.02em] text-offwhite sm:text-4xl md:text-5xl lg:text-[4rem]">
           {headline}
         </h2>
         <div className="mt-10 sm:mt-12">
           <Link
             href={`/${locale}/contact`}
-            className="group inline-flex items-center gap-3 border-b border-offwhite/30 pb-1 font-body text-[0.85rem] font-medium tracking-[0.06em] text-offwhite transition-colors duration-300 hover:border-offwhite/70"
+            className="group inline-flex items-center gap-3 border-b border-offwhite/30 pb-1 font-body text-[0.9rem] font-medium tracking-[0.1em] text-offwhite transition-colors duration-300 hover:border-offwhite/70"
           >
             {button}
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className={`h-4 w-4 transition-transform duration-300 group-hover:translate-x-1 ${isRtl ? 'rotate-180 group-hover:-translate-x-1' : ''}`}>

@@ -28,16 +28,16 @@ export default async function ServiceCards({ services, locale }: ServiceCardsPro
   const section = dict.services as Record<string, string>;
 
   return (
-    <section className="bg-surface-secondary py-section-lg sm:py-section-lg">
+    <section className="bg-surface-secondary py-section-xl sm:py-section-xl">
       <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16">
         <div className="mx-auto max-w-4xl">
           <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-muted">
             {locale === 'ar' ? 'الخدمات' : 'Services'}
           </p>
-          <h2 className="mt-4 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-[2.75rem] md:leading-[1.15]">
+          <h2 className="mt-4 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-5xl">
             {section.heading}
           </h2>
-          <p className="mt-6 font-body text-base leading-[1.85] text-muted">
+          <p className="mt-6 font-body text-base leading-[1.85] text-muted sm:text-[1.05rem]">
             {section.description}
           </p>
 
@@ -53,7 +53,7 @@ export default async function ServiceCards({ services, locale }: ServiceCardsPro
                   href={`/${locale}/services/${service.slug}`}
                   className="group flex items-start gap-6 border-t border-border py-10 first:border-t-0 sm:gap-10 sm:py-12"
                 >
-                  <span className="shrink-0 font-display text-5xl font-light leading-none text-charcoal/[0.06] transition-colors duration-300 group-hover:text-charcoal/[0.12] sm:text-6xl">
+                  <span className="shrink-0 font-display text-5xl font-light leading-none text-charcoal/[0.08] transition-colors duration-300 group-hover:text-charcoal/[0.14] sm:text-6xl">
                     {number}
                   </span>
                   <div className="flex-1 pt-1">

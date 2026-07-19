@@ -14,16 +14,17 @@ export default async function FeaturedProjects({ projects, locale }: FeaturedPro
 
   if (projects.length === 0) {
     return (
-      <section className="py-section sm:py-section">
+      <section className="py-section-lg sm:py-section-xl">
         <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16">
           <div className="mx-auto max-w-3xl">
             <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-muted">
               {locale === 'ar' ? 'أعمالنا' : 'Our Work'}
             </p>
-            <h2 className="mt-4 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-[2.75rem] md:leading-[1.15]">
               {section.title}
             </h2>
-            <p className="mt-6 font-body text-sm leading-[1.85] text-muted sm:text-[0.95rem]">
+            <div className="mt-8 h-px w-16 bg-border" />
+            <p className="mt-8 font-body text-base leading-[1.85] text-muted sm:text-[1.05rem]">
               {locale === 'ar'
                 ? 'قريبًا سنعرض مشاريعنا المتحقق منها. كل مشروع يروي قصة حقيقية.'
                 : 'Coming soon — showcasing our verified project portfolio. Every project tells a real story.'}
@@ -35,14 +36,14 @@ export default async function FeaturedProjects({ projects, locale }: FeaturedPro
   }
 
   return (
-    <section className="py-section-lg sm:py-section-lg">
+    <section className="py-section-lg sm:py-section-xl">
       <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16">
         <div className="flex items-end justify-between">
           <div>
             <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-muted">
               {locale === 'ar' ? 'عرض الكل' : 'View All'}
             </p>
-            <h2 className="mt-4 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-5xl">
+            <h2 className="mt-4 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-[2.75rem] md:leading-[1.15]">
               {section.title}
             </h2>
           </div>

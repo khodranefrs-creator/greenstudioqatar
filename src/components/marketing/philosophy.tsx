@@ -18,23 +18,23 @@ export default async function Philosophy({ locale }: PhilosophyProps) {
           </h2>
 
           <div className="mt-12 space-y-8">
-            <p className="font-body text-base leading-[1.9] text-charcoal/65 sm:text-[1.05rem]">
+            <p className="font-body text-base leading-[1.9] text-charcoal/65 sm:text-[1.1rem]">
               {phil.p1}
             </p>
-            <p className="font-body text-base leading-[1.9] text-charcoal/65 sm:text-[1.05rem]">
+            <p className="font-body text-base leading-[1.9] text-charcoal/65 sm:text-[1.1rem]">
               {phil.p2}
             </p>
           </div>
         </div>
 
-        <div className="my-20 sm:my-28">
+        <div className="my-24 sm:my-32">
           <p className="mx-auto max-w-5xl px-6 text-center font-display text-[1.75rem] font-light leading-[1.3] text-charcoal sm:text-[2.5rem] md:text-[3rem] lg:text-[3.5rem]">
             &ldquo;{phil.pullQuote}&rdquo;
           </p>
         </div>
 
         <div className="mx-auto max-w-3xl">
-          <p className="font-body text-base leading-[1.9] text-charcoal/65 sm:text-[1.05rem]">
+          <p className="font-body text-base leading-[1.9] text-charcoal/65 sm:text-[1.1rem]">
             {phil.p3}
           </p>
         </div>

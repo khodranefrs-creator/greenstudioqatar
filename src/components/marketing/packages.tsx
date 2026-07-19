@@ -98,7 +98,7 @@ export default async function Packages({ locale }: PackagesProps) {
 
 function TierHeading({ label }: { label: string }) {
   return (
-    <h3 className="font-display text-[0.8rem] font-normal tracking-[0.15em] text-charcoal/30 uppercase">
+    <h3 className="font-display text-[0.75rem] font-medium tracking-[0.2em] text-charcoal/40 uppercase">
       {label}
     </h3>
   );
@@ -315,7 +315,7 @@ function PackageCard({
       <div className="mt-8">
         <Link
           href={`/${locale}/contact`}
-          className="block w-full text-center border border-charcoal/10 py-3 px-6 font-body text-[0.7rem] font-medium tracking-[0.08em] text-charcoal/60 transition-colors duration-300 hover:border-charcoal/30 hover:text-charcoal"
+          className="block w-full text-center border-b border-charcoal/15 py-3 font-body text-[0.7rem] font-medium tracking-[0.08em] text-charcoal/50 transition-colors duration-300 hover:border-charcoal/40 hover:text-charcoal"
         >
           {cta}
         </Link>
