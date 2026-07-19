@@ -1,6 +1,7 @@
 import { getDictionary } from '@/lib/dictionary';
 import { Locale } from '@/i18n/routing';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default async function Hero({ locale }: { locale: Locale }) {
   const dict = await getDictionary(locale);
@@ -11,10 +12,20 @@ export default async function Hero({ locale }: { locale: Locale }) {
   return (
     <section className="relative h-[100dvh] w-full overflow-hidden">
       <div className="hero-bg absolute inset-0">
-        <div className="absolute inset-0 bg-charcoal" />
+        <Image
+          src="/hero-architecture.jpg"
+          alt=""
+          fill
+          sizes="100vw"
+          priority
+          quality={80}
+          className="hero-image object-cover object-[center_40%]"
+        />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-charcoal/30 via-charcoal/10 to-charcoal/80" />
-      <div className="absolute inset-0 bg-gradient-to-r from-charcoal/40 to-transparent" />
+
+      <div className="absolute inset-0 bg-charcoal/80" />
+      <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/30 to-transparent" />
+      <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at center, transparent 30%, rgba(17,17,16,0.5) 100%)' }} />
 
       <div className="relative z-10 flex h-full flex-col justify-end">
         <div className="mx-auto w-full max-w-[90rem] px-6 pb-28 sm:px-10 md:pb-32 lg:px-16">

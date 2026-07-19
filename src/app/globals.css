@@ -80,6 +80,15 @@ body {
   contain: layout style paint;
 }
 
+@keyframes heroImageScale {
+  from { transform: scale(1); }
+  to { transform: scale(1.03); }
+}
+
+.hero-image {
+  animation: heroImageScale 20s ease-in-out infinite alternate;
+}
+
 @keyframes scrollCue {
   0% { opacity: 0; transform: translateY(-8px); }
   50% { opacity: 1; transform: translateY(0); }
@@ -117,6 +126,7 @@ body {
   .scroll-cue { animation: none; }
   .animate-skeleton { animation: none; }
   .animate-fade-up { animation: none; opacity: 1; transform: none; }
+  .hero-image { animation: none; }
 }
 
 *:focus-visible {
