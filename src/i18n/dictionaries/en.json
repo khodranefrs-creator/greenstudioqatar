@@ -35,6 +35,8 @@
   },
   "services": {
     "title": "What We Do",
+    "heading": "Architecture, from concept to completion.",
+    "description": "We work across architecture, interior design, engineering, and construction supervision — connecting design vision with technical precision from the first sketch through final handover.",
     "subtitle": "Architecture, design, engineering, and project management — delivered from Qatar.",
     "viewDetails": "View Details",
     "architectural-design": {
@@ -307,11 +309,8 @@
     "p3": "Great architecture is felt before it is seen. We prioritize the human experience — light, proportion, materiality, and the sensory qualities that make a space come alive.",
     "pullQuote": "Architecture is the thoughtful making of space.",
     "pillar1Title": "Contextual Design",
-    "pillar1Body": "Every project begins with a deep reading of its context — the climate, the landscape, the urban fabric, and the cultural DNA of the place. We design with, not against, our environment.",
     "pillar2Title": "Sustainable Innovation",
-    "pillar2Body": "We see sustainability not as a checklist but as a design ethos. From passive cooling strategies to material selection, every decision is made with the long-term health of the planet in mind.",
-    "pillar3Title": "Human Experience",
-    "pillar3Body": "Great architecture is felt before it is seen. We prioritize the human experience — light, proportion, materiality, and the sensory qualities that make a space come alive."
+    "pillar3Title": "Human Experience"
   },
   "awards": {
     "title": "Certifications & Awards"
@@ -323,14 +322,14 @@
     "applyCta": "Send Your Application"
   },
   "packages": {
-    "title": "Investment Guide",
-    "subtitle": "Transparent pricing for every stage of your project. Every engagement begins with understanding your vision.",
-    "timeline": "Timeline",
+    "title": "Our Packages",
+    "subtitle": "Transparent pricing for every stage of your project. Choose the package that fits your needs.",
+    "timeline": "Duration",
     "mostPopular": "Most Popular",
-    "customQuote": "Every project is unique — pricing depends on scope, site conditions, and design complexity. Tell us about your vision and we will prepare a tailored proposal.",
+    "customQuote": "Every project is unique — contact us for a tailored proposal based on your specific requirements.",
     "customQuoteCta": "Request a Custom Quote",
-    "notSure": "Not sure which package is right for you?",
-    "notSureCta": "Book a Discovery Session"
+    "notSure": "Need help choosing?",
+    "notSureCta": "Contact Us"
   },
   "cta": {
     "headline": "Let's Build Something Extraordinary Together",

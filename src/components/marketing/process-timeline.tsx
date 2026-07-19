@@ -27,18 +27,13 @@ export default async function ProcessTimeline({ locale }: ProcessTimelineProps) 
           </h2>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-16 grid grid-cols-1 gap-x-12 gap-y-10 sm:grid-cols-2 lg:gap-x-16 lg:gap-y-14">
           {steps.map((step, index) => (
-            <div key={index} className="group relative">
-              <div className="flex items-center gap-4">
-                <span className="font-display text-4xl font-light text-charcoal/[0.08] transition-colors duration-300 group-hover:text-accent/20">
-                  {String(index + 1).padStart(2, '0')}
-                </span>
-                {index < steps.length - 1 && (
-                  <div className="hidden lg:block flex-1 h-px bg-border" />
-                )}
-              </div>
-              <h3 className="mt-5 font-display text-lg font-normal text-charcoal leading-snug">
+            <div key={index} className="group">
+              <span className="font-display text-4xl font-light text-charcoal/[0.08] transition-colors duration-300 group-hover:text-accent/20">
+                {String(index + 1).padStart(2, '0')}
+              </span>
+              <h3 className="mt-4 font-display text-lg font-normal text-charcoal leading-snug">
                 {step.title}
               </h3>
               <p className="mt-3 font-body text-[0.8rem] leading-[1.8] text-muted">

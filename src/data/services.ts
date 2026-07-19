@@ -24,6 +24,8 @@ export const services: Service[] = [
     slug: "architectural-design",
     nameEn: "Architectural Design",
     nameAr: "التصميم المعماري",
+    taglineEn: "Creating spaces where form, function and identity meet.",
+    taglineAr: "إنشاء مساحات يلتقي فيها الشكل والوظيفة والهوية.",
     summaryEn: "Comprehensive architectural design from concept through construction documentation.",
     summaryAr: "تصميم معماري شامل من المفهوم إلى توثيق البناء.",
     bodyEn:
@@ -47,6 +49,8 @@ export const services: Service[] = [
     slug: "interior-design",
     nameEn: "Interior Design",
     nameAr: "التصميم الداخلي",
+    taglineEn: "Crafting refined environments with purpose and character.",
+    taglineAr: "تصميم بيئات راقية تجمع بين الغرض والشخصية.",
     summaryEn: "Interior spaces, decoration, and customized design solutions for residential and commercial projects.",
     summaryAr: "مساحات داخلية وديكور وحلول تصميم مخصصة للمشاريع السكنية والتجارية.",
     bodyEn:
@@ -70,6 +74,8 @@ export const services: Service[] = [
     slug: "engineering-consultancy",
     nameEn: "Engineering Consultancy",
     nameAr: "الاستشارات الهندسية",
+    taglineEn: "Technical solutions built for performance and reliability.",
+    taglineAr: "حلول فنية مصممة للأداء والموثوقية.",
     summaryEn: "Civil engineering, electrical engineering, and comprehensive engineering consultations.",
     summaryAr: "هندسة مدنية وهندسة كهربائية واستشارات هندسية شاملة.",
     bodyEn:
@@ -90,8 +96,10 @@ export const services: Service[] = [
   {
     id: "4",
     slug: "project-management",
-    nameEn: "Project Management",
+    nameEn: "Project Supervision",
     nameAr: "إدارة المشاريع",
+    taglineEn: "Ensuring every detail reaches the intended vision.",
+    taglineAr: "ضمان وصول كل تفصيل إلى الرؤية المقصودة.",
     summaryEn: "End-to-end project management and project follow-up from inception to handover.",
     summaryAr: "إدارة مشاريع ومتابعة شاملة من البداية إلى التسليم.",
     bodyEn:

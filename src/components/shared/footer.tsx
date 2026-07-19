@@ -12,7 +12,6 @@ const serviceLinks = [
   { key: "interior-design", labelEn: "Interior Design", labelAr: "التصميم الداخلي" },
   { key: "engineering-consultancy", labelEn: "Engineering Consultancy", labelAr: "الاستشارات الهندسية" },
   { key: "project-management", labelEn: "Project Management", labelAr: "إدارة المشاريع" },
-  { key: "construction-supervision", labelEn: "Construction Supervision", labelAr: "إشراف التنفيذ" },
 ] as const;
 
 const quickLinks = [

@@ -108,6 +108,8 @@ export interface Service {
   slug: string;
   nameEn: string;
   nameAr: string;
+  taglineEn: string;
+  taglineAr: string;
   summaryEn: string;
   summaryAr: string;
   bodyEn?: string;

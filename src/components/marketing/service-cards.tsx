@@ -2,50 +2,25 @@ import { getDictionary } from '@/lib/dictionary';
 import { Locale } from '@/i18n/routing';
 import { Service } from '@/types';
 import Link from 'next/link';
-import React from 'react';
 
 interface ServiceCardsProps {
   services: Service[];
   locale: Locale;
 }
 
-const ServiceIcon = ({ icon }: { icon?: string }) => {
-  const icons: Record<string, React.ReactNode> = {
-    architecture: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="0.75" className="h-10 w-10">
-        <path d="M6 42h36M10 42V14l14-8 14 8v28M18 42v-12h12v12" />
-      </svg>
-    ),
-    engineering: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="0.75" className="h-10 w-10">
-        <circle cx="24" cy="24" r="8" />
-        <path d="M24 4v6M24 38v6M4 24h6M38 24h6M9.86 9.86l4.24 4.24M33.9 33.9l4.24 4.24M9.86 38.14l4.24-4.24M33.9 14.1l4.24-4.24" />
-      </svg>
-    ),
-    interiors: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="0.75" className="h-10 w-10">
-        <rect x="6" y="6" width="36" height="36" rx="2" />
-        <path d="M6 18h36M18 42V18" />
-        <path d="M24 24v6m-3-3h6" />
-      </svg>
-    ),
-    supervision: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="0.75" className="h-10 w-10">
-        <path d="M4 24s8-16 20-16 20 16 20 16-8 16-20 16S4 24 4 24z" />
-        <circle cx="24" cy="24" r="6" />
-      </svg>
-    ),
-    planning: (
-      <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="0.75" className="h-10 w-10">
-        <rect x="6" y="8" width="36" height="34" rx="2" />
-        <path d="M32 4v8M16 4v8M6 18h36" />
-        <path d="M6 28h16M26 28h18" />
-      </svg>
-    ),
-  };
-
-  return <>{icons[icon ?? "architecture"] ?? icons.architecture}</>;
-};
+function Arrow({ locale }: { locale: Locale }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      className={`h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1 rtl:-rotate-180 rtl:group-hover:translate-x-[-4px] ${locale === 'ar' ? 'rtl' : ''}`}
+    >
+      <path d="M5 12h14M12 5l7 7-7 7" />
+    </svg>
+  );
+}
 
 export default async function ServiceCards({ services, locale }: ServiceCardsProps) {
   const dict = await getDictionary(locale);
@@ -54,43 +29,58 @@ export default async function ServiceCards({ services, locale }: ServiceCardsPro
   return (
     <section className="bg-surface-secondary py-section-lg sm:py-section-lg">
       <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16">
-        <div className="text-center">
+        <div className="mx-auto max-w-3xl">
           <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-muted">
-            {locale === 'ar' ? 'خدماتنا' : 'Our Expertise'}
+            {locale === 'ar' ? 'الخدمات' : 'Services'}
           </p>
-          <h2 className="mt-3 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-5xl">
-            {section.title}
+          <h2 className="mt-4 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-[2.75rem] md:leading-[1.15]">
+            {section.heading}
           </h2>
-          <p className="mt-4 font-body text-sm text-muted max-w-xl mx-auto">
-            {section.subtitle}
+          <p className="mt-6 font-body text-sm leading-[1.85] text-muted max-w-xl">
+            {section.description}
           </p>
-        </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
-          {services.map((service) => (
+          <div className="mt-16">
+            {services.map((service, index) => {
+              const number = String(index + 1).padStart(2, '0');
+              const name = locale === 'ar' ? service.nameAr : service.nameEn;
+              const tagline = locale === 'ar' ? service.taglineAr : service.taglineEn;
+
+              return (
+                <Link
+                  key={service.id}
+                  href={`/${locale}/services/${service.slug}`}
+                  className="group flex items-start gap-6 border-t border-border py-10 first:border-t-0 sm:gap-10 sm:py-12"
+                >
+                  <span className="shrink-0 pt-1 font-body text-[0.7rem] font-medium tracking-[0.15em] text-muted transition-colors duration-300 group-hover:text-charcoal">
+                    {number}
+                  </span>
+                  <div className="flex-1">
+                    <h3 className="font-display text-xl font-normal tracking-[-0.01em] text-charcoal sm:text-2xl">
+                      {name}
+                    </h3>
+                    <p className="mt-3 font-body text-sm leading-[1.75] text-muted sm:text-[0.95rem]">
+                      {tagline}
+                    </p>
+                  </div>
+                  <span className="shrink-0 hidden sm:block pt-1.5 text-muted transition-colors duration-300 group-hover:text-charcoal">
+                    <Arrow locale={locale} />
+                  </span>
+                </Link>
+              );
+            })}
+            <div className="border-t border-border" />
+          </div>
+
+          <div className="mt-10 flex justify-end">
             <Link
-              key={service.id}
-              href={`/${locale}/services/${service.slug}`}
-              className="group relative bg-surface border border-border p-7 transition-all duration-500 hover:border-charcoal/20 hover:shadow-[0_8px_30px_-12px_rgba(0,0,0,0.08)]"
+              href={`/${locale}/services`}
+              className="group inline-flex items-center gap-2 font-body text-sm font-medium tracking-wide text-charcoal/60 transition-colors duration-300 hover:text-charcoal"
             >
-              <div className="text-muted transition-colors duration-300 group-hover:text-charcoal">
-                <ServiceIcon icon={service.icon} />
-              </div>
-              <h3 className="mt-5 font-display text-lg font-normal text-charcoal leading-snug">
-                {locale === 'ar' ? service.nameAr : service.nameEn}
-              </h3>
-              <p className="mt-3 font-body text-[0.8rem] leading-relaxed text-muted line-clamp-3">
-                {locale === 'ar' ? service.summaryAr : service.summaryEn}
-              </p>
-              <div className="mt-6 flex items-center gap-2 font-body text-[0.75rem] font-medium tracking-[0.08em] text-charcoal/60 transition-all duration-300 group-hover:text-charcoal group-hover:gap-3">
-                {section.viewDetails}
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </div>
-              <div className="absolute bottom-0 left-0 h-px w-full bg-charcoal transition-transform duration-300 origin-left scale-x-0 group-hover:scale-x-100" />
+              {locale === 'ar' ? 'عرض كل الخدمات' : 'View all services'}
+              <Arrow locale={locale} />
             </Link>
-          ))}
+          </div>
         </div>
       </div>
     </section>

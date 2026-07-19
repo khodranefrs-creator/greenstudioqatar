@@ -12,8 +12,14 @@ export default async function Packages({ locale }: PackagesProps) {
   const dict = await getDictionary(locale);
   const section = dict.packages as Record<string, string>;
 
-  const consultationPkg = packages.find((p) => p.id === 'consultation');
-  const mainPackages = packages.filter((p) => p.id !== 'consultation');
+  const featured = packages.find((p) => p.featured);
+  const remaining = packages.filter((p) => !p.featured);
+  const foundation = remaining.slice(0, 2);
+  const upgrades = remaining.slice(2);
+
+  const tierFoundation = locale === 'ar' ? 'الأساسيات' : 'Foundation';
+  const tierProfessional = locale === 'ar' ? 'الاحترافية' : 'Professional';
+  const tierComplete = locale === 'ar' ? 'الشامل' : 'Complete';
 
   return (
     <section className="bg-surface py-section-lg sm:py-section-xl">
@@ -30,30 +36,53 @@ export default async function Packages({ locale }: PackagesProps) {
           </p>
         </div>
 
-        {consultationPkg && (
-          <div className="mt-14">
-            <ConsultationBar
-              pkg={consultationPkg}
-              locale={locale}
-              label={section.notSure}
-              ctaLabel={section.notSureCta}
-            />
-          </div>
-        )}
-
-        <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {mainPackages.map((pkg) => (
+        <div className="mt-16">
+          <TierHeading label={tierFoundation} />
+          <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2">
+            {foundation.map((pkg) => (
             <PackageCard
               key={pkg.id}
               pkg={pkg}
               locale={locale}
               timelineLabel={section.timeline}
-              popularLabel={section.mostPopular}
             />
           ))}
         </div>
+      </div>
 
-        <div className="mt-10 text-center">
+      <div className="my-12 h-px w-full bg-border" />
+
+      <div>
+          <TierHeading label={tierProfessional} />
+          <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {upgrades.map((pkg) => (
+            <PackageCard
+              key={pkg.id}
+              pkg={pkg}
+              locale={locale}
+              timelineLabel={section.timeline}
+            />
+            ))}
+          </div>
+        </div>
+
+        <div className="my-12 h-px w-full bg-border" />
+
+        <div>
+          <TierHeading label={tierComplete} />
+          {featured && (
+            <div className="mt-8">
+              <FeaturedCard
+                pkg={featured}
+                locale={locale}
+                timelineLabel={section.timeline}
+                popularLabel={section.mostPopular}
+              />
+            </div>
+          )}
+        </div>
+
+        <div className="mt-14 text-center">
           <p className="font-body text-sm text-muted">{section.customQuote}</p>
           <Link
             href={`/${locale}/contact`}
@@ -67,7 +96,15 @@ export default async function Packages({ locale }: PackagesProps) {
   );
 }
 
-function PackageCard({
+function TierHeading({ label }: { label: string }) {
+  return (
+    <h3 className="font-display text-sm font-normal tracking-[0.15em] text-charcoal/40 uppercase">
+      {label}
+    </h3>
+  );
+}
+
+function FeaturedCard({
   pkg,
   locale,
   timelineLabel,
@@ -78,7 +115,134 @@ function PackageCard({
   timelineLabel: string;
   popularLabel: string;
 }) {
-  const isFeatured = pkg.featured;
+  const name = locale === 'ar' ? pkg.nameAr : pkg.nameEn;
+  const tagline = locale === 'ar' ? pkg.taglineAr : pkg.taglineEn;
+  const price = locale === 'ar' ? pkg.priceLabelAr : pkg.priceLabelEn;
+  const timeline = locale === 'ar' ? pkg.timelineAr : pkg.timelineEn;
+  const features = locale === 'ar' ? pkg.featuresAr : pkg.featuresEn;
+  const cta = locale === 'ar' ? pkg.ctaAr : pkg.ctaEn;
+  const isPopular = pkg.popular;
+
+  const midpoint = Math.ceil(features.length / 2);
+  const leftFeatures = features.slice(0, midpoint);
+  const rightFeatures = features.slice(midpoint);
+
+  return (
+    <div className="group relative flex flex-col bg-charcoal text-offwhite border border-charcoal lg:flex-row">
+      <div className="absolute top-0 left-0 h-[2px] w-full bg-accent-light" />
+
+      {isPopular && (
+        <div className="absolute -top-px left-0 z-10 h-[2px] w-24 bg-accent" />
+      )}
+
+      <div className="flex flex-col justify-between p-8 sm:p-10 lg:w-[40%] lg:border-r lg:border-offwhite/10">
+        <div>
+          {isPopular && (
+            <p className="mb-4 font-body text-[0.6rem] font-medium tracking-[0.2em] uppercase text-accent-light">
+              {popularLabel}
+            </p>
+          )}
+          <p className="font-body text-[0.65rem] font-medium tracking-[0.3em] uppercase text-offwhite/50">
+            {tagline}
+          </p>
+          <h4 className="mt-3 font-display text-2xl font-normal leading-snug text-offwhite sm:text-3xl">
+            {name}
+          </h4>
+        </div>
+
+        <div className="mt-8 lg:mt-0">
+          <p className="font-body text-base font-light text-offwhite/60">
+            {price}
+          </p>
+          <div className="mt-2 flex items-center gap-2">
+            <svg
+              viewBox="0 0 16 16"
+              fill="none"
+              className="h-3 w-3 flex-shrink-0 text-offwhite/30"
+              aria-hidden="true"
+            >
+              <circle cx="8" cy="8" r="6.5" stroke="currentColor" strokeWidth="1" />
+              <path d="M8 4.5V8.5L10.5 10" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
+            </svg>
+            <span className="font-body text-[0.7rem] text-offwhite/40">
+              {timelineLabel}: {timeline}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-1 flex-col p-8 sm:p-10">
+        <div className="flex-1 grid grid-cols-1 gap-x-8 gap-y-3 sm:grid-cols-2">
+          <ul className="space-y-3">
+            {leftFeatures.map((feature) => (
+              <li key={feature} className="flex items-start gap-2.5">
+                <svg
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-accent-light/70"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3.5 8.5L6.5 11.5L12.5 4.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <span className="font-body text-[0.8rem] leading-relaxed text-offwhite/70">
+                  {feature}
+                </span>
+              </li>
+            ))}
+          </ul>
+          <ul className="space-y-3">
+            {rightFeatures.map((feature) => (
+              <li key={feature} className="flex items-start gap-2.5">
+                <svg
+                  viewBox="0 0 16 16"
+                  fill="none"
+                  className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-accent-light/70"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M3.5 8.5L6.5 11.5L12.5 4.5"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <span className="font-body text-[0.8rem] leading-relaxed text-offwhite/70">
+                  {feature}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-8 lg:mt-6 lg:flex lg:justify-end">
+          <Link
+            href={`/${locale}/contact`}
+            className="inline-block border border-offwhite/20 px-10 py-3.5 text-center font-body text-[0.75rem] font-medium tracking-[0.08em] text-offwhite transition-all duration-300 hover:border-offwhite/40 hover:bg-offwhite hover:text-charcoal"
+          >
+            {cta}
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function PackageCard({
+  pkg,
+  locale,
+  timelineLabel,
+}: {
+  pkg: Package;
+  locale: Locale;
+  timelineLabel: string;
+}) {
   const isPopular = pkg.popular;
   const name = locale === 'ar' ? pkg.nameAr : pkg.nameEn;
   const tagline = locale === 'ar' ? pkg.taglineAr : pkg.taglineEn;
@@ -88,90 +252,49 @@ function PackageCard({
   const cta = locale === 'ar' ? pkg.ctaAr : pkg.ctaEn;
 
   return (
-    <div
-      className={`group relative flex flex-col ${
-        isFeatured
-          ? 'bg-charcoal text-offwhite border border-charcoal'
-          : 'bg-surface border border-border hover:border-charcoal/20 hover:shadow-[0_8px_30px_-12px_rgba(0,0,0,0.08)]'
-      }`}
-    >
-      {isFeatured && (
-        <div className="absolute top-0 left-0 h-[2px] w-full bg-accent-light" />
-      )}
-
+    <div className="group relative flex flex-col border border-border bg-surface p-8 transition-all duration-300 hover:border-charcoal/15">
       {isPopular && (
-        <div className="absolute -top-3 left-7 z-10">
-          <span className="inline-block bg-accent px-3 py-1 font-body text-[0.6rem] font-semibold tracking-[0.15em] uppercase text-offwhite">
-            {popularLabel}
-          </span>
-        </div>
+        <div className="absolute -top-px left-0 z-10 h-[2px] w-20 bg-accent" />
       )}
 
-      <div className="p-7 pb-0">
-        <p
-          className={`font-body text-[0.65rem] font-medium tracking-[0.3em] uppercase ${
-            isFeatured ? 'text-offwhite/70' : 'text-muted'
-          }`}
-        >
+      <div>
+        <p className="font-body text-[0.6rem] font-medium tracking-[0.3em] uppercase text-muted/60">
           {tagline}
         </p>
-        <h3
-          className={`mt-2 font-display text-xl font-normal leading-snug ${
-            isFeatured ? 'text-offwhite' : 'text-charcoal'
-          }`}
-        >
+        <h4 className="mt-2.5 font-display text-lg font-normal leading-snug text-charcoal">
           {name}
-        </h3>
+        </h4>
       </div>
 
-      <div className="px-7 pt-5 pb-0">
-        <p
-          className={`font-display text-2xl font-light tracking-[-0.01em] ${
-            isFeatured ? 'text-offwhite' : 'text-charcoal'
-          }`}
-        >
+      <div className="mt-5">
+        <p className="font-body text-sm font-light text-charcoal/50">
           {price}
         </p>
-      </div>
-
-      <div className="px-7 pt-3 pb-0">
-        <div className="flex items-center gap-2">
+        <div className="mt-1.5 flex items-center gap-2">
           <svg
             viewBox="0 0 16 16"
             fill="none"
-            className={`h-3.5 w-3.5 flex-shrink-0 ${
-              isFeatured ? 'text-offwhite/50' : 'text-muted'
-            }`}
+            className="h-3 w-3 flex-shrink-0 text-muted/40"
             aria-hidden="true"
           >
             <circle cx="8" cy="8" r="6.5" stroke="currentColor" strokeWidth="1" />
             <path d="M8 4.5V8.5L10.5 10" stroke="currentColor" strokeWidth="1" strokeLinecap="round" />
           </svg>
-          <span
-            className={`font-body text-[0.75rem] ${
-              isFeatured ? 'text-offwhite/60' : 'text-muted'
-            }`}
-          >
+          <span className="font-body text-[0.65rem] text-muted/50">
             {timelineLabel}: {timeline}
           </span>
         </div>
       </div>
 
-      <div
-        className={`my-5 mx-7 h-px w-auto ${
-          isFeatured ? 'bg-offwhite/10' : 'bg-border'
-        }`}
-      />
+      <div className="my-6 h-px w-full bg-border/60" />
 
-      <ul className="flex-1 space-y-3 px-7">
+      <ul className="flex-1 space-y-2.5">
         {features.map((feature) => (
           <li key={feature} className="flex items-start gap-2.5">
             <svg
               viewBox="0 0 16 16"
               fill="none"
-              className={`mt-0.5 h-3.5 w-3.5 flex-shrink-0 ${
-                isFeatured ? 'text-accent-light' : 'text-accent'
-              }`}
+              className="mt-0.5 h-3.5 w-3.5 flex-shrink-0 text-charcoal/20"
               aria-hidden="true"
             >
               <path
@@ -182,97 +305,21 @@ function PackageCard({
                 strokeLinejoin="round"
               />
             </svg>
-            <span
-              className={`font-body text-[0.8rem] leading-relaxed ${
-                isFeatured ? 'text-offwhite/80' : 'text-charcoal/70'
-              }`}
-            >
+            <span className="font-body text-[0.8rem] leading-relaxed text-charcoal/60">
               {feature}
             </span>
           </li>
         ))}
       </ul>
 
-      <div className="p-7 pt-7">
+      <div className="mt-8">
         <Link
           href={`/${locale}/contact`}
-          className={`block w-full text-center font-body text-[0.75rem] font-medium tracking-[0.08em] py-3.5 px-6 transition-all duration-300 ${
-            isFeatured
-              ? 'bg-offwhite text-charcoal hover:bg-offwhite/90'
-              : 'border border-charcoal/20 text-charcoal hover:border-charcoal hover:bg-charcoal hover:text-offwhite'
-          }`}
+          className="block w-full text-center border border-charcoal/15 py-3 px-6 font-body text-[0.7rem] font-medium tracking-[0.08em] text-charcoal/70 transition-all duration-300 hover:border-charcoal/40 hover:text-charcoal"
         >
           {cta}
         </Link>
       </div>
-    </div>
-  );
-}
-
-function ConsultationBar({
-  pkg,
-  locale,
-  label,
-  ctaLabel,
-}: {
-  pkg: Package;
-  locale: Locale;
-  label: string;
-  ctaLabel: string;
-}) {
-  const name = locale === 'ar' ? pkg.nameAr : pkg.nameEn;
-  const tagline = locale === 'ar' ? pkg.taglineAr : pkg.taglineEn;
-  const price = locale === 'ar' ? pkg.priceLabelAr : pkg.priceLabelEn;
-  const timeline = locale === 'ar' ? pkg.timelineAr : pkg.timelineEn;
-  const features = locale === 'ar' ? pkg.featuresAr : pkg.featuresEn;
-
-  return (
-    <div className="flex flex-col gap-6 border border-border bg-surface-secondary p-7 sm:flex-row sm:items-center sm:justify-between">
-      <div className="flex-1">
-        <p className="font-body text-[0.65rem] font-medium tracking-[0.3em] uppercase text-muted">
-          {tagline}
-        </p>
-        <h3 className="mt-2 font-display text-lg font-normal text-charcoal">
-          {name}
-        </h3>
-        <p className="mt-1 font-body text-[0.8rem] text-muted">
-          {price} &middot; {timeline}
-        </p>
-        <p className="mt-2 font-body text-[0.75rem] text-muted/80">{label}</p>
-      </div>
-
-      <div className="hidden sm:block w-px h-10 bg-border" aria-hidden="true" />
-
-      <ul className="flex flex-wrap gap-x-5 gap-y-2">
-        {features.map((feature) => (
-          <li key={feature} className="flex items-center gap-2">
-            <svg
-              viewBox="0 0 16 16"
-              fill="none"
-              className="h-3 w-3 flex-shrink-0 text-accent"
-              aria-hidden="true"
-            >
-              <path
-                d="M3.5 8.5L6.5 11.5L12.5 4.5"
-                stroke="currentColor"
-                strokeWidth="1.5"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
-            <span className="font-body text-[0.75rem] text-charcoal/70">
-              {feature}
-            </span>
-          </li>
-        ))}
-      </ul>
-
-      <Link
-        href={`/${locale}/contact`}
-        className="shrink-0 border border-charcoal/20 px-6 py-3 text-center font-body text-[0.75rem] font-medium tracking-[0.08em] text-charcoal transition-all duration-300 hover:border-charcoal hover:bg-charcoal hover:text-offwhite"
-      >
-        {ctaLabel}
-      </Link>
     </div>
   );
 }
