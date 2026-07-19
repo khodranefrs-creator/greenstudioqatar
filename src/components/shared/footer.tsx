@@ -28,7 +28,7 @@ export async function Footer({ locale }: FooterProps) {
 
   return (
     <footer className="bg-offwhite border-t border-border">
-      <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-12 py-16 lg:py-20">
+      <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16 py-16 lg:py-20">
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-4">
             <Link

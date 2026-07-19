@@ -21,7 +21,7 @@
   },
   "hero": {
     "headline": "Architecture, Design & Consultancy",
-    "subheadline": "From Qatar — providing professional design, engineering, and project management services since 2013.",
+    "subheadline": "Design, engineering, and project management — serving clients across the MENA region since 2013.",
     "ctaPrimary": "Our Services",
     "ctaSecondary": "Get in Touch",
     "scrollHint": "Scroll to explore"
@@ -31,7 +31,7 @@
     "yearsExperience": "Established",
     "teamMembers": "Expertise",
     "countriesServed": "Based in Qatar",
-    "description": "Green Studio for Design and Consultancy — providing architecture, engineering, and project management services from Qatar since 2013."
+    "description": "Architecture, interiors, engineering, and construction oversight — a single studio, delivering across the MENA region since 2013."
   },
   "services": {
     "title": "What We Do",
@@ -323,7 +323,7 @@
   },
   "packages": {
     "title": "Our Packages",
-    "subtitle": "Transparent pricing for every stage of your project. Choose the package that fits your needs.",
+    "subtitle": "Every project is unique. These engagement options provide a starting point for discussion.",
     "timeline": "Duration",
     "mostPopular": "Most Popular",
     "customQuote": "Every project is unique — contact us for a tailored proposal based on your specific requirements.",
@@ -332,8 +332,8 @@
     "notSureCta": "Contact Us"
   },
   "cta": {
-    "headline": "Let's Build Something Extraordinary Together",
-    "button": "Start Your Project"
+    "headline": "Every great building begins with a conversation.",
+    "button": "Begin a Consultation"
   },
   "legal": {
     "privacy": {

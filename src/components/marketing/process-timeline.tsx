@@ -16,29 +16,28 @@ export default async function ProcessTimeline({ locale }: ProcessTimelineProps) 
   const steps = processSection.steps as StepData[];
 
   return (
-    <section className="py-section-lg sm:py-section-lg">
+    <section className="py-section-lg sm:py-section-xl">
       <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16">
-        <div className="text-center">
-          <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-muted">
-            {locale === 'ar' ? 'كيف نعمل' : 'How We Work'}
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-5xl">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-[2.75rem] md:leading-[1.15]">
             {String(processSection.title)}
           </h2>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-x-12 gap-y-10 sm:grid-cols-2 lg:gap-x-16 lg:gap-y-14">
+        <div className="mx-auto mt-16 max-w-3xl">
           {steps.map((step, index) => (
-            <div key={index} className="group">
-              <span className="font-display text-4xl font-light text-charcoal/[0.08] transition-colors duration-300 group-hover:text-accent/20">
+            <div key={index} className="group flex gap-6 sm:gap-10">
+              <span className="shrink-0 pt-0.5 font-display text-4xl font-light text-charcoal/[0.07] transition-colors duration-300 group-hover:text-charcoal/[0.14] sm:text-5xl">
                 {String(index + 1).padStart(2, '0')}
               </span>
-              <h3 className="mt-4 font-display text-lg font-normal text-charcoal leading-snug">
-                {step.title}
-              </h3>
-              <p className="mt-3 font-body text-[0.8rem] leading-[1.8] text-muted">
-                {step.description}
-              </p>
+              <div className={`flex-1 ${index < steps.length - 1 ? 'pb-12 sm:pb-16' : ''}`}>
+                <h3 className="font-display text-lg font-normal text-charcoal leading-snug sm:text-xl">
+                  {step.title}
+                </h3>
+                <p className="mt-3 font-body text-sm leading-[1.8] text-muted sm:text-[0.95rem]">
+                  {step.description}
+                </p>
+              </div>
             </div>
           ))}
         </div>

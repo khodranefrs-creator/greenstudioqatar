@@ -17,28 +17,28 @@ export default async function Packages({ locale }: PackagesProps) {
   const foundation = remaining.slice(0, 2);
   const upgrades = remaining.slice(2);
 
-  const tierFoundation = locale === 'ar' ? 'الأساسيات' : 'Foundation';
-  const tierProfessional = locale === 'ar' ? 'الاحترافية' : 'Professional';
-  const tierComplete = locale === 'ar' ? 'الشامل' : 'Complete';
+  const tierFoundation = locale === 'ar' ? 'الأساسيات' : 'Essentials';
+  const tierProfessional = locale === 'ar' ? 'الشاملة' : 'Comprehensive';
+  const tierComplete = locale === 'ar' ? 'الكاملة' : 'Full Service';
 
   return (
     <section className="bg-surface py-section-lg sm:py-section-xl">
       <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16">
         <div className="text-center">
           <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-muted">
-            {locale === 'ar' ? 'الاستثمار' : 'Investment'}
+            {locale === 'ar' ? 'التعاون' : 'Engagement'}
           </p>
-          <h2 className="mt-3 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-5xl">
+          <h2 className="mt-4 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-5xl">
             {section.title}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl font-body text-sm text-muted">
+          <p className="mx-auto mt-4 max-w-2xl font-body text-sm text-muted sm:text-[0.95rem]">
             {section.subtitle}
           </p>
         </div>
 
         <div className="mt-16">
           <TierHeading label={tierFoundation} />
-          <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2">
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
             {foundation.map((pkg) => (
             <PackageCard
               key={pkg.id}
@@ -50,11 +50,11 @@ export default async function Packages({ locale }: PackagesProps) {
         </div>
       </div>
 
-      <div className="my-12 h-px w-full bg-border" />
+      <div className="my-16 h-px w-full bg-border" />
 
       <div>
           <TierHeading label={tierProfessional} />
-          <div className="mt-8 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {upgrades.map((pkg) => (
             <PackageCard
               key={pkg.id}
@@ -66,7 +66,7 @@ export default async function Packages({ locale }: PackagesProps) {
           </div>
         </div>
 
-        <div className="my-12 h-px w-full bg-border" />
+        <div className="my-16 h-px w-full bg-border" />
 
         <div>
           <TierHeading label={tierComplete} />
@@ -86,7 +86,7 @@ export default async function Packages({ locale }: PackagesProps) {
           <p className="font-body text-sm text-muted">{section.customQuote}</p>
           <Link
             href={`/${locale}/contact`}
-            className="mt-4 inline-block border-b border-charcoal/30 font-body text-sm font-medium text-charcoal transition-colors duration-300 hover:border-charcoal"
+            className="mt-4 inline-block border-b border-charcoal/20 font-body text-sm font-medium text-charcoal transition-colors duration-300 hover:border-charcoal"
           >
             {section.customQuoteCta}
           </Link>
@@ -98,7 +98,7 @@ export default async function Packages({ locale }: PackagesProps) {
 
 function TierHeading({ label }: { label: string }) {
   return (
-    <h3 className="font-display text-sm font-normal tracking-[0.15em] text-charcoal/40 uppercase">
+    <h3 className="font-display text-[0.8rem] font-normal tracking-[0.15em] text-charcoal/30 uppercase">
       {label}
     </h3>
   );
@@ -128,7 +128,7 @@ function FeaturedCard({
   const rightFeatures = features.slice(midpoint);
 
   return (
-    <div className="group relative flex flex-col bg-charcoal text-offwhite border border-charcoal lg:flex-row">
+    <div className="group relative flex flex-col bg-charcoal text-offwhite lg:flex-row">
       <div className="absolute top-0 left-0 h-[2px] w-full bg-accent-light" />
 
       {isPopular && (
@@ -224,7 +224,7 @@ function FeaturedCard({
         <div className="mt-8 lg:mt-6 lg:flex lg:justify-end">
           <Link
             href={`/${locale}/contact`}
-            className="inline-block border border-offwhite/20 px-10 py-3.5 text-center font-body text-[0.75rem] font-medium tracking-[0.08em] text-offwhite transition-all duration-300 hover:border-offwhite/40 hover:bg-offwhite hover:text-charcoal"
+            className="inline-block border border-offwhite/15 px-10 py-3.5 text-center font-body text-[0.75rem] font-medium tracking-[0.08em] text-offwhite transition-colors duration-300 hover:border-offwhite/30 hover:bg-offwhite hover:text-charcoal"
           >
             {cta}
           </Link>
@@ -252,7 +252,7 @@ function PackageCard({
   const cta = locale === 'ar' ? pkg.ctaAr : pkg.ctaEn;
 
   return (
-    <div className="group relative flex flex-col border border-border bg-surface p-8 transition-all duration-300 hover:border-charcoal/15">
+    <div className="group relative flex flex-col bg-surface p-8 transition-colors duration-300 hover:bg-surface-secondary/50 sm:p-10">
       {isPopular && (
         <div className="absolute -top-px left-0 z-10 h-[2px] w-20 bg-accent" />
       )}
@@ -286,7 +286,7 @@ function PackageCard({
         </div>
       </div>
 
-      <div className="my-6 h-px w-full bg-border/60" />
+      <div className="my-6 h-px w-full bg-border/40" />
 
       <ul className="flex-1 space-y-2.5">
         {features.map((feature) => (
@@ -315,7 +315,7 @@ function PackageCard({
       <div className="mt-8">
         <Link
           href={`/${locale}/contact`}
-          className="block w-full text-center border border-charcoal/15 py-3 px-6 font-body text-[0.7rem] font-medium tracking-[0.08em] text-charcoal/70 transition-all duration-300 hover:border-charcoal/40 hover:text-charcoal"
+          className="block w-full text-center border border-charcoal/10 py-3 px-6 font-body text-[0.7rem] font-medium tracking-[0.08em] text-charcoal/60 transition-colors duration-300 hover:border-charcoal/30 hover:text-charcoal"
         >
           {cta}
         </Link>
