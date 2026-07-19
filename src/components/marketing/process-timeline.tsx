@@ -15,35 +15,43 @@ export default async function ProcessTimeline({ locale }: ProcessTimelineProps) 
   const processSection = dict.process as Record<string, unknown>;
   const steps = processSection.steps as StepData[];
 
-  return (
-    <section className="py-section-lg sm:py-section-xl">
-      <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16">
-        <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-8">
-          <div className="lg:col-span-4">
-            <div className="lg:sticky lg:top-32">
-              <h2 className="font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-[2.75rem] md:leading-[1.15]">
-                {String(processSection.title)}
-              </h2>
-            </div>
-          </div>
+  const stepColors = [
+    'bg-accent',
+    'bg-charcoal',
+    'bg-accent-dark',
+    'bg-charcoal',
+  ];
 
-          <div className="lg:col-span-8">
-            {steps.map((step, index) => (
-              <div key={index} className="group flex gap-6 sm:gap-10">
-                <span className="shrink-0 pt-0.5 font-display text-4xl font-light text-charcoal/[0.10] transition-colors duration-300 group-hover:text-charcoal/[0.18] sm:text-5xl">
+  return (
+    <section className="relative overflow-hidden bg-charcoal text-offwhite py-section-xl sm:py-section-xl">
+      <div className="absolute top-0 right-0 h-full w-1/3 bg-gradient-to-l from-offwhite/5 to-transparent" />
+
+      <div className="relative mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16">
+        <h2 className="font-display text-4xl font-light tracking-[-0.02em] text-offwhite sm:text-5xl md:text-6xl lg:text-[4rem] lg:leading-[1.05]">
+          {String(processSection.title)}
+        </h2>
+
+        <div className="mt-20 grid grid-cols-1 gap-8 lg:grid-cols-2 lg:gap-6">
+          {steps.map((step, index) => (
+            <div
+              key={index}
+              className="group relative flex gap-8 border-t border-offwhite/10 pt-10"
+            >
+              <div className={`flex h-14 w-14 shrink-0 items-center justify-center ${stepColors[index % stepColors.length]}`}>
+                <span className="font-display text-lg font-light text-offwhite">
                   {String(index + 1).padStart(2, '0')}
                 </span>
-                <div className={`flex-1 ${index < steps.length - 1 ? 'pb-12 sm:pb-16' : ''}`}>
-                  <h3 className="font-display text-lg font-normal text-charcoal leading-snug sm:text-xl sm:tracking-[-0.01em]">
-                    {step.title}
-                  </h3>
-                  <p className="mt-3 font-body text-sm leading-[1.8] text-muted sm:text-[0.95rem]">
-                    {step.description}
-                  </p>
-                </div>
               </div>
-            ))}
-          </div>
+              <div>
+                <h3 className="font-display text-xl font-normal text-offwhite sm:text-2xl">
+                  {step.title}
+                </h3>
+                <p className="mt-4 max-w-md font-body text-sm leading-[1.8] text-offwhite/45 sm:text-[0.95rem]">
+                  {step.description}
+                </p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>

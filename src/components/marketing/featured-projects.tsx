@@ -16,19 +16,24 @@ export default async function FeaturedProjects({ projects, locale }: FeaturedPro
     return (
       <section className="py-section-lg sm:py-section-xl">
         <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16">
-          <div className="max-w-3xl">
-            <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-muted">
-              {locale === 'ar' ? 'أعمالنا' : 'Our Work'}
-            </p>
-            <h2 className="mt-4 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-[2.75rem] md:leading-[1.15]">
-              {section.title}
-            </h2>
-            <div className="mt-8 h-px w-16 bg-border" />
-            <p className="mt-8 font-body text-base leading-[1.85] text-muted sm:text-[1.05rem]">
-              {locale === 'ar'
-                ? 'قريبًا سنعرض مشاريعنا المتحقق منها. كل مشروع يروي قصة حقيقية.'
-                : 'Coming soon — showcasing our verified project portfolio. Every project tells a real story.'}
-            </p>
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
+            <div className="lg:col-span-7">
+              <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-muted">
+                {locale === 'ar' ? 'أعمالنا' : 'Our Work'}
+              </p>
+              <h2 className="mt-4 font-display text-4xl font-light tracking-[-0.02em] text-charcoal sm:text-5xl md:text-6xl">
+                {section.title}
+              </h2>
+              <div className="mt-8 h-px w-24 bg-charcoal/15" />
+              <p className="mt-8 max-w-lg font-body text-base leading-[1.85] text-muted sm:text-[1.05rem]">
+                {locale === 'ar'
+                  ? 'قريبًا سنعرض مشاريعنا المتحقق منها. كل مشروع يروي قصة حقيقية.'
+                  : 'Coming soon — showcasing our verified project portfolio. Every project tells a real story.'}
+              </p>
+            </div>
+            <div className="lg:col-span-5 flex items-end">
+              <div className="aspect-[4/3] w-full bg-surface-secondary" />
+            </div>
           </div>
         </div>
       </section>
@@ -43,7 +48,7 @@ export default async function FeaturedProjects({ projects, locale }: FeaturedPro
             <p className="font-body text-[0.7rem] font-medium tracking-[0.3em] uppercase text-muted">
               {locale === 'ar' ? 'عرض الكل' : 'View All'}
             </p>
-            <h2 className="mt-4 font-display text-3xl font-light tracking-[-0.02em] text-charcoal sm:text-4xl md:text-[2.75rem] md:leading-[1.15]">
+            <h2 className="mt-4 font-display text-4xl font-light tracking-[-0.02em] text-charcoal sm:text-5xl md:text-6xl">
               {section.title}
             </h2>
           </div>

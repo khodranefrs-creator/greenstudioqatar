@@ -27,34 +27,34 @@ export async function Footer({ locale }: FooterProps) {
   const footer = dict.footer as Record<string, string>;
 
   return (
-    <footer className="bg-offwhite border-t border-border">
-      <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16 py-16 lg:py-20">
-        <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-12 lg:gap-10">
+    <footer className="bg-charcoal text-offwhite">
+      <div className="mx-auto max-w-[90rem] px-6 sm:px-10 lg:px-16 py-24 lg:py-32">
+        <div className="grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-5">
             <Link
               href={`/${locale}`}
-              className="font-display text-[1.1rem] font-semibold tracking-[0.25em] uppercase text-charcoal"
+              className="font-display text-[1.5rem] font-semibold tracking-[0.25em] uppercase text-offwhite"
             >
               GREEN STUDIO
             </Link>
-            <p className="mt-5 max-w-xs font-body text-[0.8rem] leading-[1.8] text-muted">
+            <p className="mt-6 max-w-sm font-body text-[0.8rem] leading-[1.8] text-offwhite/40">
               {footer.description}
             </p>
-            <div className="mt-6">
+            <div className="mt-8">
               <LanguageSwitcher locale={locale} />
             </div>
           </div>
 
           <div className="lg:col-span-2">
-            <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-charcoal">
+            <h3 className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-offwhite/30">
               {footer.services}
             </h3>
-            <ul className="mt-5 space-y-3">
+            <ul className="mt-6 space-y-4">
               {serviceLinks.map((link) => (
                 <li key={link.key}>
                   <Link
                     href={`/${locale}/services/${link.key}`}
-                    className="font-body text-[0.8rem] text-muted hover:text-charcoal transition-colors duration-300"
+                    className="font-body text-[0.8rem] text-offwhite/45 hover:text-offwhite transition-colors duration-300"
                     >
                       {locale === "ar" ? link.labelAr : link.labelEn}
                     </Link>
@@ -64,15 +64,15 @@ export async function Footer({ locale }: FooterProps) {
             </div>
 
             <div className="lg:col-span-2">
-              <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-charcoal">
+              <h3 className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-offwhite/30">
                 {footer.quickLinks}
               </h3>
-              <ul className="mt-5 space-y-3">
+              <ul className="mt-6 space-y-4">
                 {quickLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={`/${locale}${link.href}`}
-                      className="font-body text-[0.8rem] text-muted hover:text-charcoal transition-colors duration-300"
+                      className="font-body text-[0.8rem] text-offwhite/45 hover:text-offwhite transition-colors duration-300"
                     >
                       {nav[link.key]}
                   </Link>
@@ -82,28 +82,28 @@ export async function Footer({ locale }: FooterProps) {
           </div>
 
           <div className="lg:col-span-3">
-            <h3 className="text-[0.7rem] font-semibold uppercase tracking-[0.2em] text-charcoal">
+            <h3 className="text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-offwhite/30">
               {footer.contact}
             </h3>
-            <ul className="mt-5 space-y-3 font-body text-[0.8rem] text-muted">
+            <ul className="mt-6 space-y-4 font-body text-[0.8rem] text-offwhite/45">
               <li>West Bay, Doha, Qatar</li>
               <li>
-                <a href="mailto:hello@greenstudio.qa" className="hover:text-charcoal transition-colors duration-300">
+                <a href="mailto:hello@greenstudio.qa" className="hover:text-offwhite transition-colors duration-300">
                   hello@greenstudio.qa
                 </a>
               </li>
               <li>
-                <a href="tel:+97444123456" className="hover:text-charcoal transition-colors duration-300">
+                <a href="tel:+97444123456" className="hover:text-offwhite transition-colors duration-300">
                   +974 4412 3456
                 </a>
               </li>
             </ul>
-            <div className="mt-6 flex gap-5">
+            <div className="mt-8 flex gap-6">
               <a
                 href="https://www.instagram.com/greenstudioqatar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted hover:text-charcoal transition-colors duration-300"
+                className="text-offwhite/30 hover:text-offwhite transition-colors duration-300"
                 aria-label="Instagram"
               >
                 <svg className="h-[1.125rem] w-[1.125rem]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -114,7 +114,7 @@ export async function Footer({ locale }: FooterProps) {
                 href="https://www.linkedin.com/company/greenstudioqatar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-muted hover:text-charcoal transition-colors duration-300"
+                className="text-offwhite/30 hover:text-offwhite transition-colors duration-300"
                 aria-label="LinkedIn"
               >
                 <svg className="h-[1.125rem] w-[1.125rem]" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -125,18 +125,18 @@ export async function Footer({ locale }: FooterProps) {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
-          <p className="font-body text-[0.7rem] text-muted">© {new Date().getFullYear()} Green Studio Qatar. {footer.rights}</p>
-          <div className="flex gap-6">
+        <div className="mt-20 flex flex-col items-center justify-between gap-6 border-t border-offwhite/10 pt-10 sm:flex-row">
+          <p className="font-body text-[0.7rem] text-offwhite/25">© {new Date().getFullYear()} Green Studio Qatar. {footer.rights}</p>
+          <div className="flex gap-8">
             <Link
               href={`/${locale}/privacy`}
-              className="font-body text-[0.7rem] text-muted hover:text-charcoal transition-colors duration-300"
+              className="font-body text-[0.7rem] text-offwhite/25 hover:text-offwhite/60 transition-colors duration-300"
             >
               {nav.privacy}
             </Link>
             <Link
               href={`/${locale}/terms`}
-              className="font-body text-[0.7rem] text-muted hover:text-charcoal transition-colors duration-300"
+              className="font-body text-[0.7rem] text-offwhite/25 hover:text-offwhite/60 transition-colors duration-300"
             >
               {nav.terms}
             </Link>
