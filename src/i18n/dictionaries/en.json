@@ -329,7 +329,9 @@
     "customQuote": "Every project is unique — contact us for a tailored proposal based on your specific requirements.",
     "customQuoteCta": "Request a Custom Quote",
     "notSure": "Need help choosing?",
-    "notSureCta": "Contact Us"
+    "notSureCta": "Contact Us",
+    "startingInvestment": "Starting Investment",
+    "beginPackage": "Begin with this package"
   },
   "cta": {
     "headline": "Every great building begins with a conversation.",

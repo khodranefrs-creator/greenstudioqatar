@@ -329,7 +329,9 @@
     "customQuote": "كل مشروع فريد — تواصل معنا لعرض سعر مخصص حسب متطلباتك.",
     "customQuoteCta": "طلب عرض سعر مخصص",
     "notSure": "تحتاج مساعدة في الاختيار؟",
-    "notSureCta": "تواصل معنا"
+    "notSureCta": "تواصل معنا",
+    "startingInvestment": "يبدأ من",
+    "beginPackage": "ابدأ بهذه الباقة"
   },
   "cta": {
     "headline": "كل مبنى عظيم يبدأ بمحادثة",
